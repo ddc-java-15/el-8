@@ -1,26 +1,24 @@
 ## Summary
-
-Replace this paragraph with one or more paragraphs summarizing the purpose and operation of the Android app you propose to develop in this project.
-
+Elate is an app created to help lift the user's current state of mind and help them through an offered action, or advice in order to make them feel better.
+At any given moment the user can check in on the app and enter their current state of mind. According to which state of mind is entered the app then recommends a first immediate action to take in order to help elevate the user's mood.
+The app then give the users a first option which they can either accept and complete. Once the acton is completed the user is asked again to rate their current state of mind. If they do not feel better or if they choose to, the same logic is then applied.
+The user can also decide that the first recommended action doesn't appeal to them,and they can automatically get an alternate advice.
+Once the process is done and the user is satisfied., they get the opportunity if they feel like it to enter their thoughts in a reflection box.
 ## Intended users
 
-Write a bullet list here, including at least 2 different types of intended users. Make it reasonably specific; simply saying "Anyone who likes games" (for example) is not sufficiently specific.
-
-For each type of intended user, include at least 1 _user story_. A user story is usually just 1 simple sentence (no more than 2 sentences), in the voice of the intended user, stating a specific task that the user performs using the app, and the benefit that will be obtained. The simplest user stories take the form 
-
-> As a <type of intended user (_who_)> I want to <use of feature or functionality (_what_)> so that <benefit (_why_).
-
-Please avoid writing too much for the user story. In particular, if the way the user story is written makes it difficult to see the _who_, _what_, and _why_, then you probably need to re-write it more directly. (On the other hand, a user story should not simply be a re-statement of the intended user description.)
-
-Here is one (silly) example of an intended user, along with a user story. Please note not only the conceptual structure, but the Markdown syntax used.
-
-* People who like to use randomness in their decision making.
-
-    > As someone who enjoys randomness in my life, I need an app that lets me flip a virtual coin or roll one or more virtual dice, so that I can base my decisions on randomness, without having to carry coins or dice in my pockets.
-
+- People who feel overwhelmed and need some quick guidance
+  - "As someone who easily feels overwhelmed whenever life doesn't go exactly as planned, I need an app that makes it easy for me to focus on a single action to make me feel better. I just have to follow the advice given.It has really helped me getting out of a rut I was so far!
+- People who feel down and need a little pick me up
+  - "As someone who has a hard time dealing with step backs, and usually turns to food for lifting my mood, it has been nice to have an app that can offer me other options. I highly recommend"
+ 
 ## Functionality
+- Mood Check-in
+- Advice
+- Links
+- Feedback
+- Journaling
+- 
 
-List (using a bullet list---or ordered list, if order is relevant) the key functional aspects that will be provided by the app---i.e. tell us what the user will be able to do using the app. This should not simply be a re-statement of the [summary](#summary), but should instead provide a more specific articulation of the functionality and user experience. 
 
 ## Persistent data
 
