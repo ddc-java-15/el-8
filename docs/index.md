@@ -6,25 +6,31 @@ The user can also decide that the first recommended action doesn't appeal to the
 Once the process is done and the user is satisfied., they get the opportunity if they feel like it to enter their thoughts in a reflection box.
 ## Intended users
 
-- People who feel overwhelmed and need some quick guidance
-  > As someone who easily feels overwhelmed whenever life doesn't go exactly as planned, I need an app that makes it easy for me to focus on a single action to make me feel better. I just have to follow the advice given.It has really helped me getting out of a rut I was so far!
-- People who feel down and need a little pick me up
-  > As someone who has a hard time dealing with step backs, and usually turns to food for lifting my mood, it has been nice to have an app that can offer me other options. I highly recommend"
+- Professional people that need on the go guidance
+  > As a new business owner I have a tendency to easily feel overwhelmed. Entrepreneurship is full of challenges and set backs.I need an app that can quickly lift me up so I can be my best self and succeed! 
+- Working parents that struggle with balance in their life
+  > As a working mother of three, I usually turn to food for comfort, it has been nice to have an app that can point me to some healthier options. 
  
 ## Functionality
 
-- Mood Check-in
-- Advice/action
-- Feedback
-- Reflection box
+- Mood Check-in interface with a "How are you feeling today?" message
+- Numbered boxes to check from 0 to 10 or an emotion box (e.g. depressed, overjoyed,happy etc)
+- User checks the numbered/emotion box that directs them to an advice/action with detailed and guided instruction
+- User checks the finished button after having performed the action, they then get asked if they are feeling better.
+- User gives feedback and gets a choice for a second advice or an opportunity to enter their thoughts in a reflection box.
+- User has the opportunity to favorite their preferred action for quick access in the future.
 
 ## Persistent data
 
-- Mood tracker
-- Loved action/advice
-- Reflection box
-- Name
-- History 
+- Stored and saved data of all previous usage of the app by the user.
+- Stored and saved data of all previous mood check entered by the user.
+- Stored and saved data of all actions/advice given to the user.
+- Full database library of action/advice offered by the app.
+- Welcome screen with personalized greeting.
+- Stored and saved data of Loved/Favorite action/advice.
+- All saved entry made to the reflection box.
+- Name/age/Location of the user.
+
 
 ## Device/external services
 
@@ -34,3 +40,4 @@ TBD
 
 - Links
 - Geolocalization (Advice given according to what is available around the user's device)
+- Quote to greet 
