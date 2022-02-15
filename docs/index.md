@@ -1,3 +1,10 @@
+---
+title: Overview
+description: "El8 app proposal"
+menu: Overview
+order: 0
+---
+
 ## Summary
 El8 is an app created to help lift the user's current state of mind and guide them , offering them an action, or advice in order to make them feel better.
 At any given moment the user can check in on the app and enter their current state of mind. According to which state of mind is entered the app then recommends a first immediate action to take in order to help elevate the user's mood.
@@ -40,4 +47,4 @@ TBD
 
 - Links
 - Geolocalization (Advice given according to what is available around the user's device)
-- Quote to greet 
+- Greeting quote
