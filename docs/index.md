@@ -6,11 +6,11 @@ order: 0
 ---
 
 ## Summary
-El8 is an app created to help lift the user's current state of mind and guide them , offering them an action, or advice in order to make them feel better.
-At any given moment the user can check in on the app and enter their current state of mind. According to which state of mind is entered the app then recommends a first immediate action to take in order to help elevate the user's mood.
-The app then give the users a first option which they can either accept and complete. Once the acton is completed the user is asked again to rate their current state of mind. If they do not feel better or if they choose to, the same logic is then applied.
-The user can also decide that the first recommended action doesn't appeal to them, and they can automatically get an alternate advice.
-Once the process is done and the user is satisfied., they get the opportunity if they feel like it to enter their thoughts in a reflection box.
+El8 is an app created to help lift the user's current state of mind and guide them, through the suggestion of an action, or advice in order to make them feel better.
+At any given moment the user can check in on the app and enter their current state of mind. According to their entry,the app, then recommends an action geared to help elevate the user's mood.
+The user get the opportunity to either accept and complete the suggestion. Once the acton is completed the user is asked again to rate their current state of mind. If they do not feel better or, if they choose to continue, the same logic is then applied.
+The user may also decide that the first recommended action doesn't appeal to them, and they can automatically get an alternate advice.
+Once the process is done and the user is satisfied,they get the opportunity if they feel like it to enter their thoughts in a diary entry.
 ## Intended users
 
 - Professional people that need on the go guidance
@@ -24,7 +24,7 @@ Once the process is done and the user is satisfied., they get the opportunity if
 - Numbered boxes to check from 0 to 10 or an emotion box (e.g. depressed, overjoyed,happy etc)
 - User checks the numbered/emotion box that directs them to an advice/action with detailed and guided instruction
 - User checks the finished button after having performed the action, they then get asked if they are feeling better.
-- User gives feedback and gets a choice for a second advice or an opportunity to enter their thoughts in a reflection box.
+- User gives feedback and gets a choice for a second advice or an opportunity to enter their thoughts in a diary entry.
 - User has the opportunity to favorite their preferred action for quick access in the future.
 
 ## Persistent data
@@ -42,12 +42,12 @@ Once the process is done and the user is satisfied., they get the opportunity if
 ## Device/external services
 
 - Google Sign in 
-  - https://developers.google.com/identity/sign-in/android/start-integrating
+  [https://developers.google.com/identity/sign-in/android/start-integrating]
   - Distinguish between users and offer privacy on shared devices.
   - The app is not accessible without internet connection.
 
 ## Stretch goals/possible enhancements 
 
 - Links
-- Geo-localization (Advice given according to what is available around the user's device)
-- Greeting quote
+- Geo-localization (Advice given taking into consideration the user's current surroundings.)
+- Greeting quote.
