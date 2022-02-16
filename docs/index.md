@@ -44,8 +44,8 @@ Once the process is done and the user is satisfied,they get the opportunity if t
 
 ## Device/external services
 
-- Google Sign in 
-  [https://developers.google.com/identity/sign-in/android/start-integrating]
+- Google Sign in
+  [Google sign_in](https://developers.google.com/identity/sign-in/android/start-integrating)
   - Distinguish between users and offer privacy on shared devices.
   - The app is not accessible without internet connection.
 
