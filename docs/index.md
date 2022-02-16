@@ -1,14 +1,17 @@
 ---
 title: Overview
-description: El8 is an app created to elevate your state of mind. 
+description: El8 is an app created to elevate your state of mind.El8 tracks your mood and offer you concrete advice to help you feel better, one action at a time.
 
-> A journey of a thousand miles begins with a single step
+
  
 menu: Overview
 order: 0
 ---
 
 ## Summary
+
+> A journey of a thousand miles begins with a single step
+
 El8 is an app created to help lift the user's current state of mind and guide them, offering them an action, or advice in order to make them feel better.
 At any given moment the user can check in on the app and enter their current state of mind. According to their entry,the app, then recommends an action geared to help elevate the user's mood.
 The user get the opportunity to either accept and complete the suggestion. Once the acton is completed the user is asked again to rate their current state of mind. If they do not feel better or, if they choose to continue, the same logic is then applied.
