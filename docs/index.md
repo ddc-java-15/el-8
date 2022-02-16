@@ -41,10 +41,13 @@ Once the process is done and the user is satisfied., they get the opportunity if
 
 ## Device/external services
 
-TBD
+- Google Sign in 
+  - https://developers.google.com/identity/sign-in/android/start-integrating
+  - Distinguish between users and offer privacy on shared devices.
+  - The app is not accessible without internet connection.
 
 ## Stretch goals/possible enhancements 
 
 - Links
-- Geolocalization (Advice given according to what is available around the user's device)
+- Geo-localization (Advice given according to what is available around the user's device)
 - Greeting quote
