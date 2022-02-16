@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: "El8 is an app created to elevate your state of mind.El8 tracks your mood and offer you concrete advice to help you feel better, one action at a time." "A journey of a thousand miles begins with a single step"
+description: "El8 is an app created to elevate your state of mind.El8 tracks your mood and offer you concrete advice to help you feel better, one action at a time." 
 menu: Overview
 order: 0
 ---
