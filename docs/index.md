@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: An app created to elevate your state of mind.El8 tracks your mood and offer you concrete advice to help you feel better, one action at a time.
+description: An app created to elevate your state of mind.El8 tracks your mood and offers you concrete advice to help you feel better, one action at a time.
 menu: Overview
 order: 0
 ---
