@@ -11,23 +11,24 @@ import androidx.room.PrimaryKey;
 public class User {
 
   @PrimaryKey(autoGenerate = true)
-  @NonNull
   @ColumnInfo(name = "user_id")
-  @Ignore
   private long id;
 
   @NonNull
-  @ColumnInfo(name = "name")
-  private String name;
+  @ColumnInfo(name = "name",index = true)
+  private String name = "";
 
-  @NonNull
   private int age;
 
   @NonNull
-  private String location;
+  private String location = "";
 
   public long getId() {
     return id;
+  }
+
+  public void setId(long id) {
+    this.id = id;
   }
 
   @NonNull

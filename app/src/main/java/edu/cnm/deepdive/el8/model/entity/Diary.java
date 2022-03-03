@@ -6,26 +6,49 @@ import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
+import java.util.Date;
 
-@Entity(tableName = "diary", foreignKeys = @ForeignKey(entity= User.class, parentColumns ="user_id", childColumns = "diary",onDelete = ForeignKey.CASCADE))
+@Entity(
+    tableName = "diary",
+    foreignKeys = @ForeignKey(
+        entity= User.class,
+        parentColumns ="user_id", childColumns = "user_id",
+        onDelete = ForeignKey.CASCADE))
+
 public class Diary {
 
 
-  @NonNull
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "diary_id")
-  @Ignore
   private long id;
 
   @NonNull
-  private String entry;
+  private Date created = new Date();
 
   @NonNull
-  @Ignore
-  private User user;
+  private String entry= "";
+
+
+
+  @ColumnInfo(name= "user_id",index = true)
+  private long userId;
+
 
   public long getId() {
     return id;
+  }
+
+  public void setId(long id) {
+    this.id = id;
+  }
+
+  @NonNull
+  public Date getCreated() {
+    return created;
+  }
+
+  public void setCreated(@NonNull Date created) {
+    this.created = created;
   }
 
   @NonNull
@@ -37,12 +60,13 @@ public class Diary {
     this.entry = entry;
   }
 
-  @NonNull
-  public User getUser() {
-    return user;
+
+
+  public long getUserId() {
+    return userId;
   }
 
-  public void setUser(@NonNull User user) {
-    this.user = user;
+  public void setUserId(long userId) {
+    this.userId = userId;
   }
 }

@@ -10,27 +10,36 @@ import androidx.room.PrimaryKey;
 
 
 
-@Entity(tableName = "advice", foreignKeys = @ForeignKey (entity = User.class , parentColumns = "user_id", childColumns = "advice",onDelete = ForeignKey.CASCADE))
+@Entity(
+    tableName = "advice",
+    foreignKeys = @ForeignKey (
+        entity = User.class ,
+        parentColumns = "user_id", childColumns = "user_id",
+        onDelete = ForeignKey.CASCADE))
+
 public class Advice {
 
-  @NonNull
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "advice_id")
-  @Ignore
   private long id;
 
-  private String action;
+  private String action = "";
 
-  private String image;
+  private String image = "";
 
+  @ColumnInfo(index = true)
+  private boolean favorite;
 
-  @NonNull
-  @Ignore
-  private User user;
+  @ColumnInfo(name = "user_id",index = true)
+  private long userId;
 
 
   public long getId() {
     return id;
+  }
+
+  public void setId(long id) {
+    this.id = id;
   }
 
   public String getAction() {
@@ -49,12 +58,19 @@ public class Advice {
     this.image = image;
   }
 
-  @NonNull
-  public User getUser() {
-    return user;
+  public boolean isFavorite() {
+    return favorite;
   }
 
-  public void setUser(@NonNull User user) {
-    this.user = user;
+  public void setFavorite(boolean favorite) {
+    this.favorite = favorite;
+  }
+
+  public long getUserId() {
+    return userId;
+  }
+
+  public void setUserId(long userId) {
+    this.userId = userId;
   }
 }

@@ -6,28 +6,51 @@ import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
+import java.util.Date;
 
-@Entity(tableName = "mood_check_in",foreignKeys = @ForeignKey(entity = User.class, parentColumns = "user_id", childColumns = "mood_check_in",onDelete = ForeignKey.CASCADE))
+@Entity(
+    tableName = "mood_check_in",
+    foreignKeys = @ForeignKey(
+        entity = User.class,
+        parentColumns = "user_id", childColumns = "user_id",
+        onDelete = ForeignKey.CASCADE)
+)
 public class MoodCheckIn {
 
-  @NonNull
+
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "mood_check_in_id")
-  @Ignore
   private long id;
 
   @NonNull
+  private Date created = new Date();
+
   private int rating;
 
-  @NonNull
-  private String progressReport;
+
 
   @NonNull
-  @Ignore
-  private User user;
+  @ColumnInfo(name="progress_report")
+  private String progressReport ="";
+
+  @ColumnInfo(name = "user_id",index = true)
+  private long userId;
 
   public long getId() {
     return id;
+  }
+
+  public void setId(long id) {
+    this.id = id;
+  }
+
+  @NonNull
+  public Date getCreated() {
+    return created;
+  }
+
+  public void setCreated(@NonNull Date created) {
+    this.created = created;
   }
 
   public int getRating() {
@@ -47,12 +70,11 @@ public class MoodCheckIn {
     this.progressReport = progressReport;
   }
 
-  @NonNull
-  public User getUser() {
-    return user;
+  public long getUserId() {
+    return userId;
   }
 
-  public void setUser(@NonNull User user) {
-    this.user = user;
+  public void setUserId(long userId) {
+    this.userId = userId;
   }
 }
