@@ -11,12 +11,60 @@
     android:layout_height="wrap_content"
     android:padding="@dimen/half_dynamic_spacing">
 
-    <TextView
+    <ImageButton
+      android:id="@+id/save"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Test text "
+      android:padding="@dimen/half_dynamic_spacing"
+      android:src="@drawable/ic_check"
+      android:background="?android:selectableItemBackgroundBorderless"
+      android:tint="#FF00A000"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:contentDescription="@string/save_label"
+      android:tooltipText="@string/save_label"/>
+
+    <ImageButton
+      android:id="@+id/cancel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/half_dynamic_spacing"
+      android:src="@drawable/ic_close"
+      android:background="?android:selectableItemBackgroundBorderless"
+      android:tint="#FFFF0000"
+      app:layout_constraintTop_toBottomOf="@+id/save"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:contentDescription="@string/cancel_label"
+      android:tooltipText="@string/cancel_label"/>
+
+    <TextView
+      android:id="@+id/rating_label"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/half_dynamic_spacing"
+      android:text="@string/rating_label"
+      android:textStyle="bold"
+      android:labelFor="@id/rating"
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintStart_toStartOf="parent"/>
+
+    <SeekBar
+      android:id="@+id/rating"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/half_dynamic_spacing"
+      android:min="1"
+      android:max="10"
+      android:progress="5"
+      app:layout_constraintEnd_toStartOf="@id/save"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/rating_label"/>
+
+
+
+<!--    TODO add objects for the required properties of a mood check in -->
+
+
   </androidx.constraintlayout.widget.ConstraintLayout>
 
 

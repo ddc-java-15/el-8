@@ -34,7 +34,13 @@ public class MoodCheckInDetailsFragment extends BottomSheetDialogFragment {
       Bundle savedInstanceState) {
     super.onCreateView(inflater, container, savedInstanceState);
     binding = FragmentMoodCheckInDetailsBinding.inflate(inflater, container, false);
-    // TODO Attach listeners to controls
+    binding.save.setOnClickListener((v) -> {
+      //TODO Set properties of Mood from Data entry Objects
+      moodCheckIn.setUserId(1); //FIXME Use a real id here
+      viewModel.save(moodCheckIn);
+      dismiss();
+    });
+    binding.cancel.setOnClickListener((v) -> dismiss());
     return binding.getRoot();
   }
 
