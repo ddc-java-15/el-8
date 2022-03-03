@@ -1,11 +1,13 @@
 package edu.cnm.deepdive.el8.service;
 
 import android.app.Application;
+import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverter;
 import androidx.room.TypeConverters;
+import androidx.sqlite.db.SupportSQLiteDatabase;
 import edu.cnm.deepdive.el8.model.dao.AdviceDao;
 import edu.cnm.deepdive.el8.model.dao.DiaryDao;
 import edu.cnm.deepdive.el8.model.dao.MoodCheckInDao;
@@ -15,6 +17,7 @@ import edu.cnm.deepdive.el8.model.entity.Diary;
 import edu.cnm.deepdive.el8.model.entity.MoodCheckIn;
 import edu.cnm.deepdive.el8.model.entity.User;
 import edu.cnm.deepdive.el8.service.El8Database.Converters;
+import io.reactivex.rxjava3.schedulers.Schedulers;
 import java.util.Date;
 
 @Database(
@@ -48,8 +51,26 @@ public abstract class El8Database extends RoomDatabase {
 
     private static final El8Database INSTANCE = Room
         .databaseBuilder(context, El8Database.class, DB_NAME)
+        .addCallback(new El8Database.Callback())
         .build();
   }
+
+  private static class Callback extends RoomDatabase.Callback {
+
+    @Override
+    public void onCreate(@NonNull SupportSQLiteDatabase db) {
+      super.onCreate(db);
+      User user= new User();
+      user.setName("Test name");
+      getInstance()
+          .getUserDao()
+          .insert(user)
+          .subscribeOn(Schedulers.io())
+          .subscribe();
+    }
+
+  }
+
 
   public static class Converters {
 
