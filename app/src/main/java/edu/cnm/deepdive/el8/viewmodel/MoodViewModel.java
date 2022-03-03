@@ -70,8 +70,14 @@ public class MoodViewModel extends AndroidViewModel implements DefaultLifecycleO
     repository
         .delete(moodCheckIn)
         .subscribe(
-            ()-> {},
-    this :: postThrowable);
+            () -> {
+            },
+            this::postThrowable);
+
+  }
+
+  public void setMoodCheckInId(long id) {
+    moodId.setValue(id);
 
   }
 

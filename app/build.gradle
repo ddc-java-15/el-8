@@ -35,10 +35,6 @@ android {
         }
     }
 
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
 
     //noinspection GroovyAssignabilityCheck
     buildFeatures {
@@ -66,6 +62,7 @@ dependencies {
     implementation 'androidx.fragment:fragment:1.4.1'
     implementation "androidx.navigation:navigation-fragment:$navigationVersion"
     implementation "androidx.navigation:navigation-ui:$navigationVersion"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     // Lifecycle (LiveData and ViewModel) libraries
     def lifecycleVersion = '2.4.1'

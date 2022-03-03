@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/navigation_map">
+
+  <action
+    android:id="@+id/open_details"
+    app:destination="@id/navigation_mood_details">
+
+    <argument
+      android:name="mood_id"
+      app:argType="long"
+      android:defaultValue="0L"/>
+
+  </action>
+  <dialog
+    android:id="@+id/navigation_mood_details"
+    android:name="edu.cnm.deepdive.el8.controller.MoodCheckInDetailsFragment"
+    tools:layout="@layout/fragment_mood_check_in_details">
+
+    <argument
+      android:name="mood_id"
+      app:argType="long"
+      android:defaultValue="0L"/>
+  </dialog>
+</navigation>
