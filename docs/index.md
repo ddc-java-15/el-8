@@ -52,5 +52,5 @@ Once the process is done and the user is satisfied,they get the opportunity if t
 ## Stretch goals/possible enhancements 
 
 - Links
-- Geo-localization (Advice given taking into consideration the user's current surroundings.)
+- Geolocation (Advice given taking into consideration the user's current surroundings.)
 - Greeting quote.
