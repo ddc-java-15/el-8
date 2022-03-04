@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "f10660fd77f2b39e7532e6279f31be3b",
+    "identityHash": "f661907073f9af339c0e9e45d0e9ebe1",
     "entities": [
       {
         "tableName": "user",
@@ -114,7 +114,7 @@
       },
       {
         "tableName": "mood_check_in",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`mood_check_in_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `created` INTEGER NOT NULL, `rating` INTEGER NOT NULL, `progress_report` TEXT NOT NULL, `user_id` INTEGER NOT NULL, FOREIGN KEY(`user_id`) REFERENCES `user`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`mood_check_in_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `created` INTEGER NOT NULL, `rating` INTEGER NOT NULL, `user_id` INTEGER NOT NULL, FOREIGN KEY(`user_id`) REFERENCES `user`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
         "fields": [
           {
             "fieldPath": "id",
@@ -132,12 +132,6 @@
             "fieldPath": "rating",
             "columnName": "rating",
             "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "progressReport",
-            "columnName": "progress_report",
-            "affinity": "TEXT",
             "notNull": true
           },
           {
@@ -257,7 +251,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'f10660fd77f2b39e7532e6279f31be3b')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'f661907073f9af339c0e9e45d0e9ebe1')"
     ]
   }
 }

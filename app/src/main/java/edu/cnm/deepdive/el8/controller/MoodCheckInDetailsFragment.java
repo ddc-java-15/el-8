@@ -1,6 +1,8 @@
 package edu.cnm.deepdive.el8.controller;
 
 import android.os.Bundle;
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -15,7 +17,8 @@ import edu.cnm.deepdive.el8.model.entity.MoodCheckIn;
 import edu.cnm.deepdive.el8.viewmodel.MoodViewModel;
 
 
-public class MoodCheckInDetailsFragment extends BottomSheetDialogFragment {
+public class MoodCheckInDetailsFragment extends BottomSheetDialogFragment implements
+    OnSeekBarChangeListener {
 
   private FragmentMoodCheckInDetailsBinding binding;
   private MoodViewModel viewModel;
@@ -35,13 +38,13 @@ public class MoodCheckInDetailsFragment extends BottomSheetDialogFragment {
     super.onCreateView(inflater, container, savedInstanceState);
     binding = FragmentMoodCheckInDetailsBinding.inflate(inflater, container, false);
     binding.save.setOnClickListener((v) -> {
-      //TODO Set properties of Mood from Data entry Objects
+      moodCheckIn.setRating(binding.rating.getProgress());
       moodCheckIn.setUserId(1); //FIXME Use a real id here
       viewModel.save(moodCheckIn);
       dismiss();
     });
     binding.cancel.setOnClickListener((v) -> dismiss());
-
+    binding.rating.setOnSeekBarChangeListener(this);
     return binding.getRoot();
   }
 
@@ -59,6 +62,23 @@ public class MoodCheckInDetailsFragment extends BottomSheetDialogFragment {
       viewModel.setMoodCheckInId(moodId);
     } else {
       moodCheckIn = new MoodCheckIn();
+      binding.ratingValue.setText(String.valueOf(binding.rating.getProgress()));
+
     }
+  }
+
+  @Override
+  public void onProgressChanged(SeekBar seekBar, int value, boolean byUser) {
+    binding.ratingValue.setText(String.valueOf(value));
+  }
+
+  @Override
+  public void onStartTrackingTouch(SeekBar seekBar) {
+// intentionnally ignored
+  }
+
+  @Override
+  public void onStopTrackingTouch(SeekBar seekBar) {
+// intentionnally ignored
   }
 }

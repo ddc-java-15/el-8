@@ -29,10 +29,6 @@ public class MoodCheckIn {
 
 
 
-  @NonNull
-  @ColumnInfo(name="progress_report")
-  private String progressReport ="";
-
   @ColumnInfo(name = "user_id",index = true)
   private long userId;
 
@@ -61,14 +57,7 @@ public class MoodCheckIn {
     this.rating = rating;
   }
 
-  @NonNull
-  public String getProgressReport() {
-    return progressReport;
-  }
 
-  public void setProgressReport(@NonNull String progressReport) {
-    this.progressReport = progressReport;
-  }
 
   public long getUserId() {
     return userId;

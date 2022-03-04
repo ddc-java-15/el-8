@@ -8,7 +8,9 @@ import edu.cnm.deepdive.el8.model.entity.User;
 import io.reactivex.rxjava3.core.Completable;
 import io.reactivex.rxjava3.core.Single;
 import io.reactivex.rxjava3.schedulers.Schedulers;
+import java.util.Date;
 import java.util.List;
+import java.util.concurrent.Callable;
 
 public class MoodCheckInRepository {
 
@@ -38,8 +40,11 @@ public class MoodCheckInRepository {
 
     return (
         (moodCheckIn.getId() == 0)
-            ? moodCheckInDao
-            .insert(moodCheckIn)
+            ? Single.fromCallable(() -> {
+              moodCheckIn.setCreated(new Date());
+              return moodCheckIn;
+            })
+            .flatMap(moodCheckInDao::insert)
             .map((id) -> {
               moodCheckIn.setId(id);
               return moodCheckIn;
