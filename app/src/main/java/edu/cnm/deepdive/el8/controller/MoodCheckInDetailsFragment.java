@@ -41,6 +41,7 @@ public class MoodCheckInDetailsFragment extends BottomSheetDialogFragment {
       dismiss();
     });
     binding.cancel.setOnClickListener((v) -> dismiss());
+
     return binding.getRoot();
   }
 
