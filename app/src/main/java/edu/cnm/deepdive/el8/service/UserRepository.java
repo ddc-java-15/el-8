@@ -2,7 +2,6 @@ package edu.cnm.deepdive.el8.service;
 
 import android.content.Context;
 import androidx.lifecycle.LiveData;
-import androidx.room.Database;
 import edu.cnm.deepdive.el8.model.dao.UserDao;
 import edu.cnm.deepdive.el8.model.entity.User;
 import io.reactivex.rxjava3.core.Completable;
@@ -38,15 +37,15 @@ public class UserRepository {
 
     return (
         (user.getId() == 0)
-        ? userDao
+            ? userDao
             .insert(user)
             .map((id) -> {
               user.setId(id);
               return user;
             })
-        : userDao
-            .update(user)
-            .map((count) -> user)
+            : userDao
+                .update(user)
+                .map((count) -> user)
     )
         .subscribeOn(Schedulers.io());
 
@@ -56,10 +55,10 @@ public class UserRepository {
 
     return (
         (user.getId() == 0)
-        ? Completable.complete()
-        : userDao
-            .delete(user)
-            .ignoreElement()
+            ? Completable.complete()
+            : userDao
+                .delete(user)
+                .ignoreElement()
     )
         .subscribeOn(Schedulers.io());
   }

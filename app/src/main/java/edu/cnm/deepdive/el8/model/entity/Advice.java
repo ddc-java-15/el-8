@@ -33,7 +33,6 @@ public class Advice {
   @ColumnInfo(name = "user_id",index = true)
   private long userId;
 
-
   public long getId() {
     return id;
   }

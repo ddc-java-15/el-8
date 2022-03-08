@@ -28,8 +28,6 @@ public class Diary {
   @NonNull
   private String entry= "";
 
-
-
   @ColumnInfo(name= "user_id",index = true)
   private long userId;
 
@@ -59,8 +57,6 @@ public class Diary {
   public void setEntry(@NonNull String entry) {
     this.entry = entry;
   }
-
-
 
   public long getUserId() {
     return userId;

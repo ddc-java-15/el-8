@@ -39,7 +39,7 @@ public abstract class El8Database extends RoomDatabase {
     return InstanceHolder.INSTANCE;
   }
 
-  public  abstract UserDao getUserDao();
+  public abstract UserDao getUserDao();
 
   public abstract AdviceDao getAdviceDao();
 
@@ -60,7 +60,7 @@ public abstract class El8Database extends RoomDatabase {
     @Override
     public void onCreate(@NonNull SupportSQLiteDatabase db) {
       super.onCreate(db);
-      User user= new User();
+      User user = new User();
       user.setName("Test name");
       getInstance()
           .getUserDao()
@@ -71,17 +71,16 @@ public abstract class El8Database extends RoomDatabase {
 
   }
 
-
   public static class Converters {
 
     @TypeConverter
     public static Long toLong(Date value) {
-      return (value != null) ? value.getTime() : null ;
+      return (value != null) ? value.getTime() : null;
     }
 
     @TypeConverter
     public static Date toDate(Long value) {
-      return (value != null) ? new Date(value) : null ;
+      return (value != null) ? new Date(value) : null;
     }
   }
 }

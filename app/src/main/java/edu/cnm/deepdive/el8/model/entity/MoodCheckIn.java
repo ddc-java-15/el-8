@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
-import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 import java.util.Date;
 
@@ -26,8 +25,6 @@ public class MoodCheckIn {
   private Date created = new Date();
 
   private int rating;
-
-
 
   @ColumnInfo(name = "user_id",index = true)
   private long userId;
@@ -57,8 +54,6 @@ public class MoodCheckIn {
     this.rating = rating;
   }
 
-
-
   public long getUserId() {
     return userId;
   }
@@ -66,4 +61,6 @@ public class MoodCheckIn {
   public void setUserId(long userId) {
     this.userId = userId;
   }
+
+
 }
