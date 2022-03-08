@@ -74,11 +74,11 @@ public class MoodCheckInDetailsFragment extends BottomSheetDialogFragment implem
 
   @Override
   public void onStartTrackingTouch(SeekBar seekBar) {
-// intentionnally ignored
+// intentionally ignored
   }
 
   @Override
   public void onStopTrackingTouch(SeekBar seekBar) {
-// intentionnally ignored
+// intentionally ignored
   }
 }

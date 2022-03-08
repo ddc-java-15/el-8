@@ -6,7 +6,7 @@
   <string name="save_label">Save</string>
   <string name="cancel_label">cancel_label</string>
   <string name="rating_label">Mood rating</string>
-  <string name="date_value">Date</string>
-  <string name="mood_rating_value">Mood Rating</string>
+  <string name="date_value">Date:</string>
+  <string name="mood_rating_value">Mood Rating:</string>
   <string name="progress_report_value">Your progress report</string>
 </resources>

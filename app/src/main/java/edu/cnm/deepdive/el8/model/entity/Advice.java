@@ -73,4 +73,5 @@ public class Advice {
   public void setUserId(long userId) {
     this.userId = userId;
   }
+
 }

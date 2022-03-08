@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
-  android:layout_height="match_parent"
+  android:layout_height="wrap_content"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:padding="@dimen/half_dynamic_spacing"
   xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-  <androidx.constraintlayout.widget.Guideline
-    android:id="@+id/label_vertical_guideline"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    app:layout_constraintGuide_percent="0.1"/>
-  <androidx.constraintlayout.widget.Barrier
-    android:id="@+id/value_barrier"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:barrierDirection="end"
-    app:barrierMargin="8dp"
-    app:constraint_referenced_ids="created_label,rating_label2"/>
 
 
   <TextView
@@ -27,20 +16,39 @@
     android:layout_margin="@dimen/half_dynamic_spacing"
     android:text="@string/date_value"
     android:textStyle="bold"
-    app:layout_constraintStart_toStartOf="@id/label_vertical_guideline"
-    app:layout_constraintBottom_toTopOf="@id/rating_label2"/>
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
 
   <TextView
-    android:id="@+id/rating_label2"
+    android:id="@+id/created"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_static_spacing"
+    app:layout_constraintStart_toEndOf="@id/created_label"
+    app:layout_constraintBaseline_toBaselineOf="@id/created_label"
+    tools:text="3/27/22"/>
+
+
+
+  <TextView
+    android:id="@+id/rating_label"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/half_dynamic_spacing"
     android:text="@string/mood_rating_value"
     android:textStyle="bold"
-    app:layout_constraintStart_toStartOf="@id/label_vertical_guideline"
+    app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/created_label"
-    app:layout_constraintStart_toEndOf="parent"
     />
+
+  <TextView
+    android:id="@+id/rating"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_static_spacing"
+    app:layout_constraintStart_toEndOf="@id/rating_label"
+    app:layout_constraintBaseline_toBaselineOf="@id/rating_label"
+    tools:text="10"/>
 
 
 

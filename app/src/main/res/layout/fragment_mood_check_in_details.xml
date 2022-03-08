@@ -44,7 +44,7 @@
       android:layout_margin="@dimen/half_dynamic_spacing"
       android:text="@string/rating_label"
       android:textStyle="bold"
-      android:labelFor="@id/rating_label2"
+      android:labelFor="@id/rating_label"
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintStart_toStartOf="parent"/>
 
@@ -53,8 +53,6 @@
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_margin="@dimen/half_static_spacing"
-      android:background="?android:selectableItemBackgroundBorderless"
-      android:tickMarkTint="#FFC0CB"
       android:min="1"
       android:max="10"
       android:progress="5"

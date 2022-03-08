@@ -35,10 +35,10 @@ public interface UserDao {
   Single<Integer> delete(User user);
 
   @Delete
-  Single<Integer> delete(User... user);
+  Single<Integer> delete(User... users);
 
   @Delete
-  Single<Integer> delete(Collection<User> user);
+  Single<Integer> delete(Collection<User> users);
 
   @Query("SELECT * FROM user WHERE user_id = :id")
   LiveData<User> select(long id);
