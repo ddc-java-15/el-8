@@ -34,7 +34,7 @@ order: 30
 
 - [`MoodViewModel`](https://github.com/ddc-java-15/el-8/blob/main/app/src/main/java/edu/cnm/deepdive/el8/viewmodel/MoodViewModel.java)
 
-## UI Controller
+## UI Controller Class
 
 - [`HomeFragment`](https://github.com/ddc-java-15/el-8/blob/main/app/src/main/java/edu/cnm/deepdive/el8/controller/HomeFragment.java)
 - [`MainActivity`](https://github.com/ddc-java-15/el-8/blob/main/app/src/main/java/edu/cnm/deepdive/el8/controller/MainActivity.java)
