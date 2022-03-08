@@ -48,6 +48,8 @@ Once the process is done and the user is satisfied,they get the opportunity if t
   [Google sign_in](https://developers.google.com/identity/sign-in/android/start-integrating)
   - Distinguish between users and offer privacy on shared devices.
   - The app is not accessible without internet connection.
+- [Google Maps Geolocation](https://developers.google.com/maps/documentation/geolocation/overview)
+  - The application will use Geolocation to populate a map with the volunteering opportunities available.
   
 ## Stretch goals/possible enhancements 
 
