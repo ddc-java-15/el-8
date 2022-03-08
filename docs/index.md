@@ -49,7 +49,7 @@ Once the process is done and the user is satisfied,they get the opportunity if t
   - Distinguish between users and offer privacy on shared devices.
   - The app is not accessible without internet connection.
 - [Google Maps Geolocation](https://developers.google.com/maps/documentation/geolocation/overview)
-  - The application will use Geolocation to populate a map with the volunteering opportunities available.
+  - The application will potentially use Geolocation to provide advice according to the user's current surroundings.
   
 ## Stretch goals/possible enhancements 
 
