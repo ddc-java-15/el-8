@@ -9,4 +9,5 @@
   <string name="date_value">Date:</string>
   <string name="mood_rating_value">Mood Rating:</string>
   <string name="progress_report_value">Your progress report</string>
+  <string name="completed_text">completed</string>
 </resources>

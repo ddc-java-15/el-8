@@ -7,12 +7,16 @@ import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import edu.cnm.deepdive.el8.R;
 import edu.cnm.deepdive.el8.databinding.ActivityMainBinding;
+import edu.cnm.deepdive.el8.viewmodel.AdviceViewModel;
+import edu.cnm.deepdive.el8.viewmodel.DiaryViewModel;
 import edu.cnm.deepdive.el8.viewmodel.MoodViewModel;
 
 public class MainActivity extends AppCompatActivity {
 
   private ActivityMainBinding binding;
   private MoodViewModel viewModel;
+  private AdviceViewModel adviceViewModel;
+  private DiaryViewModel diaryViewModel;
 
 
   @Override
@@ -27,4 +31,6 @@ public class MainActivity extends AppCompatActivity {
 
 
   }
+
+
 }

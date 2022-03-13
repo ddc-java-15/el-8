@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:weightSum="10">
+
+
+
+  <TextView
+    android:id="@+id/date"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:text="Today is March 23rd 2022"/>
+
+  <TextView
+    android:id="@+id/diary_welcome"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:layout_gravity="center"
+    android:textAlignment="center"
+    android:text="Welcome to your diary !"/>
+
+
+  <EditText
+    android:id="@+id/diary_input"
+    android:layout_margin="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_weight="8"
+    android:background="@drawable/edit_text_layout"
+    android:inputType="textLongMessage"
+    android:padding="@dimen/half_dynamic_spacing"
+    android:maxLines="100"
+    />
+
+</LinearLayout>
