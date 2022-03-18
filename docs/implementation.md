@@ -23,7 +23,7 @@ order: 30
 
 - [`Database`](https://github.com/ddc-java-15/el-8/blob/main/app/src/main/java/edu/cnm/deepdive/el8/service/El8Database.java)
 
-## Repository Classes
+## Repository Interfaces
 
 - [`User`](https://github.com/ddc-java-15/el-8/blob/main/app/src/main/java/edu/cnm/deepdive/el8/service/UserRepository.java)
 - [`Mood check-in`](https://github.com/ddc-java-15/el-8/blob/main/app/src/main/java/edu/cnm/deepdive/el8/service/MoodCheckInRepository.java)

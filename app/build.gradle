@@ -98,6 +98,9 @@ dependencies {
     // OkHttp logging dependency
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
 
+    // Google sign in library
+    implementation 'com.google.android.gms:play-services-auth:20.1.0'
+
     // Stetho (inspection) dependency
     implementation 'com.facebook.stetho:stetho:1.6.0'
 

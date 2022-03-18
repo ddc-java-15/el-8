@@ -53,4 +53,4 @@ CREATE INDEX IF NOT EXISTS `index_advice_favorite` ON `advice` (`favorite`);
 CREATE INDEX IF NOT EXISTS `index_advice_user_id` ON `advice` (`user_id`);
 
 ```
-[`ddl.sql`](ddl.sql)
+[`ddl.sql`](sql/ddl.sql)

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item
+    android:id="@+id/navigation_home"
+    android:icon="@drawable/outline_home_24"
+    android:title="dashboard_screen"/>
+
+  <item
+    android:id="@+id/navigation_check_in"
+    android:icon="@drawable/outline_mood_24"
+    android:title="mood_check_in_shortcut"/>
+
+  <item
+    android:id="@+id/navigation_diary"
+    android:icon="@drawable/outline_rate_review_24"
+    android:title="diary_shortcut"/>
+
+  <item
+    android:id="@+id/navigation_favorite"
+    android:icon="@drawable/outline_favorite_24"
+    android:title="favorite_shortcut"/>
+
+</menu>

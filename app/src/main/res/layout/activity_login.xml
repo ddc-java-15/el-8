@@ -19,7 +19,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="100dp"
-    android:layout_above="@id/sign_in_button"
+    android:layout_above="@id/sign_in"
     android:layout_alignParentTop="true"
     android:layout_centerInParent="true"
     android:text="WELCOME BACK TO EL8"
@@ -29,8 +29,8 @@
 
 
 
-  <Button
-    android:id="@+id/sign_in_button"
+  <com.google.android.gms.common.SignInButton
+    android:id="@+id/sign_in"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Sign in"
