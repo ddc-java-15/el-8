@@ -30,7 +30,8 @@ public class HomeFragment extends Fragment {
     binding.create.setOnClickListener((v) -> {
       Navigation
           .findNavController(binding.getRoot())
-          .navigate(HomeFragmentDirections.openDetails());
+   //       .navigate(HomeFragmentDirections.openDetails());
+          .navigate(HomeFragmentDirections.showAdvice());
     });
     return binding.getRoot();
   }

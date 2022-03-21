@@ -13,5 +13,10 @@
   <string name="login_failure_message">Unable to sign in with provided credentials</string>
   <string name="display_name_format">Signed in a %s</string>
   <string name="sign_out">Sign out</string>
+  <string name="dashboard_title">Dashboard</string>
+  <string name="mood_check_in_title">Moods</string>
+  <string name="diary_title">Diary</string>
+  <string name="favorite_title">Favorites</string>
+  <string name="advice_title">Advice</string>
 
 </resources>

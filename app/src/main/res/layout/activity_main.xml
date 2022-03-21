@@ -27,7 +27,7 @@
     app:defaultNavHost="true"
     app:navGraph="@navigation/navigation_map"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/nav_view"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"/>
 

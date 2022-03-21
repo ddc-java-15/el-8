@@ -1,6 +1,5 @@
 package edu.cnm.deepdive.el8.controller;
 
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,24 +7,25 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import edu.cnm.deepdive.el8.databinding.FragmentAdviceBinding;
+import edu.cnm.deepdive.el8.databinding.FragmentDiaryBinding;
 
-public class AdviceFragment extends Fragment {
+public class DiaryFragment extends Fragment {
 
-  private FragmentAdviceBinding binding;
+
+  private FragmentDiaryBinding binding;
 
 
   @Nullable
   @Override
   public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
       @Nullable Bundle savedInstanceState) {
-    binding = FragmentAdviceBinding.inflate(inflater, container, false);
-    return binding.getRoot();
+    binding = FragmentDiaryBinding.inflate(inflater, container, false);
+    // TODO Attach listeners to the controls.
+    return  binding.getRoot();
 
   }
 
-  // TODO override onviewcreated and connect to a viewmodel.
-
+  // TODO override on view created and attach view model.
 
   @Override
   public void onDestroyView() {

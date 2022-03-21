@@ -64,6 +64,7 @@ public class MoodCheckInDetailsFragment extends BottomSheetDialogFragment implem
       moodCheckIn = new MoodCheckIn();
       binding.ratingValue.setText(String.valueOf(binding.rating.getProgress()));
 
+
     }
   }
 

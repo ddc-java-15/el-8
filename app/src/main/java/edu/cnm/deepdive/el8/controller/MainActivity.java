@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 import edu.cnm.deepdive.el8.R;
 import edu.cnm.deepdive.el8.databinding.ActivityMainBinding;
 import edu.cnm.deepdive.el8.viewmodel.AdviceViewModel;
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
   private AdviceViewModel adviceViewModel;
   private DiaryViewModel diaryViewModel;
   private LoginViewModel loginViewModel;
+  private NavController navController;
+  private AppBarConfiguration appBarConfiguration;
 
 
   @Override
@@ -31,9 +35,13 @@ public class MainActivity extends AppCompatActivity {
     binding = ActivityMainBinding.inflate(getLayoutInflater());
     viewModel = new ViewModelProvider(this).get(MoodViewModel.class);
     setContentView(binding.getRoot());
-    NavController navController =((NavHostFragment) getSupportFragmentManager()
+    navController = ((NavHostFragment) getSupportFragmentManager()
         .findFragmentById(R.id.nav_host_fragment))
         .getNavController();
+    appBarConfiguration = new AppBarConfiguration.Builder(R.id.navigation_home, R.id.navigation_diary, R.id.navigation_favorite)
+        .build();
+    NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+    NavigationUI.setupWithNavController(binding.navView, navController);
 
     // attach the loginviewmodel
     loginViewModel = new ViewModelProvider(this).get(LoginViewModel.class);
@@ -69,5 +77,10 @@ public class MainActivity extends AppCompatActivity {
       handled = super.onOptionsItemSelected(item);
     }
     return handled;
+  }
+
+  @Override
+  public boolean onSupportNavigateUp() {
+    return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp();
   }
 }

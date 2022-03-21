@@ -8,6 +8,7 @@
   <fragment
     android:id="@+id/navigation_home"
     android:name="edu.cnm.deepdive.el8.controller.HomeFragment"
+    android:label="@string/dashboard_title"
     tools:layout="@layout/fragment_home">
     <action
       android:id="@+id/open_details"
@@ -19,7 +20,30 @@
         android:defaultValue="0L"/>
 
     </action>
+
+    <action
+      android:id="@+id/show_advice"
+      app:destination="@id/navigation_advice"/>
+
   </fragment>
+
+  <fragment
+    android:id="@+id/navigation_diary"
+    android:name="edu.cnm.deepdive.el8.controller.DiaryFragment"
+    android:label="@string/diary_title"
+    tools:layout="@layout/fragment_diary"/>
+
+  <fragment
+    android:id="@+id/navigation_advice"
+    android:name="edu.cnm.deepdive.el8.controller.AdviceFragment"
+    android:label="@string/advice_title"
+    tools:layout="@layout/fragment_advice"/>
+
+  <fragment
+    android:id="@+id/navigation_favorite"
+    android:name="edu.cnm.deepdive.el8.controller.FavoritesFragment"
+    android:label="@string/favorite_title"
+    tools:layout="@layout/fragment_favorites"/>
 
   <dialog
     android:id="@+id/navigation_mood_details"
@@ -31,7 +55,6 @@
       app:argType="long"
       android:defaultValue="0L"/>
   </dialog>
-
 
 
 </navigation>
