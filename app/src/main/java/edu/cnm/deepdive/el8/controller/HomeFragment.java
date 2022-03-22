@@ -21,6 +21,7 @@ public class HomeFragment extends Fragment {
 
 
 
+
   @Nullable
   @Override
   public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -30,8 +31,9 @@ public class HomeFragment extends Fragment {
     binding.create.setOnClickListener((v) -> {
       Navigation
           .findNavController(binding.getRoot())
-   //       .navigate(HomeFragmentDirections.openDetails());
-          .navigate(HomeFragmentDirections.showAdvice());
+         .navigate(HomeFragmentDirections.openDetails());
+          //  .navigate(HomeFragmentDirections.showAdvice());
+
     });
     return binding.getRoot();
   }

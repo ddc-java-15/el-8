@@ -43,6 +43,7 @@
     android:alignmentMode="alignMargins">
 
   <androidx.cardview.widget.CardView
+    android:id="@+id/mood_dashboard"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_columnWeight="1"
@@ -60,11 +61,11 @@
     android:gravity="center"/>
 
 
+    <ImageView
 
-  <ImageView
-    android:src="@drawable/outline_mood_24"
-    android:layout_width="80dp"
-    android:layout_height="80dp"/>
+      android:layout_width="79dp"
+      android:layout_height="80dp"
+      android:src="@drawable/outline_mood_24"/>
 
   <TextView
     android:layout_width="wrap_content"
@@ -75,6 +76,7 @@
 
   </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
+      android:id="@+id/favorites_dashboard"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_columnWeight="1"
@@ -109,6 +111,7 @@
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
+      android:id="@+id/diary_dashboard"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_columnWeight="1"
@@ -132,7 +135,7 @@
         android:src="@drawable/outline_rate_review_24"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        />
+        android:contentDescription="TODO"/>
 
       <TextView
         android:layout_width="wrap_content"

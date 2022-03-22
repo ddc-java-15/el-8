@@ -21,9 +21,7 @@
 
     </action>
 
-    <action
-      android:id="@+id/show_advice"
-      app:destination="@id/navigation_advice"/>
+
 
   </fragment>
 
@@ -38,12 +36,29 @@
     android:name="edu.cnm.deepdive.el8.controller.AdviceFragment"
     android:label="@string/advice_title"
     tools:layout="@layout/fragment_advice"/>
+    <action
+    android:id="@+id/show_diary"
+    app:destination="@id/navigation_diary"/>
+
 
   <fragment
     android:id="@+id/navigation_favorite"
     android:name="edu.cnm.deepdive.el8.controller.FavoritesFragment"
     android:label="@string/favorite_title"
     tools:layout="@layout/fragment_favorites"/>
+
+  <fragment
+    android:id="@+id/dashboard_frag"
+    android:name="edu.cnm.deepdive.el8.controller.DashBoardFragment"
+    tools:layout="@layout/fragment_dashboard"/>
+  <action
+    android:id="@+id/show_moods_dashboard"
+    app:destination="@id/navigation_mood_details"/>
+
+  <action
+    android:id="@+id/show_favorites_dashboard"
+    app:destination="@id/navigation_favorite"/>
+
 
   <dialog
     android:id="@+id/navigation_mood_details"

@@ -5,9 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 import edu.cnm.deepdive.el8.R;
 import edu.cnm.deepdive.el8.adapter.DashboardAdapter.Holder;
 
@@ -52,7 +50,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<Holder> {
   @Override
   public Holder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
     View view = LayoutInflater.from(viewGroup.getContext())
-        .inflate(R.layout.dashboard, viewGroup, false);
+        .inflate(R.layout.fragment_dashboard, viewGroup, false);
     return new Holder(view);
   }
 
@@ -78,7 +76,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<Holder> {
 
     Holder(View itemView) {
       super(itemView);
-//      itemImage = itemView.findViewById(R.id.);
+ //       itemImage = itemView.findViewById(R.id.it);
 //      itemTitle = itemView.findViewById(R.id.item_title);
 //      itemDetail= itemView.findViewById(R.id.item_detail);
 
