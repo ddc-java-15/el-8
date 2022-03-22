@@ -7,12 +7,16 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import edu.cnm.deepdive.el8.databinding.FragmentDiaryBinding;
+import edu.cnm.deepdive.el8.viewmodel.AdviceViewModel;
+import edu.cnm.deepdive.el8.viewmodel.DiaryViewModel;
 
 public class DiaryFragment extends Fragment {
 
 
   private FragmentDiaryBinding binding;
+  private DiaryViewModel viewModel;
 
 
   @Nullable
@@ -26,6 +30,14 @@ public class DiaryFragment extends Fragment {
   }
 
   // TODO override on view created and attach view model.
+
+  @Override
+  public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    super.onViewCreated(view, savedInstanceState);
+    viewModel = new ViewModelProvider(this).get(DiaryViewModel.class);
+
+
+  }
 
   @Override
   public void onDestroyView() {

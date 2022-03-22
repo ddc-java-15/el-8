@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     navController = ((NavHostFragment) getSupportFragmentManager()
         .findFragmentById(R.id.nav_host_fragment))
         .getNavController();
-    appBarConfiguration = new AppBarConfiguration.Builder(R.id.navigation_home, R.id.navigation_diary, R.id.navigation_favorite)
+    appBarConfiguration = new AppBarConfiguration.Builder(R.id.navigation_home, R.id.navigation_diary, R.id.navigation_favorite, R.id.dashboard_frag)
         .build();
     NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
     NavigationUI.setupWithNavController(binding.navView, navController);

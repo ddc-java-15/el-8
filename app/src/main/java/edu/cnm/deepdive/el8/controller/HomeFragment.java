@@ -17,7 +17,7 @@ public class HomeFragment extends Fragment {
 
 
   private FragmentHomeBinding binding;
-  private MoodViewModel viewModel;
+ // private MoodViewModel viewModel;
 
 
 
@@ -28,17 +28,28 @@ public class HomeFragment extends Fragment {
       @Nullable Bundle savedInstanceState) {
     super.onCreateView(inflater, container, savedInstanceState);
     binding = FragmentHomeBinding.inflate(inflater, container, false);
-    binding.create.setOnClickListener((v) -> {
-      Navigation
-          .findNavController(binding.getRoot())
-         .navigate(HomeFragmentDirections.openDetails());
-          //  .navigate(HomeFragmentDirections.showAdvice());
+    binding.moodDashboard.setOnClickListener((view) ->
+        Navigation
+            .findNavController(binding.getRoot())
+            .navigate(AdviceFragmentDirections.showMoodsDashboard()));
+    binding.favoritesDashboard.setOnClickListener((view) ->
+        Navigation
+            .findNavController(binding.getRoot())
+            .navigate(AdviceFragmentDirections.showFavoritesDashboard()));
 
-    });
+
+  //  binding.create.setOnClickListener((v) -> {
+   //   Navigation
+    //      .findNavController(binding.getRoot())
+        // .navigate(HomeFragmentDirections.openDetails());
+            //.navigate(HomeFragmentDirections.showAdvice());
+   //       .navigate(HomeFragmentDirections.test());
+
+ //   });
     return binding.getRoot();
   }
 
-  @Override
+ /* @Override
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
 
@@ -50,4 +61,6 @@ public class HomeFragment extends Fragment {
           binding.checkIns.setAdapter(adapter);
         });
   }
+
+  */
 }

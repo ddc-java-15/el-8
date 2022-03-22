@@ -18,10 +18,10 @@
         android:name="mood_id"
         app:argType="long"
         android:defaultValue="0L"/>
-
     </action>
-
-
+    <action
+      android:id="@+id/test"
+      app:destination="@id/dashboard_frag"/>
 
   </fragment>
 
@@ -39,6 +39,9 @@
     <action
     android:id="@+id/show_diary"
     app:destination="@id/navigation_diary"/>
+  <fragment
+    android:id="@+id/navigation_mood_check_in_details"
+    android:name="edu.cnm.deepdive.el8.controller.MoodCheckInDetailsFragment"/>
 
 
   <fragment

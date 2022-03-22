@@ -28,6 +28,8 @@ public class FavoritesFragment extends Fragment {
   // TODO override onviewcreated and attach to viewmodels
 
 
+
+
   @Override
   public void onDestroyView() {
     binding = null;
