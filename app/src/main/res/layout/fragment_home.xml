@@ -73,7 +73,7 @@
 
             android:layout_width="79dp"
             android:layout_height="80dp"
-            android:src="@drawable/outline_mood_24"/>
+            android:src="@drawable/mood"/>
 
           <TextView
             android:layout_width="wrap_content"
@@ -188,6 +188,8 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+          android:id="@+id/advice_dashboard"
+
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_columnWeight="1"
@@ -208,7 +210,7 @@
 
 
           <ImageView
-            android:src="@drawable/outline_self_improvement_24"
+            android:src="@drawable/meditation"
             android:layout_width="80dp"
             android:layout_height="80dp"/>
 

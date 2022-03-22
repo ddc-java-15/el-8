@@ -8,20 +8,19 @@
   <fragment
     android:id="@+id/navigation_home"
     android:name="edu.cnm.deepdive.el8.controller.HomeFragment"
-    android:label="@string/dashboard_title"
+    android:label="@string/home_title"
     tools:layout="@layout/fragment_home">
-    <action
-      android:id="@+id/open_details"
-      app:destination="@id/navigation_mood_details">
 
-      <argument
-        android:name="mood_id"
-        app:argType="long"
-        android:defaultValue="0L"/>
-    </action>
+
     <action
-      android:id="@+id/test"
-      app:destination="@id/dashboard_frag"/>
+      android:id="@+id/show_moods_dashboard"
+      app:destination="@id/navigation_mood"/>
+    <action
+      android:id="@+id/show_favorites_dashboard"
+      app:destination="@id/navigation_favorite"/>
+    <action
+      android:id="@+id/show_advice"
+      app:destination="@id/navigation_advice"/>
 
   </fragment>
 
@@ -35,13 +34,40 @@
     android:id="@+id/navigation_advice"
     android:name="edu.cnm.deepdive.el8.controller.AdviceFragment"
     android:label="@string/advice_title"
-    tools:layout="@layout/fragment_advice"/>
+    tools:layout="@layout/fragment_advice">
     <action
-    android:id="@+id/show_diary"
-    app:destination="@id/navigation_diary"/>
+      android:id="@+id/show_diary"
+      app:destination="@id/navigation_diary"/>
+  </fragment>
+
   <fragment
     android:id="@+id/navigation_mood_check_in_details"
     android:name="edu.cnm.deepdive.el8.controller.MoodCheckInDetailsFragment"/>
+
+
+<fragment
+  android:id="@+id/navigation_mood"
+  android:label="Mood"
+  tools:layout="@layout/fragment_mood"
+  android:name="edu.cnm.deepdive.el8.controller.MoodFragment"/>
+
+  <action
+    android:id="@+id/open_details"
+    app:destination="@id/navigation_mood_check_in_details"/>
+  <dialog
+    android:id="@+id/navigation_mood_details"
+    android:name="edu.cnm.deepdive.el8.controller.MoodCheckInDetailsFragment"
+    tools:layout="@layout/fragment_mood_check_in_details">
+    <argument
+      android:name="mood_id"
+      app:argType="long"
+      android:defaultValue="0L"/>
+  </dialog>
+
+
+  <action
+    android:id="@+id/show_advice"
+    app:destination="@id/navigation_advice"/>
 
 
   <fragment
@@ -50,29 +76,6 @@
     android:label="@string/favorite_title"
     tools:layout="@layout/fragment_favorites"/>
 
-  <fragment
-    android:id="@+id/dashboard_frag"
-    android:name="edu.cnm.deepdive.el8.controller.DashBoardFragment"
-    tools:layout="@layout/fragment_dashboard"/>
-  <action
-    android:id="@+id/show_moods_dashboard"
-    app:destination="@id/navigation_mood_details"/>
-
-  <action
-    android:id="@+id/show_favorites_dashboard"
-    app:destination="@id/navigation_favorite"/>
-
-
-  <dialog
-    android:id="@+id/navigation_mood_details"
-    android:name="edu.cnm.deepdive.el8.controller.MoodCheckInDetailsFragment"
-    tools:layout="@layout/fragment_mood_check_in_details">
-
-    <argument
-      android:name="mood_id"
-      app:argType="long"
-      android:defaultValue="0L"/>
-  </dialog>
 
 
 </navigation>

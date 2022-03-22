@@ -24,15 +24,15 @@ public class DashBoardFragment extends Fragment {
       @Nullable Bundle savedInstanceState) {
 
     binding = FragmentDashboardBinding.inflate(inflater, container, false);
-    binding.moodDashboard.setOnClickListener((view) ->
+ /*   binding.moodDashboard.setOnClickListener((view) ->
         Navigation
             .findNavController(binding.getRoot())
-            .navigate(AdviceFragmentDirections.showMoodsDashboard()));
+            .navigate(FragmentDirections.showMoodsDashboard()));
     binding.favoritesDashboard.setOnClickListener((view) ->
         Navigation
             .findNavController(binding.getRoot())
             .navigate(AdviceFragmentDirections.showFavoritesDashboard()));
-
+*/
     return binding.getRoot();
   }
 

@@ -33,12 +33,13 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     binding = ActivityMainBinding.inflate(getLayoutInflater());
-    viewModel = new ViewModelProvider(this).get(MoodViewModel.class);
+ //   viewModel = new ViewModelProvider(this).get(MoodViewModel.class);
+
     setContentView(binding.getRoot());
     navController = ((NavHostFragment) getSupportFragmentManager()
         .findFragmentById(R.id.nav_host_fragment))
         .getNavController();
-    appBarConfiguration = new AppBarConfiguration.Builder(R.id.navigation_home, R.id.navigation_diary, R.id.navigation_favorite, R.id.dashboard_frag)
+    appBarConfiguration = new AppBarConfiguration.Builder(R.id.navigation_home, R.id.navigation_mood, R.id.navigation_diary, R.id.navigation_favorite)
         .build();
     NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
     NavigationUI.setupWithNavController(binding.navView, navController);

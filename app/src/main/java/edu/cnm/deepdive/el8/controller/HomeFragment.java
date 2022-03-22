@@ -31,21 +31,25 @@ public class HomeFragment extends Fragment {
     binding.moodDashboard.setOnClickListener((view) ->
         Navigation
             .findNavController(binding.getRoot())
-            .navigate(AdviceFragmentDirections.showMoodsDashboard()));
+            .navigate(HomeFragmentDirections.showMoodsDashboard()));
     binding.favoritesDashboard.setOnClickListener((view) ->
         Navigation
             .findNavController(binding.getRoot())
-            .navigate(AdviceFragmentDirections.showFavoritesDashboard()));
+            .navigate(HomeFragmentDirections.showFavoritesDashboard()));
 
+    binding.adviceDashboard.setOnClickListener((view) ->
+        Navigation
+            .findNavController(binding.getRoot())
+            .navigate(HomeFragmentDirections.showAdvice()));
 
-  //  binding.create.setOnClickListener((v) -> {
-   //   Navigation
-    //      .findNavController(binding.getRoot())
+ /*  binding.create.setOnClickListener((v) -> {
+     Navigation
+         .findNavController(binding.getRoot())
         // .navigate(HomeFragmentDirections.openDetails());
             //.navigate(HomeFragmentDirections.showAdvice());
-   //       .navigate(HomeFragmentDirections.test());
+         .navigate(HomeFragmentDirections.test());
 
- //   });
+    });*/
     return binding.getRoot();
   }
 
