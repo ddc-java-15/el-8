@@ -33,7 +33,13 @@ public class AdviceRepository {
     return adviceDao.select();
   }
 
-      public Single<Advice> save(Advice advice) {
+  public LiveData<List<Advice>> getAllByUser(long userId) {
+
+    return adviceDao.selectByUser(userId);
+  }
+
+
+  public Single<Advice> save(Advice advice) {
 
     return (
         (advice.getId() == 0)
@@ -61,6 +67,15 @@ public class AdviceRepository {
                 .ignoreElement()
     )
         .subscribeOn(Schedulers.io());
+  }
+
+  public Single<Advice> generate(int moodRating, long userId) {
+    Advice advice = new Advice();
+    advice.setUserId(userId);
+    advice.setAction("Yoga"); // FIXME based advice on mood rating.
+    advice.setImage(""); // FIXME based on drawable resources and mood rating;
+    return save(advice);
+
   }
 
 }

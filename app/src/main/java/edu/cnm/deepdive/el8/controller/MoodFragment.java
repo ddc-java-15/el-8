@@ -11,12 +11,15 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 import edu.cnm.deepdive.el8.adapter.MoodCheckInAdapter;
 import edu.cnm.deepdive.el8.databinding.FragmentMoodBinding;
+import edu.cnm.deepdive.el8.viewmodel.LoginViewModel;
 import edu.cnm.deepdive.el8.viewmodel.MoodViewModel;
 
 public class MoodFragment extends Fragment {
 
-private FragmentMoodBinding binding;
-private MoodViewModel viewModel;
+  private FragmentMoodBinding binding;
+  private MoodViewModel moodViewModel;
+  private LoginViewModel loginViewModel;
+
 
   @Nullable
   @Override
@@ -30,28 +33,20 @@ private MoodViewModel viewModel;
           .findNavController(binding.getRoot())
           .navigate(MoodFragmentDirections.openDetails());
     });
-/*
-    binding.adviceButton.setOnClickListener((v) -> {
-      Navigation
-          .findNavController(binding.getRoot())
-          .navigate((MoodFragmentDirections.showAdvice()));
-    });
-*/
-
-
-
-
 
     return binding.getRoot();
 
   }
 
-   @Override
+  @Override
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
-
-    viewModel = new ViewModelProvider(this).get(MoodViewModel.class);
-    viewModel
+    loginViewModel = new ViewModelProvider(getActivity()).get(LoginViewModel.class);
+    moodViewModel = new ViewModelProvider(this).get(MoodViewModel.class);
+    loginViewModel
+        .getUser()
+        .observe(getViewLifecycleOwner(),(user) -> moodViewModel.setUserId(user.getId()));
+    moodViewModel
         .getMoods()
         .observe(getViewLifecycleOwner(), (moods) -> {
           if (moods != null) {

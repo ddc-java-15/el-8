@@ -3,7 +3,16 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   xmlns:app="http://schemas.android.com/apk/res-auto">
-
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/check_ins"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:orientation="vertical"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
 
   <TextView
     android:id="@+id/advice"
@@ -20,7 +29,7 @@
     android:layout_margin="@dimen/half_static_spacing"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintBottom_toTopOf="@id/advice"/>
+    app:layout_constraintTop_toTopOf="@id/advice"/>
 
   <TextView
     android:id="@+id/advice_description"
@@ -46,16 +55,41 @@
     app:layout_constraintTop_toBottomOf="@id/advice_description"
     android:contentDescription="image of a person meditating"/>
 
-
+<TextView
+  android:id="@+id/open_diary_label"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  app:layout_constraintStart_toStartOf="parent"
+  app:layout_constraintEnd_toStartOf="@id/open_diary"
+  app:layout_constraintTop_toBottomOf="@id/image_advice"
+  android:text="Feeling inspired?Tap here to go to your diary"/>
   <Button
-    android:id="@+id/completed"
+    android:id="@+id/open_diary"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@string/completed_text"
-    android:gravity="center_vertical"
     android:layout_marginEnd="@dimen/half_static_spacing"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/image_advice"/>
+
+  <TextView
+    android:id="@+id/open_advice_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/open_advice"
+    app:layout_constraintTop_toTopOf="@id/open_advice"
+    android:text="Tap here to get another Advice"/>
+
+  <Button
+    android:id="@+id/open_advice"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Advice"
+    app:layout_constraintTop_toBottomOf="@id/open_diary"
+    app:layout_constraintStart_toStartOf="@id/open_diary"
+    app:layout_constraintEnd_toEndOf="@id/open_diary"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

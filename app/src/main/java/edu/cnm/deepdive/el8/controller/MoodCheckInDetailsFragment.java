@@ -5,7 +5,6 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +14,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import edu.cnm.deepdive.el8.R;
 import edu.cnm.deepdive.el8.databinding.FragmentMoodCheckInDetailsBinding;
 import edu.cnm.deepdive.el8.model.entity.MoodCheckIn;
+import edu.cnm.deepdive.el8.viewmodel.LoginViewModel;
 import edu.cnm.deepdive.el8.viewmodel.MoodViewModel;
 
 
@@ -22,9 +22,11 @@ public class MoodCheckInDetailsFragment extends BottomSheetDialogFragment implem
     OnSeekBarChangeListener {
 
   private FragmentMoodCheckInDetailsBinding binding;
-  private MoodViewModel viewModel;
+  private MoodViewModel moodViewModel;
   private long moodId;
+  private long userId;
   private MoodCheckIn moodCheckIn;
+  private LoginViewModel loginViewModel;
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
@@ -40,8 +42,8 @@ public class MoodCheckInDetailsFragment extends BottomSheetDialogFragment implem
     binding = FragmentMoodCheckInDetailsBinding.inflate(inflater, container, false);
     binding.save.setOnClickListener((v) -> {
       moodCheckIn.setRating(binding.rating.getProgress());
-      moodCheckIn.setUserId(1); //FIXME Use a real id here
-      viewModel.save(moodCheckIn);
+      moodCheckIn.setUserId(userId);
+      moodViewModel.save(moodCheckIn);
   //    dismiss();
       Navigation
           .findNavController(getActivity(),R.id.nav_host_fragment)
@@ -52,24 +54,26 @@ public class MoodCheckInDetailsFragment extends BottomSheetDialogFragment implem
     return binding.getRoot();
   }
 
+  @SuppressWarnings("ConstantConditions")
   @Override
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
-    //noinspection ConstantConditions
-    viewModel = new ViewModelProvider(getActivity()).get(MoodViewModel.class);
-    viewModel
+    loginViewModel = new ViewModelProvider(getActivity()).get(LoginViewModel.class);
+    moodViewModel = new ViewModelProvider(getActivity()).get(MoodViewModel.class);
+    moodViewModel
         .getMoodCheckIn()
         .observe(getViewLifecycleOwner(), (moodCheckin) -> {
           // TODO Populate view objects
         });
     if (moodId != 0) {
-      viewModel.setMoodCheckInId(moodId);
+      moodViewModel.setMoodCheckInId(moodId);
     } else {
       moodCheckIn = new MoodCheckIn();
       binding.ratingValue.setText(String.valueOf(binding.rating.getProgress()));
-
-
     }
+    loginViewModel
+        .getUser()
+        .observe(getViewLifecycleOwner(), (user) -> userId = user.getId());
   }
 
   @Override

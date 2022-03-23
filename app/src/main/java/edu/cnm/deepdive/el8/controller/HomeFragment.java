@@ -32,9 +32,8 @@ public class HomeFragment extends Fragment {
 
     binding.moodDashboard.setOnClickListener((view) ->
         navController.navigate(HomeFragmentDirections.quickMoodDetails()));
-    binding.favoritesDashboard.setOnClickListener((view) ->
-        navController.navigate(HomeFragmentDirections.showFavoritesDashboard()));
-
+    binding.diaryDashboard.setOnClickListener((view) ->
+        navController.navigate(HomeFragmentDirections.showDiaryDashboard()));
     binding.adviceDashboard.setOnClickListener((view) ->
         navController.navigate(HomeFragmentDirections.showAdvice()));
 
@@ -54,6 +53,7 @@ public class HomeFragment extends Fragment {
     super.onViewCreated(view, savedInstanceState);
     navController = Navigation
         .findNavController(binding.getRoot());
+
 
 /*
     viewModel = new ViewModelProvider(this).get(MoodViewModel.class);

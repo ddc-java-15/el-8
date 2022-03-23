@@ -25,13 +25,20 @@ public class MoodViewModel extends AndroidViewModel implements DefaultLifecycleO
 
   private final MutableLiveData<Long> moodId;
 
+  private final MutableLiveData<Long> userId;
+
+  private final LiveData<List<MoodCheckIn>> moods;
+
   private final CompositeDisposable pending;
+
 
   public MoodViewModel(@NonNull Application application) {
     super(application);
     repository = new MoodCheckInRepository(application);
     moodId = new MutableLiveData<>();
     moodCheckIn = Transformations.switchMap(moodId, (id) -> repository.get(id));
+    userId = new MutableLiveData<>();
+    moods = Transformations.switchMap(userId, repository::getAllByUser);
     throwable = new MutableLiveData<>();
     pending = new CompositeDisposable();
 
@@ -52,7 +59,11 @@ public class MoodViewModel extends AndroidViewModel implements DefaultLifecycleO
   }
 
   public LiveData<List<MoodCheckIn>> getMoods() {
-    return repository.getAll();
+    return moods;
+  }
+
+  public void setUserId(long userId) {
+    this.userId.setValue(userId);
   }
 
   public void save(MoodCheckIn moodCheckIn) {

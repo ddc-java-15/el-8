@@ -12,7 +12,9 @@ import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import edu.cnm.deepdive.el8.model.entity.User;
 import edu.cnm.deepdive.el8.service.GoogleSignInService;
+import edu.cnm.deepdive.el8.service.UserRepository;
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.disposables.Disposable;
 
@@ -22,6 +24,7 @@ public class LoginViewModel extends AndroidViewModel implements DefaultLifecycle
   private final MutableLiveData<GoogleSignInAccount> account;
   private final MutableLiveData<Throwable> throwable;
   private final CompositeDisposable pending;
+  private final UserRepository userRepository;
 
   public LoginViewModel(@NonNull Application application) {
     super(application);
@@ -29,7 +32,12 @@ public class LoginViewModel extends AndroidViewModel implements DefaultLifecycle
     account = new MutableLiveData<>();
     throwable = new MutableLiveData<>();
     pending = new CompositeDisposable();
+    userRepository= new UserRepository(application);
     refresh();
+  }
+
+  public LiveData<User> getUser() {
+    return userRepository.getUser();
   }
 
   public LiveData<GoogleSignInAccount> getAccount() {

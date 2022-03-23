@@ -5,14 +5,23 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "user")
+@Entity(
+    tableName = "user",
+    indices = {
+        @Index(value = "oauth_key", unique = true)
+    }
+)
 public class User {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "user_id")
   private long id;
+
+  @ColumnInfo(name = "oauth_key")
+  private String oauthKey;
 
   @NonNull
   @ColumnInfo(name = "name",index = true)
@@ -29,6 +38,14 @@ public class User {
 
   public void setId(long id) {
     this.id = id;
+  }
+
+  public String getOauthKey() {
+    return oauthKey;
+  }
+
+  public void setOauthKey(String oauthKey) {
+    this.oauthKey = oauthKey;
   }
 
   @NonNull

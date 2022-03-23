@@ -33,6 +33,9 @@ public class MoodCheckInRepository {
 
     return moodCheckInDao.select();
   }
+  public LiveData<List<MoodCheckIn>> getAllByUser(long userId) {
+    return moodCheckInDao.selectByUser(userId);
+  }
 
   public Single<MoodCheckIn> save(MoodCheckIn moodCheckIn) {
 

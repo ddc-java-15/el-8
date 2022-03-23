@@ -16,8 +16,8 @@
       android:id="@+id/quick_mood_details"
       app:destination="@id/navigation_mood_details"/>
     <action
-      android:id="@+id/show_favorites_dashboard"
-      app:destination="@id/navigation_favorite"/>
+      android:id="@+id/show_diary_dashboard"
+      app:destination="@id/navigation_diary"/>
     <action
       android:id="@+id/show_advice"
       app:destination="@id/navigation_advice"/>

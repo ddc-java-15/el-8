@@ -7,7 +7,7 @@ import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
-
+import java.util.Date;
 
 
 @Entity(
@@ -22,6 +22,10 @@ public class Advice {
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "advice_id")
   private long id;
+
+  @NonNull
+  @ColumnInfo(index = true)
+  private Date created = new Date();
 
   private String action = "";
 
@@ -39,6 +43,15 @@ public class Advice {
 
   public void setId(long id) {
     this.id = id;
+  }
+
+  @NonNull
+  public Date getCreated() {
+    return created;
+  }
+
+  public void setCreated(@NonNull Date created) {
+    this.created = created;
   }
 
   public String getAction() {

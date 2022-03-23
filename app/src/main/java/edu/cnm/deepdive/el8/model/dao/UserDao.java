@@ -7,6 +7,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 import edu.cnm.deepdive.el8.model.entity.User;
+import io.reactivex.rxjava3.core.Maybe;
 import io.reactivex.rxjava3.core.Single;
 import java.util.Collection;
 import java.util.List;
@@ -45,4 +46,7 @@ public interface UserDao {
 
   @Query("SELECT * FROM user ORDER BY name ASC")
   LiveData<List<User>> select();
+
+  @Query("SELECT * FROM user WHERE oauth_key = :oauthKey")
+  Maybe<User> getByOauthKey(String oauthKey);
 }

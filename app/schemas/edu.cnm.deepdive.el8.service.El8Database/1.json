@@ -2,17 +2,23 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "f661907073f9af339c0e9e45d0e9ebe1",
+    "identityHash": "4f41a53a62412ec1548ca12fbbf7e531",
     "entities": [
       {
         "tableName": "user",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`user_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `age` INTEGER NOT NULL, `location` TEXT NOT NULL)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`user_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `oauth_key` TEXT, `name` TEXT NOT NULL, `age` INTEGER NOT NULL, `location` TEXT NOT NULL)",
         "fields": [
           {
             "fieldPath": "id",
             "columnName": "user_id",
             "affinity": "INTEGER",
             "notNull": true
+          },
+          {
+            "fieldPath": "oauthKey",
+            "columnName": "oauth_key",
+            "affinity": "TEXT",
+            "notNull": false
           },
           {
             "fieldPath": "name",
@@ -40,6 +46,15 @@
           "autoGenerate": true
         },
         "indices": [
+          {
+            "name": "index_user_oauth_key",
+            "unique": true,
+            "columnNames": [
+              "oauth_key"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_user_oauth_key` ON `${TABLE_NAME}` (`oauth_key`)"
+          },
           {
             "name": "index_user_name",
             "unique": false,
@@ -174,11 +189,17 @@
       },
       {
         "tableName": "advice",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`advice_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `action` TEXT, `image` TEXT, `favorite` INTEGER NOT NULL, `user_id` INTEGER NOT NULL, FOREIGN KEY(`user_id`) REFERENCES `user`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`advice_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `created` INTEGER NOT NULL, `action` TEXT, `image` TEXT, `favorite` INTEGER NOT NULL, `user_id` INTEGER NOT NULL, FOREIGN KEY(`user_id`) REFERENCES `user`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
         "fields": [
           {
             "fieldPath": "id",
             "columnName": "advice_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "created",
+            "columnName": "created",
             "affinity": "INTEGER",
             "notNull": true
           },
@@ -214,6 +235,15 @@
           "autoGenerate": true
         },
         "indices": [
+          {
+            "name": "index_advice_created",
+            "unique": false,
+            "columnNames": [
+              "created"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_advice_created` ON `${TABLE_NAME}` (`created`)"
+          },
           {
             "name": "index_advice_favorite",
             "unique": false,
@@ -251,7 +281,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'f661907073f9af339c0e9e45d0e9ebe1')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '4f41a53a62412ec1548ca12fbbf7e531')"
     ]
   }
 }
