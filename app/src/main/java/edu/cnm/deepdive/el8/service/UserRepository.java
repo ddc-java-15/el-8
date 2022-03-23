@@ -1,6 +1,7 @@
 package edu.cnm.deepdive.el8.service;
 
 import android.content.Context;
+import android.util.Log;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -30,7 +31,11 @@ public class UserRepository {
     userDao = database.getUserDao();
     signInService = GoogleSignInService.getInstance();
     user = new MutableLiveData<>();
-    getOrCreate().subscribe();
+    getOrCreate()
+        .subscribe(
+            (user) -> this.user.postValue(user),
+            (throwable) -> Log.e(getClass().getSimpleName(), throwable.getMessage(),throwable)
+        );
   }
 
   public LiveData<User> getUser() {
@@ -94,7 +99,6 @@ public class UserRepository {
                     .flatMap(this::save)
             )
         )
-        .doOnSuccess(this.user::postValue)
         .subscribeOn(Schedulers.io());
 
 
