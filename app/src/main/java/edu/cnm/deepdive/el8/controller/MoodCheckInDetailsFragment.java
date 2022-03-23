@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import edu.cnm.deepdive.el8.R;
 import edu.cnm.deepdive.el8.databinding.FragmentMoodCheckInDetailsBinding;
@@ -41,7 +42,10 @@ public class MoodCheckInDetailsFragment extends BottomSheetDialogFragment implem
       moodCheckIn.setRating(binding.rating.getProgress());
       moodCheckIn.setUserId(1); //FIXME Use a real id here
       viewModel.save(moodCheckIn);
-      dismiss();
+  //    dismiss();
+      Navigation
+          .findNavController(getActivity(),R.id.nav_host_fragment)
+          .navigate(MoodCheckInDetailsFragmentDirections.showRelatedAdvice(moodCheckIn.getRating()));
     });
     binding.cancel.setOnClickListener((v) -> dismiss());
     binding.rating.setOnSeekBarChangeListener(this);

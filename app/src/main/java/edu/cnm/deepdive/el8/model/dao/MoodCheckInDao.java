@@ -45,7 +45,7 @@ public interface MoodCheckInDao {
   @Query("SELECT * FROM mood_check_in WHERE mood_check_in_id = :id")
   LiveData<MoodCheckIn> select(long id);
 
-  @Query("SELECT * FROM mood_check_in ORDER BY created ASC")
+  @Query("SELECT * FROM mood_check_in ORDER BY created DESC")
   LiveData<List<MoodCheckIn>> select();
 
 }

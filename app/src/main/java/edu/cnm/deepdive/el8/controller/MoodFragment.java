@@ -30,11 +30,13 @@ private MoodViewModel viewModel;
           .findNavController(binding.getRoot())
           .navigate(MoodFragmentDirections.openDetails());
     });
+/*
     binding.adviceButton.setOnClickListener((v) -> {
       Navigation
           .findNavController(binding.getRoot())
           .navigate((MoodFragmentDirections.showAdvice()));
     });
+*/
 
 
 

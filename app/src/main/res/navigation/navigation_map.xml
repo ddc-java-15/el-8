@@ -13,8 +13,8 @@
 
 
     <action
-      android:id="@+id/show_moods_dashboard"
-      app:destination="@id/navigation_mood"/>
+      android:id="@+id/quick_mood_details"
+      app:destination="@id/navigation_mood_details"/>
     <action
       android:id="@+id/show_favorites_dashboard"
       app:destination="@id/navigation_favorite"/>
@@ -40,20 +40,19 @@
       app:destination="@id/navigation_diary"/>
   </fragment>
 
+
   <fragment
-    android:id="@+id/navigation_mood_check_in_details"
-    android:name="edu.cnm.deepdive.el8.controller.MoodCheckInDetailsFragment"/>
+    android:id="@+id/navigation_mood"
+    android:label="Mood"
+    tools:layout="@layout/fragment_mood"
+    android:name="edu.cnm.deepdive.el8.controller.MoodFragment">
+    <action
+      android:id="@+id/open_details"
+      app:destination="@id/navigation_mood_details"/>
+
+  </fragment>
 
 
-<fragment
-  android:id="@+id/navigation_mood"
-  android:label="Mood"
-  tools:layout="@layout/fragment_mood"
-  android:name="edu.cnm.deepdive.el8.controller.MoodFragment"/>
-
-  <action
-    android:id="@+id/open_details"
-    app:destination="@id/navigation_mood_check_in_details"/>
   <dialog
     android:id="@+id/navigation_mood_details"
     android:name="edu.cnm.deepdive.el8.controller.MoodCheckInDetailsFragment"
@@ -62,6 +61,15 @@
       android:name="mood_id"
       app:argType="long"
       android:defaultValue="0L"/>
+    <action
+      android:id="@+id/show_related_advice"
+      app:destination="@id/navigation_advice">
+      <argument
+        android:name="mood_level"
+        app:argType="integer"/>
+
+    </action>
+
   </dialog>
 
 
@@ -75,7 +83,6 @@
     android:name="edu.cnm.deepdive.el8.controller.FavoritesFragment"
     android:label="@string/favorite_title"
     tools:layout="@layout/fragment_favorites"/>
-
 
 
 </navigation>

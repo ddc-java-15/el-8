@@ -8,7 +8,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import edu.cnm.deepdive.el8.R;
 import edu.cnm.deepdive.el8.adapter.MoodCheckInAdapter;
 import edu.cnm.deepdive.el8.databinding.FragmentHomeBinding;
 import edu.cnm.deepdive.el8.viewmodel.MoodViewModel;
@@ -17,9 +19,8 @@ public class HomeFragment extends Fragment {
 
 
   private FragmentHomeBinding binding;
- // private MoodViewModel viewModel;
-
-
+  private NavController navController;
+  // private MoodViewModel viewModel;
 
 
   @Nullable
@@ -28,19 +29,14 @@ public class HomeFragment extends Fragment {
       @Nullable Bundle savedInstanceState) {
     super.onCreateView(inflater, container, savedInstanceState);
     binding = FragmentHomeBinding.inflate(inflater, container, false);
+
     binding.moodDashboard.setOnClickListener((view) ->
-        Navigation
-            .findNavController(binding.getRoot())
-            .navigate(HomeFragmentDirections.showMoodsDashboard()));
+        navController.navigate(HomeFragmentDirections.quickMoodDetails()));
     binding.favoritesDashboard.setOnClickListener((view) ->
-        Navigation
-            .findNavController(binding.getRoot())
-            .navigate(HomeFragmentDirections.showFavoritesDashboard()));
+        navController.navigate(HomeFragmentDirections.showFavoritesDashboard()));
 
     binding.adviceDashboard.setOnClickListener((view) ->
-        Navigation
-            .findNavController(binding.getRoot())
-            .navigate(HomeFragmentDirections.showAdvice()));
+        navController.navigate(HomeFragmentDirections.showAdvice()));
 
  /*  binding.create.setOnClickListener((v) -> {
      Navigation
@@ -53,10 +49,13 @@ public class HomeFragment extends Fragment {
     return binding.getRoot();
   }
 
- /* @Override
+  @Override
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
+    navController = Navigation
+        .findNavController(binding.getRoot());
 
+/*
     viewModel = new ViewModelProvider(this).get(MoodViewModel.class);
     viewModel
         .getMoods()
@@ -64,7 +63,8 @@ public class HomeFragment extends Fragment {
           MoodCheckInAdapter adapter = new MoodCheckInAdapter(getContext(), moods);
           binding.checkIns.setAdapter(adapter);
         });
+*/
   }
 
-  */
+
 }

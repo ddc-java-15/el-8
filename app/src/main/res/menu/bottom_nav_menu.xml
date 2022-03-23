@@ -7,14 +7,16 @@
     android:title="@string/home_title"/>
 
   <item
-    android:id="@+id/navigation_check_in"
+    android:id="@+id/navigation_mood"
     android:icon="@drawable/outline_mood_24"
     android:title="@string/mood_check_in_title"/>
 
+<!--
   <item
     android:id="@+id/navigation_diary"
     android:icon="@drawable/outline_rate_review_24"
     android:title="@string/diary_title"/>
+-->
 
   <item
     android:id="@+id/navigation_favorite"
