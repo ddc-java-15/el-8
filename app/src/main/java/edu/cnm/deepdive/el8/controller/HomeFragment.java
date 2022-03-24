@@ -35,7 +35,7 @@ public class HomeFragment extends Fragment {
     binding.diaryDashboard.setOnClickListener((view) ->
         navController.navigate(HomeFragmentDirections.showDiaryDashboard()));
     binding.adviceDashboard.setOnClickListener((view) ->
-        navController.navigate(HomeFragmentDirections.showAdvice()));
+        navController.navigate(HomeFragmentDirections.showAdviceDetails()));
 
  /*  binding.create.setOnClickListener((v) -> {
      Navigation

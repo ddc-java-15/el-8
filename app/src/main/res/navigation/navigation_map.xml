@@ -19,8 +19,8 @@
       android:id="@+id/show_diary_dashboard"
       app:destination="@id/navigation_diary"/>
     <action
-      android:id="@+id/show_advice"
-      app:destination="@id/navigation_advice"/>
+      android:id="@+id/show_advice_details"
+      app:destination="@id/navigation_advice_details"/>
 
   </fragment>
 
@@ -67,6 +67,12 @@
     android:id="@+id/navigation_advice_details"
     android:name="edu.cnm.deepdive.el8.controller.AdviceDetailsFragment"
     tools:layout="@layout/fragment_advice_details">
+    <action
+      android:id="@+id/show_diary"
+      app:destination="@id/navigation_diary"/>
+    <action
+      android:id="@+id/show_advice_details"
+      app:destination="@id/navigation_advice_details"/>
 
     <argument
       android:name="advice_id"

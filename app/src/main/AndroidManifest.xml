@@ -2,14 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
   package="edu.cnm.deepdive.el8">
-<uses-permission android:name="android.permission.INTERNET"/>
+
+  <uses-permission android:name="android.permission.INTERNET"/>
 
   <application
     android:allowBackup="false"
-    android:icon="@mipmap/ic_launcher"
+    android:icon="@mipmap/ic_el8_launcher2"
     android:label="@string/app_name"
     android:name=".El8Application"
-    android:roundIcon="@mipmap/ic_launcher_round"
+    android:roundIcon="@mipmap/ic_el8_launcher2_round"
     android:supportsRtl="true"
     android:theme="@style/AppTheme"
     tools:ignore="AllowBackup">
@@ -17,7 +18,8 @@
     <activity
       android:name=".controller.MainActivity">
     </activity>
-    <activity android:name=".controller.LoginActivity"
+    <activity
+      android:name=".controller.LoginActivity"
       android:exported="true">
 
       <intent-filter>

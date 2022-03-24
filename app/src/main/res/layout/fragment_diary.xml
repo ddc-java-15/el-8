@@ -37,5 +37,17 @@
     android:padding="@dimen/half_dynamic_spacing"
     android:maxLines="100"
     />
+  <ImageButton
+    android:id="@+id/save"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/half_dynamic_spacing"
+    android:src="@drawable/ic_check"
+    android:background="?android:selectableItemBackgroundBorderless"
+    android:tint="#FF00A000"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:contentDescription="@string/save_label"
+    android:tooltipText="@string/save_label"/>
 
 </LinearLayout>

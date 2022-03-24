@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 import edu.cnm.deepdive.el8.databinding.FragmentAdviceDetailsBinding;
 import edu.cnm.deepdive.el8.viewmodel.AdviceViewModel;
 import edu.cnm.deepdive.el8.viewmodel.LoginViewModel;
@@ -38,6 +39,15 @@ public class AdviceDetailsFragment extends Fragment {
       @Nullable Bundle savedInstanceState) {
     FragmentAdviceDetailsBinding binding = FragmentAdviceDetailsBinding.inflate(inflater, container,
         false);
+    binding.openDiary.setOnClickListener((v) ->
+        Navigation
+            .findNavController(binding.getRoot())
+            .navigate(AdviceFragmentDirections.showDiary()));
+
+    binding.openAdvice.setOnClickListener((v) ->
+        Navigation
+            .findNavController(binding.getRoot())
+            .navigate(AdviceFragmentDirections.showAdviceDetails()));
 
     return binding.getRoot();
 
