@@ -33,7 +33,7 @@ public class HomeFragment extends Fragment {
     binding.moodDashboard.setOnClickListener((view) ->
         navController.navigate(HomeFragmentDirections.quickMoodDetails()));
     binding.diaryDashboard.setOnClickListener((view) ->
-        navController.navigate(HomeFragmentDirections.showDiaryDashboard()));
+        navController.navigate(HomeFragmentDirections.showDiaryDetails()));
     binding.adviceDashboard.setOnClickListener((view) ->
         navController.navigate(HomeFragmentDirections.showAdviceDetails()));
 

@@ -27,6 +27,8 @@ public class DiaryViewModel extends AndroidViewModel implements DefaultLifecycle
 
   private final MutableLiveData<Long> userId;
 
+  private final LiveData<List<Diary>> diaries;
+
 
   private final CompositeDisposable pending;
 
@@ -36,6 +38,7 @@ public class DiaryViewModel extends AndroidViewModel implements DefaultLifecycle
     diaryId = new MutableLiveData<>();
     diary = Transformations.switchMap(diaryId, (id) -> repository.get(id));
     userId = new MutableLiveData<>();
+    diaries = Transformations.switchMap(userId, (id) -> repository.getAllByUser(id));
     throwable = new MutableLiveData<>();
     pending = new CompositeDisposable();
 
@@ -56,7 +59,7 @@ public class DiaryViewModel extends AndroidViewModel implements DefaultLifecycle
   }
 
   public LiveData<List<Diary>> getDiaries() {
-    return repository.getAll();
+    return diaries;
   }
 
   public void setUserId(long userId) {

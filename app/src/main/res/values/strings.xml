@@ -23,56 +23,60 @@
   <string name="open_diary">Feeling inspired?Tap here to go to your diary</string>
   <string name="image_description">image of a person meditating</string>
   <string name="advice_description">Meditation is a simple practice available to all, which can reduce stress, increase calmness and clarity and promote happiness. Learning how to meditate is straightforward, and the benefits can come quickly. Here, we offer basic tips to get you started on a path toward greater equanimity, acceptance and joy. Take a deep breath, and get ready to relax.</string>
+  <string name="diary_details_label">Diary</string>
+  <string name="add_diary_entry_label">Add diary entry.</string>
 
-  <string-array name="advices">
-    <item>Take a 10-min walk.\nIf you are feeling stressed or worried, taking a short walk outside will raise your mood and can also calm you down.</item>
-    <item>Listen to happy music.\nStudy participants found that they felt better when listening to upbeat music while actively trying to feel happier,as long as they simply focused on the positive feelings and not the “destination” of being happy.</item>
-    <item>Declutter.\nWork on decluttering your home and workspace. Just seeing clutter has been found to cause spikes in cortisol, the stress hormone.</item>
-    <item>Give a one-minute hug to someone you love.\nWhen you stimulate the pressure receptors of your skin, it lowers stress hormones. Touch also boosts oxytocin,a hormone that promotes a sense of well-being, security, and love. Hugs may even help reduce the severity of cold symptoms!</item>
-    <item>Spend a minute petting a dog or cat.\nA Washington State University study found that petting a dog or cat for even just ten minutes produced a major reduction in cortisol, the stress hormone.</item>
-    <item>Take 10 slow, deep breaths.\nBy breathing slower and more deeply, you signal your nervous system to calm down. It takes practice to reap profound benefits,so devote some time to deep breathing daily.</item>
-    <item>Watch a cat video or Dog videos for 2 minutes.\nA survey of almost 7,000 people found that people felt more energetic and positive after watching cat videos.The pleasure they got from the videos was greater than the guilt of procrastinating.</item>
-    <item>Do a puzzle.\nAny kind of puzzle will do. Every success we have while working on a puzzle releases dopamine,which grants us a sense of satisfaction and pleasure.</item>
-    <item>Make a trip to your favorite coffee shop and order your favorite drink\nEnjoy some coffee. Coffee has been shown to help lower the risk of depression, especially in women.</item>
-    <item>Spend 10 minutes in the sun.\nA study spanning six years discovered that therapy patients reported less emotional distress on sunny days. Vitamin D has also been linked to mental well-being.</item>
-    <item>Smiling for a minute.\nIt can trick your brain into feeling happiness! A meta-analysis of 138 studies found that smiling can slightly lift our moods.</item>
-    <item>Try “shinrin-yoku” (forest-bathing).\nA Japanese study discovered that a walk through the woods can alleviate acute emotions such as hostility, depression, and boredom.</item>
-    <item>Smell lavender.\nLavender interacts with the neurotransmitter GABA to help relax the brain and nervous system, reducing agitation, anger, aggression, and restlessness.</item>
-    <item>Walk barefoot in the park for 5 minute.\nEnjoy the scent of fresh-cut grass. Scent researchers have found that a chemical released by fresh-cut grass may provide joy and stress relief.</item>
-    <item>Enjoy the smell of citrus.\nAn ambient orange aroma in a dental office was found to relieve anxiety and boost the mood of female patients.</item>
-    <item>Chew gum.\nChewing gum has been found to alleviate poor mood and reduce cortisol, the stress hormone.</item>
-    <item>Admire flowers ofr two minutes.\nGazing at flowers has been shown to nurture a lasting positive mood. Flowers and plants also boost productivity and creativity at work.</item>
-    <item>Eat some chocolate.\nThe antioxidant in chocolate (resveratrol) provides a burst of endorphins and serotonin.</item>
-    <item>Visualize your best self.\nResearch shows that five-minute visualizations of one’s best possible self boosted optimism immediately and over time.</item>
-    <item>Look ate something green for 2 minutes.\nA study found that we associate the color green with happiness, comfort, excitement, and peace. In fact, gardeners tend to be happier than most people.</item>
-    <item>Touch something soft (or hug a teddy bear) for 3 minutes.\nIn a study of consumers, those in a negative state found more comfort in pleasant tactile sensations. This may be linked to the mammalian instinct to return to our mothers during vulnerable states (sick, injured, cold, lost).</item>
-    <item>Go outside and talk to the first stranger you encounter.\nBrief, positive interactions with strangers may boost mood and create a stronger sense of belonging to one’s community.</item>
-    <item>Take an hour break from social media.\nStudies have found that social media use predicts a decline in the mental well-being of young adults.</item>
-    <item>Indulge in a massage.\nSeveral studies have shown that massage increases serotonin levels, especially in pregnant women and infants.Even just rubbing your own shoulders, neck, hands, and temples can help.</item>
-    <item>Go outside and Play in the dirt for 5 minutes.\nUK scientists have found that a type of friendly bacteria found in soil may influence brain cells to produce serotonin in a similar way that antidepressants</item>
-    <item>Move your way into a better mood for 3 minutes.\nActing out happy movements—like skipping, hopping, jumping or just throwing your hands up in the air—can make you feel happier.There's also lots of research into the positive mood effects of moderate exercise: They are near-immediate and can last for minutes or hours.</item>
-    <item>Call a friend.\nSocial connection is a key factor for emotional well-being. The happiest people have strong social relationships.</item>
-    <item>Walk to the window and look into the light for two minute.\nExposure to natural light during the day (especially in the morning) is crucial for keeping your body rhythms in sync and regulating sleep, metabolism and mood. Windows in the workplace have been associated with improved well-being. If you don’t have an office with a window, barge into someone else’s.</item>
-    <item>Strike a powerful pose for one minute\nAssuming a powerful stance (think: Wonder Woman or trying-to-scare-a-bear) can make you feel powerful—and what feels better than power?</item>
-    <item>Celebrate good times.\nLook at happy photos or spend a minute or so thinking back on positive memories(that first 5K finish line, a group trip to the waterpark, that amazing scone from a no-name coffee shop)—nostalgia can trigger happiness.</item>
-    <item>Think of someone you know and with him well for one minute\nResearchers at Iowa State University found that instead of trying to make ourselves feel better,we should focus on trying to make others feel better. They found that offering kindness to others can help reduce anxiety,improve happiness, and lead to stronger feelings of social connection. Send congratulatory cards when something good happens to a loved one,compliment a stranger’s shoes, or give a colleague a stellar recommendation on LinkedIn.</item>
-    <item>Write 3 positive things down that happened to you today.\nDid you know that taking the time to write down 3 positive things each day will make you more optimistic and less stressed?</item>
-    <item>Say "thank you.""thank you.""thank you over and over for one minute\nEven this small act of gratitude will boost your positivity.</item>
-    <item>Learn something new.\nWhether it's reading a wiki about a topic that interests you or watching a quick Youtube tutorial, the digital world is full of ways to learn things fast and on the go.</item>
-    <item>Text a friend.\nReaching out to a pal and letting them know how awesome they are will make you feel awesome, too.</item>
-    <item>Meditate for two minutes\nWhat if I told you that if you commit to meditate 5 to 10 minutes a day on most days you’ll feel calmer, more focused and happier?</item>
-    <item>Nap Time for 20 minutes\nYou will feel refreshed and happier.</item>
-    <item>Buy a Plant\nGo to your local flower shop and find a colorful plant or just something you would enjoy caring for.Put it in a space you spend most of your time, give it plenty of sun and water and watch it flourish!</item>
-    <item>Crank Up the Music and play your favorite upbeat song.\nListening to music can be an enjoyable experience, but there is also evidence that music has psychological benefits including having an influence on your moods. One 2013 study found that listening to upbeat songs could improve happiness and boost mood relatively quickly</item>
-    <item>Do something spontaneous.\nSome of my favorite memories entail choices I made spontaneously.We should all learn to let go of routine every now and then and do something exciting and unplan</item>
-    <item> Bake something.\nBaking is very  therapeutic and entertaining. You can also share it with others afterward.</item>
-    <item>Read or watch Something Inspirational\nWords have the power to heal and pick you back up when you’re down. Go online and search for inspirational quotes.Watch a speech from a famous and inspiring leader you admire, or read a thoughtful or inspiring book.</item>
-    <item>Jump around for one minute\nGet happy-making endorphins pumping fast with some jumping jacks, jump rope, or random flailing around (hey, no judgment here).</item>
-    <item>Light a candle\nThe smell and flicker of the flame on a burning a candle can help with relaxation. Scented candles that use quality essential oils can also induce quality sleep.</item>
-    <item>Rearrange some furniture for ten minutes\nChanging an environment can help us feel refreshed, enabling us to bust out of a negative mood.</item>
-    <item>Smile for a minute.\nYou’ve heard it before, but we’ll say it again: Just smiling makes you feel happy. The old standby really does work.</item>
-    <item>Do something nice for someone else\nWhether it’s walking someone’s dog or giving someone a book you no longer need, small acts of kindness can go a long way and will help you to feel more positive.</item>
-    <item>Give yourself a ten minute massage. A quick rubdown\n(focus on the neck, shoulders, lower back, and feet) can improve mood and release stress.</item>
+  <!--
+    <string-array name="advices">
+      <item>Take a 10-min walk.\nIf you are feeling stressed or worried, taking a short walk outside will raise your mood and can also calm you down.</item>
+      <item>Listen to happy music.\nStudy participants found that they felt better when listening to upbeat music while actively trying to feel happier,as long as they simply focused on the positive feelings and not the “destination” of being happy.</item>
+      <item>Declutter.\nWork on decluttering your home and workspace. Just seeing clutter has been found to cause spikes in cortisol, the stress hormone.</item>
+      <item>Give a one-minute hug to someone you love.\nWhen you stimulate the pressure receptors of your skin, it lowers stress hormones. Touch also boosts oxytocin,a hormone that promotes a sense of well-being, security, and love. Hugs may even help reduce the severity of cold symptoms!</item>
+      <item>Spend a minute petting a dog or cat.\nA Washington State University study found that petting a dog or cat for even just ten minutes produced a major reduction in cortisol, the stress hormone.</item>
+      <item>Take 10 slow, deep breaths.\nBy breathing slower and more deeply, you signal your nervous system to calm down. It takes practice to reap profound benefits,so devote some time to deep breathing daily.</item>
+      <item>Watch a cat video or Dog videos for 2 minutes.\nA survey of almost 7,000 people found that people felt more energetic and positive after watching cat videos.The pleasure they got from the videos was greater than the guilt of procrastinating.</item>
+      <item>Do a puzzle.\nAny kind of puzzle will do. Every success we have while working on a puzzle releases dopamine,which grants us a sense of satisfaction and pleasure.</item>
+      <item>Make a trip to your favorite coffee shop and order your favorite drink\nEnjoy some coffee. Coffee has been shown to help lower the risk of depression, especially in women.</item>
+      <item>Spend 10 minutes in the sun.\nA study spanning six years discovered that therapy patients reported less emotional distress on sunny days. Vitamin D has also been linked to mental well-being.</item>
+      <item>Smiling for a minute.\nIt can trick your brain into feeling happiness! A meta-analysis of 138 studies found that smiling can slightly lift our moods.</item>
+      <item>Try “shinrin-yoku” (forest-bathing).\nA Japanese study discovered that a walk through the woods can alleviate acute emotions such as hostility, depression, and boredom.</item>
+      <item>Smell lavender.\nLavender interacts with the neurotransmitter GABA to help relax the brain and nervous system, reducing agitation, anger, aggression, and restlessness.</item>
+      <item>Walk barefoot in the park for 5 minute.\nEnjoy the scent of fresh-cut grass. Scent researchers have found that a chemical released by fresh-cut grass may provide joy and stress relief.</item>
+      <item>Enjoy the smell of citrus.\nAn ambient orange aroma in a dental office was found to relieve anxiety and boost the mood of female patients.</item>
+      <item>Chew gum.\nChewing gum has been found to alleviate poor mood and reduce cortisol, the stress hormone.</item>
+      <item>Admire flowers ofr two minutes.\nGazing at flowers has been shown to nurture a lasting positive mood. Flowers and plants also boost productivity and creativity at work.</item>
+      <item>Eat some chocolate.\nThe antioxidant in chocolate (resveratrol) provides a burst of endorphins and serotonin.</item>
+      <item>Visualize your best self.\nResearch shows that five-minute visualizations of one’s best possible self boosted optimism immediately and over time.</item>
+      <item>Look ate something green for 2 minutes.\nA study found that we associate the color green with happiness, comfort, excitement, and peace. In fact, gardeners tend to be happier than most people.</item>
+      <item>Touch something soft (or hug a teddy bear) for 3 minutes.\nIn a study of consumers, those in a negative state found more comfort in pleasant tactile sensations. This may be linked to the mammalian instinct to return to our mothers during vulnerable states (sick, injured, cold, lost).</item>
+      <item>Go outside and talk to the first stranger you encounter.\nBrief, positive interactions with strangers may boost mood and create a stronger sense of belonging to one’s community.</item>
+      <item>Take an hour break from social media.\nStudies have found that social media use predicts a decline in the mental well-being of young adults.</item>
+      <item>Indulge in a massage.\nSeveral studies have shown that massage increases serotonin levels, especially in pregnant women and infants.Even just rubbing your own shoulders, neck, hands, and temples can help.</item>
+      <item>Go outside and Play in the dirt for 5 minutes.\nUK scientists have found that a type of friendly bacteria found in soil may influence brain cells to produce serotonin in a similar way that antidepressants</item>
+      <item>Move your way into a better mood for 3 minutes.\nActing out happy movements—like skipping, hopping, jumping or just throwing your hands up in the air—can make you feel happier.There's also lots of research into the positive mood effects of moderate exercise: They are near-immediate and can last for minutes or hours.</item>
+      <item>Call a friend.\nSocial connection is a key factor for emotional well-being. The happiest people have strong social relationships.</item>
+      <item>Walk to the window and look into the light for two minute.\nExposure to natural light during the day (especially in the morning) is crucial for keeping your body rhythms in sync and regulating sleep, metabolism and mood. Windows in the workplace have been associated with improved well-being. If you don’t have an office with a window, barge into someone else’s.</item>
+      <item>Strike a powerful pose for one minute\nAssuming a powerful stance (think: Wonder Woman or trying-to-scare-a-bear) can make you feel powerful—and what feels better than power?</item>
+      <item>Celebrate good times.\nLook at happy photos or spend a minute or so thinking back on positive memories(that first 5K finish line, a group trip to the waterpark, that amazing scone from a no-name coffee shop)—nostalgia can trigger happiness.</item>
+      <item>Think of someone you know and with him well for one minute\nResearchers at Iowa State University found that instead of trying to make ourselves feel better,we should focus on trying to make others feel better. They found that offering kindness to others can help reduce anxiety,improve happiness, and lead to stronger feelings of social connection. Send congratulatory cards when something good happens to a loved one,compliment a stranger’s shoes, or give a colleague a stellar recommendation on LinkedIn.</item>
+      <item>Write 3 positive things down that happened to you today.\nDid you know that taking the time to write down 3 positive things each day will make you more optimistic and less stressed?</item>
+      <item>Say "thank you.""thank you.""thank you over and over for one minute\nEven this small act of gratitude will boost your positivity.</item>
+      <item>Learn something new.\nWhether it's reading a wiki about a topic that interests you or watching a quick Youtube tutorial, the digital world is full of ways to learn things fast and on the go.</item>
+      <item>Text a friend.\nReaching out to a pal and letting them know how awesome they are will make you feel awesome, too.</item>
+      <item>Meditate for two minutes\nWhat if I told you that if you commit to meditate 5 to 10 minutes a day on most days you’ll feel calmer, more focused and happier?</item>
+      <item>Nap Time for 20 minutes\nYou will feel refreshed and happier.</item>
+      <item>Buy a Plant\nGo to your local flower shop and find a colorful plant or just something you would enjoy caring for.Put it in a space you spend most of your time, give it plenty of sun and water and watch it flourish!</item>
+      <item>Crank Up the Music and play your favorite upbeat song.\nListening to music can be an enjoyable experience, but there is also evidence that music has psychological benefits including having an influence on your moods. One 2013 study found that listening to upbeat songs could improve happiness and boost mood relatively quickly</item>
+      <item>Do something spontaneous.\nSome of my favorite memories entail choices I made spontaneously.We should all learn to let go of routine every now and then and do something exciting and unplan</item>
+      <item> Bake something.\nBaking is very  therapeutic and entertaining. You can also share it with others afterward.</item>
+      <item>Read or watch Something Inspirational\nWords have the power to heal and pick you back up when you’re down. Go online and search for inspirational quotes.Watch a speech from a famous and inspiring leader you admire, or read a thoughtful or inspiring book.</item>
+      <item>Jump around for one minute\nGet happy-making endorphins pumping fast with some jumping jacks, jump rope, or random flailing around (hey, no judgment here).</item>
+      <item>Light a candle\nThe smell and flicker of the flame on a burning a candle can help with relaxation. Scented candles that use quality essential oils can also induce quality sleep.</item>
+      <item>Rearrange some furniture for ten minutes\nChanging an environment can help us feel refreshed, enabling us to bust out of a negative mood.</item>
+      <item>Smile for a minute.\nYou’ve heard it before, but we’ll say it again: Just smiling makes you feel happy. The old standby really does work.</item>
+      <item>Do something nice for someone else\nWhether it’s walking someone’s dog or giving someone a book you no longer need, small acts of kindness can go a long way and will help you to feel more positive.</item>
+      <item>Give yourself a ten minute massage. A quick rubdown\n(focus on the neck, shoulders, lower back, and feet) can improve mood and release stress.</item>
 
-  </string-array>
+    </string-array>
+  -->
 </resources>

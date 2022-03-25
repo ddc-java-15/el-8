@@ -8,6 +8,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
+import edu.cnm.deepdive.el8.adapter.DiaryAdapter;
 import edu.cnm.deepdive.el8.databinding.FragmentDiaryBinding;
 import edu.cnm.deepdive.el8.model.entity.Diary;
 import edu.cnm.deepdive.el8.viewmodel.DiaryViewModel;
@@ -33,11 +35,9 @@ public class DiaryFragment extends Fragment {
 
     binding = FragmentDiaryBinding.inflate(inflater, container, false);
     // TODO Attach listeners to the controls.
-    binding.save.setOnClickListener((v) -> {
-      diaryViewModel.setUserId(userId);
-      diaryViewModel.setDiaryId(diaryId);;
-      diaryViewModel.save(diary);
-    });
+  binding.create.setOnClickListener((v) -> Navigation
+      .findNavController(binding.getRoot())
+      .navigate(DiaryFragmentDirections.openDiaryDetails()));
     return  binding.getRoot();
 
   }
@@ -53,18 +53,24 @@ public class DiaryFragment extends Fragment {
         .getUser()
         .observe(getViewLifecycleOwner(),(user) -> diaryViewModel.setUserId(user.getId()));
     diaryViewModel
-        .getDiary()
-        .observe(getViewLifecycleOwner(), (diary)-> {
-       //   binding.diaryInput.getText();
+        .getDiaries()
+        .observe(getViewLifecycleOwner(), (diaries)-> {
+          DiaryAdapter adapter = new DiaryAdapter(getContext(), diaries, (position, v, diary) ->
+              Navigation
+                  .findNavController(binding.getRoot())
+                  .navigate(DiaryFragmentDirections.openDiaryDetails().setDiaryId(diary.getId()))
+          );
+          binding.entries.setAdapter(adapter);
         });
-    if (diaryId != 0) {
+
+  /*  if (diaryId != 0) {
       diaryViewModel.setDiaryId(diaryId);
     } else {
       diary = new Diary();
       if (diaryId != 0) {
         binding.diaryInput.getText();
       }
-    }
+    }*/
 
 
 

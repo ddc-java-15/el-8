@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:padding="@dimen/half_dynamic_spacing"
+
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <TextView
+    android:id="@+id/date"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    android:text="Today is March 23rd 2022"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/diary_welcome"/>
+
+  <TextView
+    android:id="@+id/diary_welcome"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    android:text="Welcome to your diary !"
+    app:layout_constraintTop_toBottomOf="@id/date"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/diary_entry"/>
+
+  <EditText
+    android:id="@+id/diary_entry"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    android:background="@drawable/edit_text_layout"
+    android:padding="@dimen/half_dynamic_spacing"
+    android:inputType="textMultiLine"
+    android:gravity="top|start"
+    app:layout_constraintTop_toBottomOf="@id/diary_welcome"
+    app:layout_constraintBottom_toTopOf="@id/save_diary_entry"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHeight_percent="0.60"
+    tools:text="Dear Diary,
+
+Today while I was cleaning my cupboard, I want some old pictures of me and my sisters. We all were laughing a lot in this picture. I believe that it should be some really funny moment. Another moment was captured, when I was hiding and eating chocolates from my Father’s pocket so that I don’t have to share with anyone."/>
+
+  <ImageButton
+    android:id="@+id/save_diary_entry"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/half_dynamic_spacing"
+    android:layout_margin="@dimen/half_static_spacing"
+    android:src="@drawable/ic_check"
+    android:background="?android:selectableItemBackgroundBorderless"
+    android:tint="#FF00A000"
+    app:layout_constraintTop_toBottomOf="@id/diary_entry"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:contentDescription="@string/save_label"
+    android:tooltipText="@string/save_label"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

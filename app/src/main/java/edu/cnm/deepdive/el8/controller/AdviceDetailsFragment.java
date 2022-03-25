@@ -42,7 +42,7 @@ public class AdviceDetailsFragment extends Fragment {
     binding.openDiary.setOnClickListener((v) ->
         Navigation
             .findNavController(binding.getRoot())
-            .navigate(AdviceFragmentDirections.showDiary()));
+            .navigate(AdviceFragmentDirections.showDiaryDetails()));
 
     binding.openAdvice.setOnClickListener((v) ->
         Navigation

@@ -47,4 +47,7 @@ public interface DiaryDao {
   @Query("SELECT * FROM diary ORDER BY created ASC")
   LiveData<List<Diary>> select();
 
+  @Query("SELECT * FROM diary WHERE user_id = :userId ORDER BY created DESC")
+  LiveData<List<Diary>> selectByUser(long userId);
+
 }

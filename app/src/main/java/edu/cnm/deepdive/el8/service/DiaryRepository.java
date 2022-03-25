@@ -66,5 +66,8 @@ public class DiaryRepository {
     )
         .subscribeOn(Schedulers.io());
   }
+  public LiveData<List<Diary>> getAllByUser(long userId) {
+    return diaryDao.selectByUser(userId);
+  }
 
 }

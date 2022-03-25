@@ -16,8 +16,9 @@
       android:id="@+id/quick_mood_details"
       app:destination="@id/navigation_mood_details"/>
     <action
-      android:id="@+id/show_diary_dashboard"
-      app:destination="@id/navigation_diary"/>
+      android:id="@+id/show_diary_details"
+      app:destination="@id/navigation_diary_details"/>
+
     <action
       android:id="@+id/show_advice_details"
       app:destination="@id/navigation_advice_details"/>
@@ -28,7 +29,34 @@
     android:id="@+id/navigation_diary"
     android:name="edu.cnm.deepdive.el8.controller.DiaryFragment"
     android:label="@string/diary_title"
-    tools:layout="@layout/fragment_diary"/>
+    tools:layout="@layout/fragment_diary">
+
+    <action
+      android:id="@+id/open_diary_details"
+      app:destination="@id/navigation_diary_details">
+      <argument
+        android:name="diary_id"
+        app:argType="long"
+        android:defaultValue="0L"/>
+
+
+    </action>
+
+  </fragment>
+
+  <fragment
+    android:id="@+id/navigation_diary_details"
+    android:name="edu.cnm.deepdive.el8.controller.DiaryDetailsFragment"
+    android:label="@string/diary_details_label"
+    tools:layout="@layout/fragment_diary_details">
+
+    <argument
+      android:name="diary_id"
+      app:argType="long"
+      android:defaultValue="0L"/>
+
+
+  </fragment>
 
   <fragment
     android:id="@+id/navigation_advice"
@@ -36,8 +64,8 @@
     android:label="@string/advice_title"
     tools:layout="@layout/fragment_advice">
     <action
-      android:id="@+id/show_diary"
-      app:destination="@id/navigation_diary"/>
+      android:id="@+id/show_diary_details"
+      app:destination="@id/navigation_diary_details"/>
     <action
       android:id="@+id/show_advice_details"
       app:destination="@id/navigation_advice_details">
@@ -102,8 +130,6 @@
 
 
   </dialog>
-
-
 
 
   <fragment

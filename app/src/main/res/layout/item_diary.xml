@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_margin="@dimen/half_static_spacing"
+  android:padding="@dimen/half_static_spacing"
+  android:background="?android:selectableItemBackground"
+  android:clickable="true"
+  android:focusable="true"
+  app:cardCornerRadius="@dimen/half_dynamic_spacing">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="@dimen/half_static_spacing">
+
+  <TextView
+    android:id="@+id/date_entry"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_static_spacing"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:text="03/05/22"/>
+  <TextView
+    android:id="@+id/diary"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_static_spacing"
+    android:maxLines="5"
+    android:ellipsize="end"
+    android:inputType="none"
+    tools:text="Dear Diary,Today while I was cleaning my cupboard, I want some old pictures of me and my sisters. We all were laughing a lot in this picture. I believe that it should be some really funny moment. Another moment was captured, when I was hiding and eating chocolates from my Father’s pocket so that I don’t have to share with anyone."
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/date_entry"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
