@@ -6,7 +6,7 @@
   xmlns:app="http://schemas.android.com/apk/res-auto">
 
   <TextView
-    android:id="@+id/advice"
+    android:id="@+id/title"
     android:layout_margin="@dimen/half_dynamic_spacing"
 
     android:layout_width="wrap_content"
@@ -17,14 +17,14 @@
     android:text="Let's get started"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="@id/advice"/>
+    app:layout_constraintTop_toTopOf="parent"/>
 
   <TextView
-    android:id="@+id/advice_description"
+    android:id="@+id/advice"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    app:layout_constraintTop_toBottomOf="@id/advice"
-    app:layout_constraintBottom_toTopOf="@id/image_advice"
+    app:layout_constraintTop_toBottomOf="@id/title"
+    app:layout_constraintBottom_toTopOf="@id/image"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     android:text="@string/advice_description"
@@ -32,32 +32,32 @@
 
 
   <ImageView
-    android:id="@+id/image_advice"
+    android:id="@+id/image"
     android:layout_width="0dp"
-      android:layout_height="wrap_content"
+    android:layout_height="wrap_content"
     android:src="@drawable/meditation"
     android:scaleType="fitCenter"
     android:adjustViewBounds="true"
     android:layout_margin="@dimen/half_dynamic_spacing"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/advice_description"
+    app:layout_constraintTop_toBottomOf="@id/advice"
     app:layout_constraintBottom_toTopOf="@id/open_diary"
     app:layout_constraintWidth_percent="0.8"
     android:contentDescription="@string/image_description"/>
 
-<TextView
-  android:id="@+id/open_diary_label"
-  android:layout_width="0dp"
-  android:layout_height="wrap_content"
-  android:layout_margin="@dimen/half_static_spacing"
-  android:textColor="#2196F3"
-  android:textSize="15sp"
+  <TextView
+    android:id="@+id/open_diary_label"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_static_spacing"
+    android:textColor="#2196F3"
+    android:textSize="15sp"
 
-  app:layout_constraintStart_toStartOf="parent"
-  app:layout_constraintEnd_toStartOf="@id/open_diary"
-  app:layout_constraintBaseline_toBaselineOf="@id/open_diary"
-  android:text="@string/open_diary"/>
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/open_diary"
+    app:layout_constraintBaseline_toBaselineOf="@id/open_diary"
+    android:text="@string/open_diary"/>
   <Button
     android:id="@+id/open_diary"
     android:layout_width="wrap_content"
@@ -89,7 +89,6 @@
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintStart_toStartOf="@id/open_diary"
     app:layout_constraintEnd_toEndOf="@id/open_diary"/>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
