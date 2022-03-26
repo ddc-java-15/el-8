@@ -1,7 +1,6 @@
 package edu.cnm.deepdive.el8.controller;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +26,9 @@ public class AdviceDetailsFragment extends Fragment {
   private long userId;
   private String adviceText;
   private boolean saved;
-
+  private boolean favorite;
+  private Advice advice;
+  private int imageint;
   @Override
   public void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -51,6 +52,21 @@ public class AdviceDetailsFragment extends Fragment {
         Navigation
             .findNavController(binding.getRoot())
             .navigate(AdviceFragmentDirections.showAdviceDetails()));
+
+   binding.favorite.setOnClickListener((v) -> {
+
+
+     if (adviceId == 0) {
+       advice.setId(adviceId);
+       advice.setFavorite(favorite);
+     } else {
+
+       advice.setFavorite(favorite);
+
+     }
+
+   });
+
 
     return binding.getRoot();
 
@@ -79,7 +95,9 @@ public class AdviceDetailsFragment extends Fragment {
             binding.advice.setText(advice.getAction());
           });
     } else {
+
       String[] advices = getContext()
+
           .getResources()
           .getStringArray(R.array.advices);
       Random rng = new Random();
@@ -87,7 +105,27 @@ public class AdviceDetailsFragment extends Fragment {
       binding.advice.setText(adviceText);
       saveAdvice();
     }
+    if (adviceId != 0) {
+      adviceViewModel.setAdviceId(adviceId);
+      adviceViewModel
+          .getAdvice()
+          .observe(getViewLifecycleOwner(), (image) -> {
+            binding.image.setImageResource(imageint);
+          });
+    } else {
+      int [] images = getContext()
+          .getResources()
+          .getIntArray(R.array.images);
+      Random rng = new Random();
+      imageint = images[rng.nextInt(images.length)];
+      binding.image.setImageResource(imageint);
+      saveAdvice();
+
+    }
   }
+
+
+
 
   private synchronized void saveAdvice() {
     if (!saved && userId != 0 && adviceText != null) {

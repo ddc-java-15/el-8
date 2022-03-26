@@ -20,8 +20,8 @@
       app:destination="@id/navigation_diary_details"/>
 
     <action
-      android:id="@+id/show_advice_details"
-      app:destination="@id/navigation_advice_details"/>
+      android:id="@+id/show_advice"
+      app:destination="@id/navigation_advice"/>
 
   </fragment>
 

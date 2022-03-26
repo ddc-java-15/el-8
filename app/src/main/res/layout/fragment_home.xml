@@ -29,15 +29,15 @@
         <ImageView
           android:layout_width="82dp"
           android:layout_height="82dp"
-          android:layout_alignParentRight="true"
+          android:padding="@dimen/half_static_spacing"
+          android:layout_alignParentEnd="true"
           android:src="@drawable/path"
           />
 
 
-
         <TextView
           android:id="@+id/dashboard"
-          android:text="My path"
+          android:text="@string/my_path_label"
           android:textAlignment="viewEnd"
           android:textStyle="bold"
           android:autoSizeMaxTextSize="30sp"
@@ -71,22 +71,26 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="16dp"
-            android:gravity="center"/>
+            android:gravity="center">
 
 
-          <ImageView
+            <ImageView
 
-            android:layout_width="79dp"
-            android:layout_height="80dp"
-            android:src="@drawable/good"/>
+              android:layout_width="79dp"
+              android:layout_height="80dp"
+              android:background="?android:selectableItemBackgroundBorderless"
+              android:src="@drawable/good"/>
 
-          <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:textColor="#000"/>
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="#673AB7"
+              android:textSize="15sp"
 
+              android:text="@string/mood_check_in_label"
+              android:layout_marginTop="12dp"/>
 
+          </LinearLayout>
 
 
         </androidx.cardview.widget.CardView>
@@ -98,6 +102,7 @@
           android:layout_rowWeight="1"
           app:cardElevation="6dp"
           app:contentPadding="4dp"
+          android:background="?android:selectableItemBackgroundBorderless"
 
           app:cardCornerRadius="12dp"
           android:layout_margin="12dp">
@@ -107,23 +112,24 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="16dp"
-            android:gravity="center"/>
+            android:gravity="center">
 
 
+            <ImageView
+              android:src="@drawable/diary2"
+              android:layout_width="80dp"
+              android:layout_height="80dp"
+              android:contentDescription="TODO"/>
 
-          <ImageView
-            android:src="@drawable/diaryy"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:contentDescription="TODO"/>
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="12dp"
+              android:textColor="#673AB7"
+              android:textSize="15sp"
+              android:text="@string/my_diary_label"/>
 
-          <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:textColor="#000"/>
-
-
+          </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
           android:layout_width="wrap_content"
@@ -132,7 +138,7 @@
           android:layout_rowWeight="1"
           app:cardElevation="6dp"
           app:contentPadding="4dp"
-
+          android:background="?android:selectableItemBackgroundBorderless"
           app:cardCornerRadius="12dp"
           android:layout_margin="12dp">
 
@@ -141,34 +147,35 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="16dp"
-            android:gravity="center"/>
+            android:gravity="center">
 
 
+            <ImageView
+              android:src="@drawable/graph"
+              android:layout_width="80dp"
+              android:layout_height="80dp"
+              />
 
-          <ImageView
-            android:src="@drawable/graph"
-            android:layout_width="80dp"
-            android:layout_height="80dp"/>
-
-          <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:textColor="#000"/>
-
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="12dp"
+              android:text="@string/mood_graph_label"
+              android:textColor="#673AB7"
+              />
+          </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
           android:id="@+id/advice_dashboard"
-
+          android:background="?android:selectableItemBackgroundBorderless"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_columnWeight="1"
           android:layout_rowWeight="1"
           app:cardElevation="6dp"
           app:contentPadding="4dp"
-
           app:cardCornerRadius="12dp"
           android:layout_margin="12dp">
 
@@ -177,21 +184,22 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="16dp"
-            android:gravity="center"/>
+            android:gravity="center">
 
 
+            <ImageView
+              android:src="@drawable/advice"
+              android:layout_width="80dp"
+              android:layout_height="80dp"/>
 
-          <ImageView
-            android:src="@drawable/advice"
-            android:layout_width="80dp"
-            android:layout_height="80dp"/>
-
-          <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:textColor="#000"/>
-
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="12dp"
+              android:textColor="#673AB7"
+              android:textSize="15sp"
+              android:text="@string/advice_label"/>
+          </LinearLayout>
 
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -201,7 +209,7 @@
           android:layout_rowWeight="1"
           app:cardElevation="6dp"
           app:contentPadding="4dp"
-
+          android:background="?android:selectableItemBackgroundBorderless"
           app:cardCornerRadius="12dp"
           android:layout_margin="12dp">
 
@@ -210,41 +218,30 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="16dp"
-            android:gravity="center"/>
+            android:gravity="center">
 
 
+            <ImageView
+              android:src="@drawable/location"
+              android:layout_width="80dp"
+              android:layout_height="80dp"/>
 
-          <ImageView
-            android:src="@drawable/location"
-            android:layout_width="80dp"
-            android:layout_height="80dp"/>
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="12dp"
+              android:textColor="#673AB7"
+              android:textSize="15sp"
+              android:text="@string/what_s_around_me_label"/>
 
-          <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:textColor="#000"/>
-
-
+          </LinearLayout>
         </androidx.cardview.widget.CardView>
 
       </GridLayout>
 
 
-
-
-
-
     </LinearLayout>
   </ScrollView>
-  <com.google.android.material.floatingactionbutton.FloatingActionButton
-    android:id="@+id/create"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:src="@drawable/ic_add"
-    app:useCompatPadding="true"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    android:contentDescription="@string/create_mood_label"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

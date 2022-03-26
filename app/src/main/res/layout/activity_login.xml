@@ -6,7 +6,7 @@
   tools:context=".controller.MainActivity"
   android:layout_gravity="center"
   android:focusableInTouchMode="true"
-  android:background="@color/colorPrimary">
+  android:background="@android:color/holo_purple">
 
   <LinearLayout
     android:id="@+id/linear_layout"
@@ -15,6 +15,13 @@
     android:orientation="vertical"
     android:padding="20dp"/>
 
+
+  <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_add"/>
+
+
   <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -22,18 +29,20 @@
     android:layout_above="@id/sign_in"
     android:layout_alignParentTop="true"
     android:layout_centerInParent="true"
-    android:text="WELCOME BACK TO EL8"
+    android:text="@string/greeting_label"
     android:textAlignment="center"
-    android:textColor="@android:color/holo_blue_bright"
+    android:textColor="@color/colorPrimary"
     android:textSize="20sp"/>
-
 
 
   <com.google.android.gms.common.SignInButton
     android:id="@+id/sign_in"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Sign in"
+    android:background="?android:selectableItemBackgroundBorderless"
+    android:padding="@dimen/half_dynamic_spacing"
+    android:text="@string/sign_in_label"
     android:layout_centerInParent="true"/>
+
 
 </RelativeLayout>

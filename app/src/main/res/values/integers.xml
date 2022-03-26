@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <integer-array name="images">
+    <item>@drawable/happy1</item>
+    <item>@drawable/happy2</item>
+    <item>@drawable/happy3</item>
+    <item>@drawable/diary2</item>
+    <item>@drawable/happy5</item>
+    <item>@drawable/happy6</item>
+    <item>@drawable/happy7</item>
+    <item>@drawable/happy8</item>
+    <item>@drawable/happy9</item>
+    <item>@drawable/happy10</item>
+    <item>@drawable/happy11</item>
+    <item>@drawable/happy12</item>
+    <item>@drawable/happy13</item>
+    <item>@drawable/happy14</item>
+    <item>@drawable/happy15</item>
+    <item>@drawable/happy16</item>
+  </integer-array>
+</resources>

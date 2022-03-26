@@ -73,7 +73,7 @@ public class AdviceAdapter extends RecyclerView.Adapter<Holder> {
       if (advice.isFavorite()) {
         binding.favorite.setColorFilter(favoriteColor);
       } else {
-        binding.favorite.setColorFilter(0);
+        binding.favorite.setColorFilter(1);
       }
       binding.getRoot().setOnClickListener((v) -> adviceClickListener.onClick(position, v, advice));
       binding.favorite.setOnClickListener(
