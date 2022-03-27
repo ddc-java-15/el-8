@@ -71,11 +71,15 @@ public class AdviceViewModel extends AndroidViewModel implements
     Disposable disposable = repository
         .save(advice)
         .subscribe(
-            (c) -> {
-            },
+            (adv) -> this.adviceId.postValue(adv.getId()),
             this::postThrowable
         );
     pending.add(disposable);
+  }
+
+  public void setFavorite(Advice advice, boolean favorite) {
+    advice.setFavorite(favorite);
+    save(advice);
   }
 
   public void delete(Advice advice) {

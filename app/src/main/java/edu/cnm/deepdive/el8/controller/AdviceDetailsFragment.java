@@ -1,12 +1,15 @@
 package edu.cnm.deepdive.el8.controller;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.text.HtmlCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 import edu.cnm.deepdive.el8.R;
@@ -28,7 +31,8 @@ public class AdviceDetailsFragment extends Fragment {
   private boolean saved;
   private boolean favorite;
   private Advice advice;
-  private int imageint;
+  private int imageInt;
+
   @Override
   public void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -53,20 +57,9 @@ public class AdviceDetailsFragment extends Fragment {
             .findNavController(binding.getRoot())
             .navigate(AdviceFragmentDirections.showAdviceDetails()));
 
-   binding.favorite.setOnClickListener((v) -> {
-
-
-     if (adviceId == 0) {
-       advice.setId(adviceId);
-       advice.setFavorite(favorite);
-     } else {
-
-       advice.setFavorite(favorite);
-
-     }
-
-   });
-
+    binding.favorite.setOnClickListener((v) -> {
+      adviceViewModel.setFavorite(advice, !advice.isFavorite());
+    });
 
     return binding.getRoot();
 
@@ -76,8 +69,11 @@ public class AdviceDetailsFragment extends Fragment {
   @Override
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
-    adviceViewModel = new ViewModelProvider(getActivity()).get(AdviceViewModel.class);
-    loginViewModel = new ViewModelProvider(getActivity()).get(LoginViewModel.class);
+    FragmentActivity activity = getActivity();
+    Resources resources = activity.getResources();
+
+    adviceViewModel = new ViewModelProvider(activity).get(AdviceViewModel.class);
+    loginViewModel = new ViewModelProvider(activity).get(LoginViewModel.class);
     loginViewModel
         .getUser()
         .observe(getViewLifecycleOwner(), (user) -> {
@@ -87,51 +83,40 @@ public class AdviceDetailsFragment extends Fragment {
           // TODO personalize user object
           // TODO based on userId and adviceID and moodRating, create and save new adviceobject if necessary.
         });
+    adviceViewModel
+        .getAdvice()
+        .observe(getViewLifecycleOwner(), (advice) -> {
+          this.advice = advice;
+          binding.advice.setText(HtmlCompat.fromHtml(advice.getAction(),HtmlCompat.FROM_HTML_SEPARATOR_LINE_BREAK_HEADING));
+
+          displayImage(activity,resources, advice.getImage() );
+          binding.favorite.setColorFilter(advice.isFavorite() ? 0XFFFF0000: 0X80000000);
+        });
     if (adviceId != 0) {
       adviceViewModel.setAdviceId(adviceId);
-      adviceViewModel
-          .getAdvice()
-          .observe(getViewLifecycleOwner(), (advice) -> {
-            binding.advice.setText(advice.getAction());
-          });
     } else {
-
-      String[] advices = getContext()
-
-          .getResources()
-          .getStringArray(R.array.advices);
+      advice = new Advice();
+      String[] advices = resources.getStringArray(R.array.advices);
       Random rng = new Random();
       adviceText = advices[rng.nextInt(advices.length)];
-      binding.advice.setText(adviceText);
+      advice.setAction(adviceText);
+      String[] images = resources.getStringArray(R.array.images);
+      String image = images[rng.nextInt(images.length)];
+      displayImage(activity, resources, image);
+      advice.setImage(image);
       saveAdvice();
-    }
-    if (adviceId != 0) {
-      adviceViewModel.setAdviceId(adviceId);
-      adviceViewModel
-          .getAdvice()
-          .observe(getViewLifecycleOwner(), (image) -> {
-            binding.image.setImageResource(imageint);
-          });
-    } else {
-      int [] images = getContext()
-          .getResources()
-          .getIntArray(R.array.images);
-      Random rng = new Random();
-      imageint = images[rng.nextInt(images.length)];
-      binding.image.setImageResource(imageint);
-      saveAdvice();
-
     }
   }
 
-
+  private void displayImage(FragmentActivity activity, Resources resources, String image) {
+    int imageId = resources.getIdentifier(image,"drawable", activity.getPackageName());
+    binding.image.setImageResource(imageId);
+  }
 
 
   private synchronized void saveAdvice() {
     if (!saved && userId != 0 && adviceText != null) {
-      Advice advice = new Advice();
       advice.setUserId(userId);
-      advice.setAction(adviceText);
       adviceViewModel.save(advice);
       saved = true;
     }

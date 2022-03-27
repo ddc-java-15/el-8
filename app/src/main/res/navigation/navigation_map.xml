@@ -93,6 +93,7 @@
 
   <fragment
     android:id="@+id/navigation_advice_details"
+    android:label="@string/advice_label"
     android:name="edu.cnm.deepdive.el8.controller.AdviceDetailsFragment"
     tools:layout="@layout/fragment_advice_details">
     <action
