@@ -12,6 +12,10 @@ import io.reactivex.rxjava3.core.Single;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * Interface  used to access, modify, delete and update  data of the {@link Advice} entity and to abstract
+ * the retrieval of data through queries from the database.
+ */
 @Dao
 public interface AdviceDao {
 
@@ -53,5 +57,7 @@ public interface AdviceDao {
   @Query("SELECT * FROM advice WHERE user_id = :userId ORDER BY `action` ASC")
   LiveData<List<Advice>> selectByUser(long userId);
 
+  @Query("SELECT * FROM advice WHERE user_id = :userId AND favorite ORDER BY `action` ASC")
+  LiveData<List<Advice>> selectFavoritesByUser(long userId);
 
 }

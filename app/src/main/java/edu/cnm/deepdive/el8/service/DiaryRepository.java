@@ -3,6 +3,7 @@ package edu.cnm.deepdive.el8.service;
 import android.content.Context;
 import androidx.lifecycle.LiveData;
 import edu.cnm.deepdive.el8.model.dao.DiaryDao;
+import edu.cnm.deepdive.el8.model.entity.Advice;
 import edu.cnm.deepdive.el8.model.entity.Diary;
 import io.reactivex.rxjava3.core.Completable;
 import io.reactivex.rxjava3.core.Single;
@@ -10,6 +11,9 @@ import io.reactivex.rxjava3.schedulers.Schedulers;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Provides the core CRUD operations for the {@link Diary} entity.
+ */
 public class DiaryRepository {
 
   private final DiaryDao diaryDao;

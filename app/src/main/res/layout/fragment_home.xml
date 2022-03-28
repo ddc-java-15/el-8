@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
   android:layout_width="match_parent"
   android:layout_height="match_parent"
+
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
   tools:context=".controller.MainActivity">
 
-
-  <ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-
     <LinearLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
       android:orientation="vertical">
 
       <RelativeLayout
@@ -27,8 +28,8 @@
 
 
         <ImageView
-          android:layout_width="82dp"
-          android:layout_height="82dp"
+          android:layout_width="@dimen/dashboard_image_width"
+          android:layout_height="@dimen/dashboard_image_height"
           android:padding="@dimen/half_static_spacing"
           android:layout_alignParentEnd="true"
           android:src="@drawable/path"
@@ -37,12 +38,11 @@
 
         <TextView
           android:id="@+id/dashboard"
-          android:text="@string/my_path_label"
-          android:textAlignment="viewEnd"
           android:textStyle="bold"
-          android:autoSizeMaxTextSize="30sp"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:text="@string/my_path_label"
+          android:textAlignment="viewEnd"
           android:textColor="#673AB7"
           android:textSize="20sp"/>
 
@@ -57,29 +57,28 @@
 
         <androidx.cardview.widget.CardView
           android:id="@+id/mood_dashboard"
-          android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_columnWeight="1"
           android:layout_rowWeight="1"
-          app:cardElevation="6dp"
-          app:contentPadding="4dp"
-          app:cardCornerRadius="12dp"
-          android:layout_margin="12dp">
+          android:background="?android:selectableItemBackground"
+          app:cardElevation="@dimen/in_between_spacing"
+          app:contentPadding="@dimen/half_static_spacing"
+          app:cardCornerRadius="@dimen/near_full_spacing"
+          android:layout_margin="@dimen/near_full_spacing">
 
           <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="16dp"
+            android:padding="@dimen/full_spacing"
             android:gravity="center">
 
 
             <ImageView
 
-              android:layout_width="79dp"
-              android:layout_height="80dp"
-              android:background="?android:selectableItemBackgroundBorderless"
-              android:src="@drawable/good"/>
+              android:layout_width="@dimen/dashboard_image_width"
+              android:layout_height="@dimen/dashboard_image_height"
+              android:src="@drawable/moodchanges64"/>
 
             <TextView
               android:layout_width="wrap_content"
@@ -88,7 +87,7 @@
               android:textSize="15sp"
 
               android:text="@string/mood_check_in_label"
-              android:layout_marginTop="12dp"/>
+              android:layout_marginTop="@dimen/near_full_spacing"/>
 
           </LinearLayout>
 
@@ -96,35 +95,34 @@
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
           android:id="@+id/diary_dashboard"
-          android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_columnWeight="1"
           android:layout_rowWeight="1"
-          app:cardElevation="6dp"
-          app:contentPadding="4dp"
-          android:background="?android:selectableItemBackgroundBorderless"
+          app:cardElevation="@dimen/in_between_spacing"
+          app:contentPadding="@dimen/half_static_spacing"
+          android:background="?android:selectableItemBackground"
 
-          app:cardCornerRadius="12dp"
-          android:layout_margin="12dp">
+          app:cardCornerRadius="@dimen/near_full_spacing"
+          android:layout_margin="@dimen/near_full_spacing">
 
           <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="16dp"
+            android:padding="@dimen/full_spacing"
             android:gravity="center">
 
 
             <ImageView
-              android:src="@drawable/diary2"
-              android:layout_width="80dp"
-              android:layout_height="80dp"
+              android:src="@drawable/diary64"
+              android:layout_width="@dimen/dashboard_image_width"
+              android:layout_height="@dimen/dashboard_image_height"
               android:contentDescription="TODO"/>
 
             <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:layout_marginTop="12dp"
+              android:layout_marginTop="@dimen/near_full_spacing"
               android:textColor="#673AB7"
               android:textSize="15sp"
               android:text="@string/my_diary_label"/>
@@ -132,34 +130,33 @@
           </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-          android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_columnWeight="1"
           android:layout_rowWeight="1"
-          app:cardElevation="6dp"
-          app:contentPadding="4dp"
-          android:background="?android:selectableItemBackgroundBorderless"
-          app:cardCornerRadius="12dp"
-          android:layout_margin="12dp">
+          app:cardElevation="@dimen/in_between_spacing"
+          app:contentPadding="@dimen/half_static_spacing"
+          android:background="?android:selectableItemBackground"
+          app:cardCornerRadius="@dimen/near_full_spacing"
+          android:layout_margin="@dimen/near_full_spacing">
 
           <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="16dp"
+            android:padding="@dimen/full_spacing"
             android:gravity="center">
 
 
             <ImageView
               android:src="@drawable/graph"
-              android:layout_width="80dp"
-              android:layout_height="80dp"
+              android:layout_width="@dimen/dashboard_image_width"
+              android:layout_height="@dimen/dashboard_image_height"
               />
 
             <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:layout_marginTop="12dp"
+              android:layout_marginTop="@dimen/near_full_spacing"
               android:text="@string/mood_graph_label"
               android:textColor="#673AB7"
               />
@@ -169,33 +166,32 @@
 
         <androidx.cardview.widget.CardView
           android:id="@+id/advice_dashboard"
-          android:background="?android:selectableItemBackgroundBorderless"
-          android:layout_width="wrap_content"
+          android:background="?android:selectableItemBackground"
           android:layout_height="wrap_content"
           android:layout_columnWeight="1"
           android:layout_rowWeight="1"
-          app:cardElevation="6dp"
-          app:contentPadding="4dp"
-          app:cardCornerRadius="12dp"
-          android:layout_margin="12dp">
+          app:cardElevation="@dimen/in_between_spacing"
+          app:contentPadding="@dimen/half_static_spacing"
+          app:cardCornerRadius="@dimen/near_full_spacing"
+          android:layout_margin="@dimen/near_full_spacing">
 
           <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="16dp"
+            android:padding="@dimen/full_spacing"
             android:gravity="center">
 
 
             <ImageView
               android:src="@drawable/advice"
-              android:layout_width="80dp"
-              android:layout_height="80dp"/>
+              android:layout_width="@dimen/dashboard_image_width"
+              android:layout_height="@dimen/dashboard_image_height"/>
 
             <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:layout_marginTop="12dp"
+              android:layout_marginTop="@dimen/near_full_spacing"
               android:textColor="#673AB7"
               android:textSize="15sp"
               android:text="@string/advice_label"/>
@@ -203,28 +199,27 @@
 
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-          android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_columnWeight="1"
           android:layout_rowWeight="1"
-          app:cardElevation="6dp"
-          app:contentPadding="4dp"
-          android:background="?android:selectableItemBackgroundBorderless"
-          app:cardCornerRadius="12dp"
-          android:layout_margin="12dp">
+          app:cardElevation="@dimen/in_between_spacing"
+          app:contentPadding="@dimen/half_static_spacing"
+          android:background="?android:selectableItemBackground"
+          app:cardCornerRadius="@dimen/near_full_spacing"
+          android:layout_margin="@dimen/near_full_spacing">
 
           <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="16dp"
+            android:padding="@dimen/full_spacing"
             android:gravity="center">
 
 
             <ImageView
               android:src="@drawable/location"
-              android:layout_width="80dp"
-              android:layout_height="80dp"/>
+              android:layout_width="@dimen/dashboard_image_width"
+              android:layout_height="@dimen/dashboard_image_height"/>
 
             <TextView
               android:layout_width="wrap_content"
@@ -241,7 +236,8 @@
 
 
     </LinearLayout>
-  </ScrollView>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

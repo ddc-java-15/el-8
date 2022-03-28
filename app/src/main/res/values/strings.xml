@@ -18,9 +18,9 @@
   <string name="diary_title">Diary</string>
   <string name="favorite_title">Favorites</string>
   <string name="advice_title">Advice</string>
-  <string name="open_advice">Tap here to get another Advice</string>
+  <string name="open_advice">Want a new advice?</string>
   <string name="advice">Advice</string>
-  <string name="open_diary">Feeling inspired?Tap here to go to your diary</string>
+  <string name="open_diary">Navigate to your diary</string>
   <string name="image_description">image of a person meditating</string>
   <string name="advice_description">Meditation is a simple practice available to all, which can reduce stress, increase calmness and clarity and promote happiness. Learning how to meditate is straightforward, and the benefits can come quickly. Here, we offer basic tips to get you started on a path toward greater equanimity, acceptance and joy. Take a deep breath, and get ready to relax.</string>
   <string name="diary_details_label">Diary</string>
@@ -34,7 +34,6 @@
   <string name="what_s_around_me_label">What\'s around me</string>
   <string name="my_path_label">My path</string>
   <string name="my_diary_label">My Diary</string>
-  <string name="advice_label">Advice</string>
 
   <string-array name="advices">
 
@@ -67,25 +66,25 @@
     <item><![CDATA[<h5>ADVICE 27</h5>Call a friend!\nSocial connection is a key factor for emotional well-being. The happiest people have strong social relationships.]]></item>
     <item><![CDATA[<h5>ADVICE 28</h5>Walk to the window and look into the light for two minute.\nExposure to natural light during the day (especially in the morning) is crucial for keeping your body rhythms in sync and regulating sleep, metabolism and mood. Windows in the workplace have been associated with improved well-being. If you don’t have an office with a window, barge into someone else’s.]]></item>
     <item><![CDATA[<h5>ADVICE 29</h5>Strike a powerful pose for one minute\nAssuming a powerful stance (think: Wonder Woman or trying-to-scare-a-bear) can make you feel powerful—and what feels better than power?]]></item>
-    <item>Celebrate good times.\nLook at happy photos or spend a minute or so thinking back on positive memories(that first 5K finish line, a group trip to the waterpark, that amazing scone from a no-name coffee shop)—nostalgia can trigger happiness.</item>
-    <item>Think of someone you know and with him well for one minute\nResearchers at Iowa State University found that instead of trying to make ourselves feel better,we should focus on trying to make others feel better. They found that offering kindness to others can help reduce anxiety,improve happiness, and lead to stronger feelings of social connection. Send congratulatory cards when something good happens to a loved one,compliment a stranger’s shoes, or give a colleague a stellar recommendation on LinkedIn.</item>
-    <item>Write 3 positive things down that happened to you today.\nDid you know that taking the time to write down 3 positive things each day will make you more optimistic and less stressed?</item>
-    <item>Say \"thank you, thank you, thank you,\" over and over for one minute\nEven this small act of gratitude will boost your positivity.</item>
-    <item>Learn something new.\nWhether it\'s reading a wiki about a topic that interests you or watching a quick Youtube tutorial, the digital world is full of ways to learn things fast and on the go.</item>
-    <item>Text a friend.\nReaching out to a pal and letting them know how awesome they are will make you feel awesome, too.</item>
-    <item>Meditate for two minutes\nWhat if I told you that if you commit to meditate 5 to 10 minutes a day on most days you’ll feel calmer, more focused and happier?</item>
-    <item>Nap Time for 20 minutes\nYou will feel refreshed and happier.</item>
-    <item>Buy a Plant\nGo to your local flower shop and find a colorful plant or just something you would enjoy caring for.Put it in a space you spend most of your time, give it plenty of sun and water and watch it flourish!</item>
-    <item>Crank Up the Music and play your favorite upbeat song.\nListening to music can be an enjoyable experience, but there is also evidence that music has psychological benefits including having an influence on your moods. One 2013 study found that listening to upbeat songs could improve happiness and boost mood relatively quickly</item>
-    <item>Do something spontaneous.\nSome of my favorite memories entail choices I made spontaneously.We should all learn to let go of routine every now and then and do something exciting and unplan</item>
-    <item>Bake something.\nBaking is very  therapeutic and entertaining. You can also share it with others afterward.</item>
-    <item>Read or watch Something Inspirational\nWords have the power to heal and pick you back up when you’re down. Go online and search for inspirational quotes.Watch a speech from a famous and inspiring leader you admire, or read a thoughtful or inspiring book.</item>
-    <item>Jump around for one minute\nGet happy-making endorphins pumping fast with some jumping jacks, jump rope, or random flailing around (hey, no judgment here).</item>
-    <item>Light a candle\nThe smell and flicker of the flame on a burning a candle can help with relaxation. Scented candles that use quality essential oils can also induce quality sleep.</item>
-    <item>Rearrange some furniture for ten minutes\nChanging an environment can help us feel refreshed, enabling us to bust out of a negative mood.</item>
-    <item>Smile for a minute.\nYou’ve heard it before, but we’ll say it again: Just smiling makes you feel happy. The old standby really does work.</item>
-    <item>Do something nice for someone else\nWhether it’s walking someone’s dog or giving someone a book you no longer need, small acts of kindness can go a long way and will help you to feel more positive.</item>
-    <item>Give yourself a ten minute massage. A quick rubdown\n(focus on the neck, shoulders, lower back, and feet) can improve mood and release stress.</item>
+    <item><![CDATA[<h5>ADVICE 30</h5>Celebrate good times.\nLook at happy photos or spend a minute or so thinking back on positive memories(that first 5K finish line, a group trip to the waterpark, that amazing scone from a no-name coffee shop)—nostalgia can trigger happiness.</item>
+    <item><![CDATA[<h5>ADVICE 31</h5>Think of someone you know and with him well for one minute\nResearchers at Iowa State University found that instead of trying to make ourselves feel better,we should focus on trying to make others feel better. They found that offering kindness to others can help reduce anxiety,improve happiness, and lead to stronger feelings of social connection. Send congratulatory cards when something good happens to a loved one,compliment a stranger’s shoes, or give a colleague a stellar recommendation on LinkedIn.]]></item>
+    <item><![CDATA[<h5>ADVICE 32</h5>Write 3 positive things down that happened to you today.\nDid you know that taking the time to write down 3 positive things each day will make you more optimistic and less stressed?]]></item>
+    <item><![CDATA[<h5>ADVICE 33</h5>Say \"thank you, thank you, thank you,\" over and over for one minute\nEven this small act of gratitude will boost your positivity.]]></item>
+    <item><![CDATA[<h5>ADVICE 34</h5>Learn something new.\nWhether it\'s reading a wiki about a topic that interests you or watching a quick Youtube tutorial, the digital world is full of ways to learn things fast and on the go.]]></item>
+    <item><![CDATA[<h5>ADVICE 35</h5>Text a friend.\nReaching out to a pal and letting them know how awesome they are will make you feel awesome, too.]]></item>
+    <item><![CDATA[<h5>ADVICE 36</h5>Meditate for two minutes\nWhat if I told you that if you commit to meditate 5 to 10 minutes a day on most days you’ll feel calmer, more focused and happier?]]></item>
+    <item><![CDATA[<h5>ADVICE 37</h5>Nap Time for 20 minutes\nYou will feel refreshed and happier.</item>
+    <item><![CDATA[<h5>ADVICE 38</h5>Buy a Plant\nGo to your local flower shop and find a colorful plant or just something you would enjoy caring for.Put it in a space you spend most of your time, give it plenty of sun and water and watch it flourish!]]></item>
+    <item><![CDATA[<h5>ADVICE 39</h5>Crank Up the Music and play your favorite upbeat song.\nListening to music can be an enjoyable experience, but there is also evidence that music has psychological benefits including having an influence on your moods. One 2013 study found that listening to upbeat songs could improve happiness and boost mood relatively quickly]]></item>
+    <item><![CDATA[<h5>ADVICE 40</h5>Do something spontaneous.\nSome of my favorite memories entail choices I made spontaneously.We should all learn to let go of routine every now and then and do something exciting and unplan]]></item>
+    <item><![CDATA[<h5>ADVICE 41</h5>Bake something.\nBaking is very  therapeutic and entertaining. You can also share it with others afterward.]]></item>
+    <item><![CDATA[<h5>ADVICE 42</h5>Read or watch Something Inspirational\nWords have the power to heal and pick you back up when you’re down. Go online and search for inspirational quotes.Watch a speech from a famous and inspiring leader you admire, or read a thoughtful or inspiring book.]]></item>
+    <item><![CDATA[<h5>ADVICE 43</h5>Jump around for one minute\nGet happy-making endorphins pumping fast with some jumping jacks, jump rope, or random flailing around (hey, no judgment here).]]></item>
+    <item><![CDATA[<h5>ADVICE 44</h5>Light a candle\nThe smell and flicker of the flame on a burning a candle can help with relaxation. Scented candles that use quality essential oils can also induce quality sleep.]]></item>
+    <item><![CDATA[<h5>ADVICE 45</h5>Rearrange some furniture for ten minutes\nChanging an environment can help us feel refreshed, enabling us to bust out of a negative mood.]]></item>
+    <item><![CDATA[<h5>ADVICE 46</h5>Smile for a minute.\nYou’ve heard it before, but we’ll say it again: Just smiling makes you feel happy. The old standby really does work.]]></item>
+    <item><![CDATA[<h5>ADVICE 47</h5>Do something nice for someone else\nWhether it’s walking someone’s dog or giving someone a book you no longer need, small acts of kindness can go a long way and will help you to feel more positive.]]></item>
+    <item><![CDATA[<h5>ADVICE 29</h5>Give yourself a ten minute massage. A quick rubdown\n(focus on the neck, shoulders, lower back, and feet) can improve mood and release stress.]]></item>
   </string-array>
 
   <string-array name="images">
@@ -106,5 +105,6 @@
     <item>happy16</item>
     <item>happy4</item>
   </string-array>
+
 
 </resources>

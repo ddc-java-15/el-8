@@ -8,6 +8,7 @@ import androidx.room.ForeignKey;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 import java.util.Date;
+import edu.cnm.deepdive.el8.model.entity.Advice;
 
 
 @Entity(
@@ -16,6 +17,10 @@ import java.util.Date;
         entity = User.class ,
         parentColumns = "user_id", childColumns = "user_id",
         onDelete = ForeignKey.CASCADE))
+
+/**
+ * Encapsulates the property of the {@link Advice} entity class.
+ */
 
 public class Advice {
 

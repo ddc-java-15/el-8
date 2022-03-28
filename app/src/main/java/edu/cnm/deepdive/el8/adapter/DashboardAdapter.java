@@ -9,6 +9,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import edu.cnm.deepdive.el8.R;
 import edu.cnm.deepdive.el8.adapter.DashboardAdapter.Holder;
 
+/**
+ * Provides access to a recycler view and creates a view for each item in the data set.
+ */
+
 public class DashboardAdapter extends RecyclerView.Adapter<Holder> {
 
 
@@ -50,7 +54,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<Holder> {
   @Override
   public Holder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
     View view = LayoutInflater.from(viewGroup.getContext())
-        .inflate(R.layout.fragment_dashboard, viewGroup, false);
+        .inflate(R.layout.fragment_home, viewGroup, false);
     return new Holder(view);
   }
 
@@ -76,9 +80,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<Holder> {
 
     Holder(View itemView) {
       super(itemView);
- //       itemImage = itemView.findViewById(R.id.it);
-//      itemTitle = itemView.findViewById(R.id.item_title);
-//      itemDetail= itemView.findViewById(R.id.item_detail);
+
 
     }
   }

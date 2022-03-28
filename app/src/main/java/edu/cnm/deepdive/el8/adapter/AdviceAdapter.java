@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
+import androidx.core.text.HtmlCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import edu.cnm.deepdive.el8.R;
 import edu.cnm.deepdive.el8.adapter.AdviceAdapter.Holder;
@@ -14,6 +15,9 @@ import edu.cnm.deepdive.el8.model.entity.Advice;
 import java.text.DateFormat;
 import java.util.List;
 
+/**
+ * Provides access to a recycler view and creates a view for each item in the data set.
+ */
 public class AdviceAdapter extends RecyclerView.Adapter<Holder> {
 
 
@@ -25,6 +29,13 @@ public class AdviceAdapter extends RecyclerView.Adapter<Holder> {
   @ColorInt
   private final int favoriteColor;
 
+  /**
+   *Initialize this instance of {@link AdviceAdapter}
+   * @param context
+   * @param advices
+   * @param adviceClickListener
+   * @param favoriteClickListener
+   */
   public AdviceAdapter(Context context, List<Advice> advices,
       OnAdviceClickListener adviceClickListener,
       OnFavoriteClickListener favoriteClickListener) {
@@ -57,23 +68,34 @@ public class AdviceAdapter extends RecyclerView.Adapter<Holder> {
     return advices.size();
   }
 
+  /**
+   *
+   */
   class Holder extends RecyclerView.ViewHolder {
 
     private ItemAdviceBinding binding;
 
+    /**
+     *
+     * @param binding
+     */
     public Holder(@NonNull ItemAdviceBinding binding) {
       super(binding.getRoot());
       this.binding = binding;
     }
 
+    /**
+     *
+     * @param position
+     */
     public void bind(int position) {
       Advice advice = advices.get(position);
-      binding.action.setText(advice.getAction());
+      binding.action.setText(HtmlCompat.fromHtml(advice.getAction(),HtmlCompat.FROM_HTML_SEPARATOR_LINE_BREAK_HEADING));
       binding.date.setText(dateFormat.format(advice.getCreated()));
       if (advice.isFavorite()) {
         binding.favorite.setColorFilter(favoriteColor);
       } else {
-        binding.favorite.setColorFilter(1);
+        binding.favorite.setColorFilter(0X80000000);
       }
       binding.getRoot().setOnClickListener((v) -> adviceClickListener.onClick(position, v, advice));
       binding.favorite.setOnClickListener(
@@ -82,12 +104,18 @@ public class AdviceAdapter extends RecyclerView.Adapter<Holder> {
     }
   }
 
+  /**
+   *
+   */
   @FunctionalInterface
   public interface OnAdviceClickListener {
 
     void onClick(int position, View view, Advice advice);
   }
 
+  /**
+   *
+   */
   @FunctionalInterface
   public interface OnFavoriteClickListener {
 

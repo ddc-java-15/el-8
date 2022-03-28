@@ -63,14 +63,6 @@ public class DiaryFragment extends Fragment {
           binding.entries.setAdapter(adapter);
         });
 
-  /*  if (diaryId != 0) {
-      diaryViewModel.setDiaryId(diaryId);
-    } else {
-      diary = new Diary();
-      if (diaryId != 0) {
-        binding.diaryInput.getText();
-      }
-    }*/
 
 
 

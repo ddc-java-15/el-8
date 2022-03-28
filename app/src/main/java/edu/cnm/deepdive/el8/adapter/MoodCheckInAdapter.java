@@ -12,12 +12,21 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Provides access to a recycler view and creates a view for each item in the data set.
+ */
+
 public class MoodCheckInAdapter extends RecyclerView.Adapter<Holder> {
 
   private final List<MoodCheckIn> moodCheckIns;
   private final LayoutInflater inflater;
   private final DateFormat dateFormat;
 
+  /**
+   * Initialize this instance of {@link MoodCheckInAdapter}
+   * @param context
+   * @param moodCheckIns
+   */
   public MoodCheckInAdapter(Context context,
       List<MoodCheckIn> moodCheckIns) {
     this.moodCheckIns = moodCheckIns;

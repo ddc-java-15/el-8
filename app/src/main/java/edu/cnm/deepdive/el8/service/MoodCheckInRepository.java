@@ -3,6 +3,7 @@ package edu.cnm.deepdive.el8.service;
 import android.content.Context;
 import androidx.lifecycle.LiveData;
 import edu.cnm.deepdive.el8.model.dao.MoodCheckInDao;
+import edu.cnm.deepdive.el8.model.entity.Advice;
 import edu.cnm.deepdive.el8.model.entity.MoodCheckIn;
 import io.reactivex.rxjava3.core.Completable;
 import io.reactivex.rxjava3.core.Single;
@@ -10,6 +11,10 @@ import io.reactivex.rxjava3.schedulers.Schedulers;
 import java.util.Date;
 import java.util.List;
 
+
+/**
+ * Provides the core CRUD operations for the {@link MoodCheckIn} entity.
+ */
 public class MoodCheckInRepository {
 
   private final Context context;

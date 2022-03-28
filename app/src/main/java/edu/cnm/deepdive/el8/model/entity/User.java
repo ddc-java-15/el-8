@@ -14,6 +14,10 @@ import androidx.room.PrimaryKey;
         @Index(value = "oauth_key", unique = true)
     }
 )
+/**
+ * Encapsulates the property of the {@link User} entity class.
+ */
+
 public class User {
 
   @PrimaryKey(autoGenerate = true)

@@ -15,8 +15,12 @@ import java.util.Date;
         parentColumns ="user_id", childColumns = "user_id",
         onDelete = ForeignKey.CASCADE))
 
+
 public class Diary {
 
+  /**
+   * Encapsulates the property of the {@link Diary} entity class.
+   */
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "diary_id")

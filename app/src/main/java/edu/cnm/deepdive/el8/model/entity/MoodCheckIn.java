@@ -14,6 +14,12 @@ import java.util.Date;
         parentColumns = "user_id", childColumns = "user_id",
         onDelete = ForeignKey.CASCADE)
 )
+
+/**
+ * Encapsulates the property of the {@link MoodCheckIn} entity class.
+ */
+
+
 public class MoodCheckIn {
 
 

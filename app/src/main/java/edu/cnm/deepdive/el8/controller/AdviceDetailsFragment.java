@@ -50,12 +50,12 @@ public class AdviceDetailsFragment extends Fragment {
     binding.openDiary.setOnClickListener((v) ->
         Navigation
             .findNavController(binding.getRoot())
-            .navigate(AdviceFragmentDirections.showDiaryDetails()));
+            .navigate(AdviceDetailsFragmentDirections.showDiaryDetails()));
 
     binding.openAdvice.setOnClickListener((v) ->
         Navigation
             .findNavController(binding.getRoot())
-            .navigate(AdviceFragmentDirections.showAdviceDetails()));
+            .navigate(AdviceDetailsFragmentDirections.showAdviceDetails()));
 
     binding.favorite.setOnClickListener((v) -> {
       adviceViewModel.setFavorite(advice, !advice.isFavorite());

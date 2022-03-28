@@ -6,11 +6,16 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
+import edu.cnm.deepdive.el8.model.entity.Advice;
 import edu.cnm.deepdive.el8.model.entity.Diary;
 import io.reactivex.rxjava3.core.Single;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * Interface  used to access , modify, delete and update  data of the {@link Diary} entity and to abstract
+ * the retrieval of data through queries from the database.
+ */
 @Dao
 public interface DiaryDao {
 

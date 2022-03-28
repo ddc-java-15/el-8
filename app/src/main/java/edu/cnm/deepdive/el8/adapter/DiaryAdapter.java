@@ -12,6 +12,10 @@ import edu.cnm.deepdive.el8.model.entity.Diary;
 import java.text.DateFormat;
 import java.util.List;
 
+/**
+ * Provides access to a recycler view and creates a view for each item in the data set.
+ */
+
 public class DiaryAdapter extends RecyclerView.Adapter<Holder> {
 
 
@@ -20,6 +24,12 @@ public class DiaryAdapter extends RecyclerView.Adapter<Holder> {
   private final LayoutInflater inflater;
   private final DateFormat dateFormat;
 
+  /**
+   * Initialize this instance of {@link DiaryAdapter}
+   * @param context
+   * @param diaries
+   * @param listener
+   */
 
   public DiaryAdapter(Context context, List<Diary> diaries,
       OnDiaryClickListener listener) {
@@ -50,10 +60,17 @@ public class DiaryAdapter extends RecyclerView.Adapter<Holder> {
     return diaries.size();
   }
 
+  /**
+   *
+   */
   class Holder extends RecyclerView.ViewHolder {
 
     private ItemDiaryBinding binding;
 
+    /**
+     *
+     * @param binding
+     */
     public Holder(@NonNull ItemDiaryBinding binding) {
       super(binding.getRoot());
       this.binding = binding;

@@ -21,7 +21,13 @@
 
     <action
       android:id="@+id/show_advice"
-      app:destination="@id/navigation_advice"/>
+      app:destination="@id/navigation_advice">
+      <argument
+        android:name="only_favorites"
+        app:argType="boolean"
+        android:defaultValue="false"/>
+
+    </action>
 
   </fragment>
 
@@ -63,6 +69,11 @@
     android:name="edu.cnm.deepdive.el8.controller.AdviceFragment"
     android:label="@string/advice_title"
     tools:layout="@layout/fragment_advice">
+
+    <argument
+      android:name="only_favorites"
+      app:argType="boolean"
+      android:defaultValue="false"/>
     <action
       android:id="@+id/show_diary_details"
       app:destination="@id/navigation_diary_details"/>
@@ -97,8 +108,8 @@
     android:name="edu.cnm.deepdive.el8.controller.AdviceDetailsFragment"
     tools:layout="@layout/fragment_advice_details">
     <action
-      android:id="@+id/show_diary"
-      app:destination="@id/navigation_diary"/>
+      android:id="@+id/show_diary_details"
+      app:destination="@id/navigation_diary_details"/>
     <action
       android:id="@+id/show_advice_details"
       app:destination="@id/navigation_advice_details"/>
@@ -134,10 +145,32 @@
 
 
   <fragment
-    android:id="@+id/navigation_favorite"
-    android:name="edu.cnm.deepdive.el8.controller.FavoritesFragment"
+    android:id="@+id/navigation_favorites"
+    android:name="edu.cnm.deepdive.el8.controller.AdviceFragment"
     android:label="@string/favorite_title"
-    tools:layout="@layout/fragment_favorites"/>
+    tools:layout="@layout/fragment_advice">
+
+    <argument
+      android:name="only_favorites"
+      app:argType="boolean"
+      android:defaultValue="true"/>
+
+    <action
+      android:id="@+id/show_diary_details"
+      app:destination="@id/navigation_diary_details"/>
+
+    <action
+      android:id="@+id/show_advice_details"
+      app:destination="@id/navigation_advice_details">
+
+      <argument
+        android:name="advice_id"
+        app:argType="long"
+        android:defaultValue="0L"/>
+
+    </action>
+
+  </fragment>
 
 
 </navigation>

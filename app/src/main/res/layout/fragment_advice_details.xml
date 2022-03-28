@@ -14,7 +14,6 @@
     android:textSize="24sp"
     android:textColor="@color/colorPrimary"
     android:padding="@dimen/half_static_spacing"
-    android:text="@string/advice_details_header"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toTopOf="parent"/>
@@ -65,18 +64,22 @@
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/half_static_spacing"
-    android:textColor="#2196F3"
+    android:textColor="@color/colorPrimary"
     android:textSize="15sp"
 
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toStartOf="@id/open_diary"
-    app:layout_constraintBaseline_toBaselineOf="@id/open_diary"
+    app:layout_constraintTop_toTopOf="@id/open_diary"
+    app:layout_constraintBottom_toBottomOf="@id/open_diary"
     android:text="@string/open_diary"/>
-  <Button
+  <ImageButton
     android:id="@+id/open_diary"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@string/completed_text"
+    android:src="@drawable/diary64"
+    android:background="?android:selectableItemBackground"
+
     android:layout_margin="@dimen/half_static_spacing"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintBottom_toTopOf="@id/open_advice"/>
@@ -86,21 +89,24 @@
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:textSize="15sp"
-    android:textColor="#2196F3"
+    android:textColor="@color/colorPrimary"
 
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toStartOf="@id/open_advice"
-    app:layout_constraintBaseline_toBaselineOf="@id/open_advice"
+    app:layout_constraintTop_toTopOf="@id/open_advice"
+    app:layout_constraintBottom_toBottomOf="@id/open_advice"
     android:layout_margin="@dimen/half_static_spacing"
     android:text="@string/open_advice"/>
 
-  <Button
+  <ImageButton
     android:id="@+id/open_advice"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:text="@string/advice"
+    android:background="?android:selectableItemBackground"
 
+    android:text="@string/advice"
     android:layout_margin="@dimen/half_static_spacing"
+    android:src="@drawable/advice"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintStart_toStartOf="@id/open_diary"
     app:layout_constraintEnd_toEndOf="@id/open_diary"/>

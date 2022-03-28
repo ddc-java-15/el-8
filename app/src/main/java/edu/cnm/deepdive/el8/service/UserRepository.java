@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import edu.cnm.deepdive.el8.model.dao.UserDao;
+import edu.cnm.deepdive.el8.model.entity.Advice;
 import edu.cnm.deepdive.el8.model.entity.User;
 import io.reactivex.rxjava3.core.Completable;
 import io.reactivex.rxjava3.core.Maybe;
@@ -13,6 +14,9 @@ import io.reactivex.rxjava3.core.Single;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 import java.util.List;
 
+/**
+ * Provides the core CRUD operations for the {@link User} entity.
+ */
 public class UserRepository {
 
   private final Context context;
@@ -23,7 +27,11 @@ public class UserRepository {
 
   private final MutableLiveData<User> user;
 
-
+  /**
+   *
+   * Initializes this instance with of {@link UserRepository}
+   * @param context
+   */
   public UserRepository(Context context) {
     this.context = context;
 

@@ -9,6 +9,9 @@ import io.reactivex.rxjava3.core.Single;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 import java.util.List;
 
+/**
+ * Provides the core CRUD operations for the {@link Advice} entity.
+ */
 public class AdviceRepository {
 
   private final Context context;
@@ -33,9 +36,11 @@ public class AdviceRepository {
     return adviceDao.select();
   }
 
-  public LiveData<List<Advice>> getAllByUser(long userId) {
+  public LiveData<List<Advice>> getAllByUser(long userId, boolean onlyFavorites) {
 
-    return adviceDao.selectByUser(userId);
+    return onlyFavorites
+        ? adviceDao.selectFavoritesByUser(userId)
+        : adviceDao.selectByUser(userId);
   }
 
 
