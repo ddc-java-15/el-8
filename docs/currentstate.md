@@ -9,7 +9,9 @@ order: 50
 
 - The App navigation needs some improvements to make it more intuitive and more user-friendly.
 - The multiple entry point to access similar screens as "Mood rating, Advice and Diary" could definitely use some refinement.
-
+- Navigation between home screen and child screen  through the bottom nav menu needs some refinement
+- Mood graph button and what's around me are not yet implemented.
+- 
 ## Cosmetic Enhancement
 
 - Known bug in the home fragment layout that displays the card views unevenly,that will definitely need to be taken care of and fixed.
