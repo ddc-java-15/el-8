@@ -16,9 +16,11 @@ order: 60
   - After registering your mood, you will be taken to your advice screen, where an advice and an image will be generated.
   - You will then get the option of clicking on advice to generate a second one, or to be taken to your diary to write an entry.
   - Use the left arrow at the top right anytime you want to get back to the previous screen.
+
 #### 2- Diary button
   - Next to the Mood check in button, on the left, click on the Diary button, to navigate directly to your diary and write an entry.
   - Use the left arrow at the top right anytime you want to get back to the previous screen. 
+
 #### 3- Advice button
   - Below the Diary button, click on the Advice button to navigate to a history of all the advices that have been displayed to the current user.
   - Use the left arrow at the top right want to get back to the previous screen.
