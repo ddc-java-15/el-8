@@ -28,11 +28,11 @@
 
 
         <ImageView
-          android:layout_width="@dimen/dashboard_image_width"
-          android:layout_height="@dimen/dashboard_image_height"
-          android:padding="@dimen/half_static_spacing"
+          android:layout_width="@dimen/icon_size"
+          android:layout_height="@dimen/icon_size"
           android:layout_alignParentEnd="true"
-          android:src="@drawable/path"
+          android:padding="@dimen/half_static_spacing"
+          android:src="@drawable/icon_lotus"
           />
 
 

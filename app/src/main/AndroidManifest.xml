@@ -7,10 +7,10 @@
 
   <application
     android:allowBackup="false"
-    android:icon="@mipmap/ic_el8_launcher2"
+    android:icon="@mipmap/ic_el8_lotus_launcher"
     android:label="@string/app_name"
     android:name=".El8Application"
-    android:roundIcon="@mipmap/ic_el8_launcher2_round"
+    android:roundIcon="@mipmap/ic_el8_lotus_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/AppTheme"
     tools:ignore="AllowBackup">
