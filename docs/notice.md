@@ -1,3 +1,11 @@
+---
+title: Copyright and license information
+description: Copyright and license information for EL8 and the incorporated libraries.
+menu: License
+order: 100
+---
+
+
 ## EL8
 
 Copyright 2022 Cathy Bastareaud. All rights reserved.
