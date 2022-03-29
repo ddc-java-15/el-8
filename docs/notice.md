@@ -3,6 +3,8 @@ title: Copyright and license information
 description: Copyright and license information for EL8 and the incorporated libraries.
 menu: License
 order: 100
+heading_navigator: 
+  enabled: false
 ---
 
 
