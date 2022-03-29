@@ -30,7 +30,7 @@ public class AdviceAdapter extends RecyclerView.Adapter<Holder> {
   private final int favoriteColor;
 
   /**
-   *Initialize this instance of {@link AdviceAdapter}
+   *Initialize this instance of {@link AdviceAdapter} with the injected below parameters.
    * @param context
    * @param advices
    * @param adviceClickListener
@@ -69,15 +69,15 @@ public class AdviceAdapter extends RecyclerView.Adapter<Holder> {
   }
 
   /**
-   *
+   * Provides access to a recycler view and creates a view for each item in the data set.
    */
   class Holder extends RecyclerView.ViewHolder {
 
     private ItemAdviceBinding binding;
 
     /**
-     *
-     * @param binding
+     * Wraps around the View that contains the {@code fragment_advice.xml} layout
+     * @param binding Attaches to the root of the layout,
      */
     public Holder(@NonNull ItemAdviceBinding binding) {
       super(binding.getRoot());
@@ -85,7 +85,7 @@ public class AdviceAdapter extends RecyclerView.Adapter<Holder> {
     }
 
     /**
-     *
+     * Binds the item according to its position
      * @param position
      */
     public void bind(int position) {
@@ -105,7 +105,7 @@ public class AdviceAdapter extends RecyclerView.Adapter<Holder> {
   }
 
   /**
-   *
+   * Provides an updated onClick Listener
    */
   @FunctionalInterface
   public interface OnAdviceClickListener {

@@ -79,7 +79,7 @@ public class User {
   }
 
   /**
-   * Set the  name of the specified {@link User}
+   * Sets the  name of the specified {@link User}
    * @param name
    */
   public void setName(@NonNull String name) {

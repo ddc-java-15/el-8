@@ -13,7 +13,7 @@ import edu.cnm.deepdive.el8.databinding.ActivityLoginBinding;
 import edu.cnm.deepdive.el8.viewmodel.LoginViewModel;
 
 /**
- * Defines and manages and inflates the {@code activity_login.xml} layout.
+ * Defines, manages and inflates the {@code activity_login.xml} layout.
  * Handles the lifecycle and input events of the {@link LoginActivity}
  */
 public class LoginActivity extends AppCompatActivity {

@@ -23,7 +23,7 @@ public class MoodCheckInAdapter extends RecyclerView.Adapter<Holder> {
   private final DateFormat dateFormat;
 
   /**
-   * Initialize this instance of {@link MoodCheckInAdapter}
+   * Initialize this instance of {@link MoodCheckInAdapter} with the injected parameters
    * @param context
    * @param moodCheckIns
    */
@@ -55,14 +55,24 @@ public class MoodCheckInAdapter extends RecyclerView.Adapter<Holder> {
   }
 
 
+  /**
+   * Provides access to a recycler view and creates a view for each item in the data set.
+   */
   class Holder extends RecyclerView.ViewHolder {
     private final ItemMoodCheckInBinding binding;
 
-
+    /**
+     * Wraps around the View that contains the {@code fragment_mood_check_in.xml} layout
+     * @param binding Attaches to the root of the layout,
+     */
     public Holder(@NonNull ItemMoodCheckInBinding binding) {
       super(binding.getRoot());
       this.binding = binding;
     }
+    /**
+     * Binds the item according to its position
+     * @param position
+     */
     public void bind (int position) {
       MoodCheckIn item = moodCheckIns.get(position) ;
       Date created = item.getCreated();

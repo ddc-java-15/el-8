@@ -17,7 +17,7 @@ import edu.cnm.deepdive.el8.viewmodel.DiaryViewModel;
 import edu.cnm.deepdive.el8.viewmodel.LoginViewModel;
 import java.util.Date;
 /**
- * Defines and manages and inflates the {@code fragment_diary_details.xml} layout.
+ * Defines, manages and inflates the {@code fragment_diary_details.xml} layout.
  * Handles its layout lifecycle and input events.
  */
 public class DiaryDetailsFragment extends Fragment {

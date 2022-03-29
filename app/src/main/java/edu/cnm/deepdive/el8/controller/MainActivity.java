@@ -21,7 +21,7 @@ import edu.cnm.deepdive.el8.viewmodel.MoodViewModel;
 /**
  * Entry point of the EL8 application.
  * Loads the {@link MainActivity} and then the rest of the application.
- * Defines and manages and inflates the {@code activity_main.xml} layout.
+ * Defines, manages and inflates the {@code activity_main.xml} layout.
  * Handles the lifecycle and input events of the whole application through {@link MainActivity}.
  */
 public class MainActivity extends AppCompatActivity {

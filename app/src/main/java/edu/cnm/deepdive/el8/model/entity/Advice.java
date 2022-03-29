@@ -64,31 +64,47 @@ public class Advice {
     return created;
   }
   /**
-   * Set the date of creation of the specified {@link Advice}
+   * Sets the date of creation of the specified {@link Advice}
    * @param created
    */
   public void setCreated(@NonNull Date created) {
     this.created = created;
   }
 
+  /**
+   * Retrieves the {@code action} of the specified {@link Advice}
+   * @return
+   */
   public String getAction() {
     return action;
   }
 
+  /**
+   * Sets the {@code action} of the specified {@link Advice}
+   * @param action
+   */
   public void setAction(String action) {
     this.action = action;
   }
 
+  /**
+   * Retrieves the {@code image} of the specified {@link Advice}
+   * @return
+   */
   public String getImage() {
     return image;
   }
 
+  /**
+   * Sets the {@code action} of the specified {@link Advice}
+   * @param image
+   */
   public void setImage(String image) {
     this.image = image;
   }
 
   /**
-   * Sets a {@code favorite} specific to {@link Diary}
+   * Sets a {@code favorite} specific to {@link Advice}
    * @return
    */
   public boolean isFavorite() {
@@ -96,21 +112,21 @@ public class Advice {
   }
 
   /**
-   * Sets a {@code favorite} specific to {@link Diary}
+   * Sets a {@code favorite} specific to {@link Advice}
    * @param favorite
    */
   public void setFavorite(boolean favorite) {
     this.favorite = favorite;
   }
   /**
-   * Retrieves the  name of the {@link User} specific to {@link Diary}
+   * Retrieves the  name of the {@link User} specific to {@link Advice}
    * @return
    */
   public long getUserId() {
     return userId;
   }
   /**
-   * Sets the  name of the {@link User} specific to {@link Diary}
+   * Sets the  name of the {@link User} specific to {@link Advice}
    * @param userId
    */
   public void setUserId(long userId) {

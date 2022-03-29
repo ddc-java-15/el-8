@@ -15,7 +15,7 @@ import edu.cnm.deepdive.el8.viewmodel.LoginViewModel;
 import edu.cnm.deepdive.el8.viewmodel.MoodViewModel;
 
 /**
- * Defines and manages and inflates the {@code fragment_mood.xml} layout.
+ * Defines, manages and inflates the {@code fragment_mood.xml} layout.
  * handles its lifecycle amd  input events.
  */
 public class MoodFragment extends Fragment {

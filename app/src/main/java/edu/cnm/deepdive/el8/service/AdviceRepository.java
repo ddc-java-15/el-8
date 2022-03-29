@@ -8,6 +8,7 @@ import io.reactivex.rxjava3.core.Completable;
 import io.reactivex.rxjava3.core.Single;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 import java.util.List;
+import edu.cnm.deepdive.el8.model.entity.User;
 
 /**
  * Provides the core CRUD operations for the {@link Advice} entity.
@@ -18,24 +19,42 @@ public class AdviceRepository {
 
   private final AdviceDao adviceDao;
 
+  /**
+   * Initializes this instance of {@link AdviceRepository} with the injected parameters below.
+   * @param context
+   */
   public AdviceRepository(Context context) {
     this.context = context;
-
     El8Database database = El8Database.getInstance();
     adviceDao = database.getAdviceDao();
   }
 
+  /**
+   * Returns a LiveData instance of {@code id} specific to {@link AdviceDao}
+   * @param id
+   * @return
+   */
   public LiveData<Advice> get(long id) {
 
     return adviceDao.select(id);
 
   }
 
+  /**
+   * Retrieves a List of {@link Advice}
+   * @return
+   */
   public LiveData<List<Advice>> getAll() {
 
     return adviceDao.select();
   }
 
+  /**
+   * Retrieves a list of all {@link Advice} specific to an instance of {@link User}
+   * @param userId specific to this userId
+   * @param onlyFavorites parameterizes to only retrieve  the favorite instances.
+   * @return
+   */
   public LiveData<List<Advice>> getAllByUser(long userId, boolean onlyFavorites) {
 
     return onlyFavorites

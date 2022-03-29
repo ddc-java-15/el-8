@@ -25,12 +25,11 @@ public class DiaryAdapter extends RecyclerView.Adapter<Holder> {
   private final DateFormat dateFormat;
 
   /**
-   * Initialize this instance of {@link DiaryAdapter}
+   * Initialize this instance of {@link DiaryAdapter} with the injected below parameters.
    * @param context
    * @param diaries
    * @param listener
    */
-
   public DiaryAdapter(Context context, List<Diary> diaries,
       OnDiaryClickListener listener) {
     this.diaries = diaries;
@@ -61,21 +60,24 @@ public class DiaryAdapter extends RecyclerView.Adapter<Holder> {
   }
 
   /**
-   *
+   * Provides access to a recycler view and creates a view for each item in the data set.
    */
   class Holder extends RecyclerView.ViewHolder {
 
     private ItemDiaryBinding binding;
 
     /**
-     *
-     * @param binding
+     * Wraps around the View that contains the {@code fragment_diary.xml} layout
+     * @param binding Attaches to the root of the layout,
      */
     public Holder(@NonNull ItemDiaryBinding binding) {
       super(binding.getRoot());
       this.binding = binding;
     }
-
+    /**
+     * Binds the item according to its position
+     * @param position
+     */
     public void bind(int position) {
       Diary diary = diaries.get(position);
       binding.dateEntry.setText(dateFormat.format(diary.getCreated()));
@@ -83,7 +85,9 @@ public class DiaryAdapter extends RecyclerView.Adapter<Holder> {
       binding.getRoot().setOnClickListener((view) -> listener.onClick(position, view, diary));
     }
   }
-
+  /**
+   * Provides an updated onClick Listener
+   */
   public interface OnDiaryClickListener {
 
     void onClick(int position, View view, Diary diary);

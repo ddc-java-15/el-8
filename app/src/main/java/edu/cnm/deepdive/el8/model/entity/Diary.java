@@ -82,14 +82,14 @@ public class Diary {
     this.entry = entry;
   }
   /**
-   * Retrieves the  name of the {@link User} specific to {@link Diary}
+   * Retrieves the id of the {@link User} specific to {@link Diary}
    * @return
    */
   public long getUserId() {
     return userId;
   }
   /**
-   * Sets the  name of the {@link User} specific to {@link Diary}
+   * Sets the  id of the {@link User} specific to {@link Diary}
    * @param userId
    */
   public void setUserId(long userId) {
