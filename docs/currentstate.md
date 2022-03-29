@@ -14,18 +14,18 @@ order: 50
 
 ## Cosmetic Enhancement
 
-- Known bug in the home fragment layout that displays the card views unevenly need to be taken care of and fixed.
-- The advice details fragment layout section requires improvement with the use of HTML to display the advice in a more powerful way.
+- Known bug in the home fragment layout that displays the card views unevenly needs to be taken care of and fixed.
+- The advice section requires HTML improvement to display the advice in a more powerful way.
 - Enhancement to the diary layout is required.
-- A better theme of colors is needed throughout the app for coherence.
+- A more suitable theme of colors is needed throughout the app for coherence.
 - A better selection of icons.
 
 ## Functional Stretch Goals
 
-- Display a history of the mood rating in a graph so the user is able to see trends.
+- Implementation of a history of the mood rating visually through a graph to enable the user to view trends.
 - Implementation of Geolocation services.
 - Larger pool of advices.
 - Selection of image that matches more accurately the advice displayed.
 - Larger pool of images.
-- A timer to keep track of how long the user spent on any given advice.
+- Implementation of a timer to keep track of time spent on a given advice.
 - Implementation of a calendar in the diary fragment and diary layout.
