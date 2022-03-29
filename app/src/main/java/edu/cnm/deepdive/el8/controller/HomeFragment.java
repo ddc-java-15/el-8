@@ -15,12 +15,15 @@ import edu.cnm.deepdive.el8.adapter.MoodCheckInAdapter;
 import edu.cnm.deepdive.el8.databinding.FragmentHomeBinding;
 import edu.cnm.deepdive.el8.viewmodel.MoodViewModel;
 
+/**
+ * Defines and manages and inflates the {@code fragment_home.xml} layout.
+ * Handles its layout lifecycle and input events.
+ */
 public class HomeFragment extends Fragment {
 
 
   private FragmentHomeBinding binding;
   private NavController navController;
-  // private MoodViewModel viewModel;
 
 
   @Nullable

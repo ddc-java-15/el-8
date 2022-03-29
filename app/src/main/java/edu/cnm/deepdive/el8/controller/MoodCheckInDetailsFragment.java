@@ -17,7 +17,10 @@ import edu.cnm.deepdive.el8.model.entity.MoodCheckIn;
 import edu.cnm.deepdive.el8.viewmodel.LoginViewModel;
 import edu.cnm.deepdive.el8.viewmodel.MoodViewModel;
 
-
+/**
+ * Defines and manages and inflates the {@code fragment_mood_check_in_details.xml} layout.
+ * Handles its layout lifecycle amd  input events.
+ */
 public class MoodCheckInDetailsFragment extends BottomSheetDialogFragment implements
     OnSeekBarChangeListener {
 

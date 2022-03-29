@@ -15,6 +15,10 @@ import edu.cnm.deepdive.el8.model.entity.Diary;
 import edu.cnm.deepdive.el8.viewmodel.DiaryViewModel;
 import edu.cnm.deepdive.el8.viewmodel.LoginViewModel;
 
+/**
+ * Defines and manages and inflates the {@code fragment_diary.xml} layout.
+ * Handles its layout lifecycle and input events.
+ */
 public class DiaryFragment extends Fragment {
 
 

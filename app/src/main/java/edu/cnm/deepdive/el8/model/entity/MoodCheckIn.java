@@ -84,7 +84,7 @@ public class MoodCheckIn {
   }
 
   /**
-   * Retrieves the  name of the {@link User} specific to {@link MoodCheckIn}
+   * Retrieves the  id of the {@link User} specific to {@link MoodCheckIn}
    * @return
    */
   public long getUserId() {
@@ -92,7 +92,7 @@ public class MoodCheckIn {
   }
 
   /**
-   * Sets the  name of the {@link User} specific to {@link MoodCheckIn}
+   * Sets the  id of the {@link User} specific to {@link MoodCheckIn}
    * @param userId
    */
   public void setUserId(long userId) {

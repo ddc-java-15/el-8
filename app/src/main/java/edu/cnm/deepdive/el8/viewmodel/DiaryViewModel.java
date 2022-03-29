@@ -9,12 +9,20 @@ import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Transformations;
+import edu.cnm.deepdive.el8.controller.DiaryFragment;
+import edu.cnm.deepdive.el8.controller.DiaryDetailsFragment;
 import edu.cnm.deepdive.el8.model.entity.Diary;
+import edu.cnm.deepdive.el8.model.entity.MoodCheckIn;
+import edu.cnm.deepdive.el8.model.entity.User;
 import edu.cnm.deepdive.el8.service.DiaryRepository;
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.disposables.Disposable;
 import java.util.List;
 
+/**
+ *  Prepares and manages the data for the {@link DiaryFragment } and {@link DiaryDetailsFragment} fragment .
+ *  Handles the communication of {@link DiaryFragment } and {@link DiaryDetailsFragment}  with the rest of the application.
+ */
 public class DiaryViewModel extends AndroidViewModel implements DefaultLifecycleObserver {
 
   private final DiaryRepository repository;
@@ -32,6 +40,10 @@ public class DiaryViewModel extends AndroidViewModel implements DefaultLifecycle
 
   private final CompositeDisposable pending;
 
+  /**
+   *Initialize this instance of {@link DiaryViewModel} with the injected parameters.
+   * @param application
+   */
   public DiaryViewModel(@NonNull Application application) {
     super(application);
     repository = new DiaryRepository(application);
@@ -50,22 +62,40 @@ public class DiaryViewModel extends AndroidViewModel implements DefaultLifecycle
     pending.clear();
   }
 
+  /**
+   * Retrieves an instance of {@code Livedata} {@link  Diary}
+   * @return
+   */
   public LiveData<Diary> getDiary() {
     return diary;
   }
 
+  /**
+   * Retrieves an {@code throwable} {@link Diary}
+   * @return
+   */
   public LiveData<Throwable> getThrowable() {
     return throwable;
   }
-
+  /**
+   * Retrieves a List of {@code Livedata} {@link  Diary}
+   * @return
+   */
   public LiveData<List<Diary>> getDiaries() {
     return diaries;
   }
-
+  /**
+   * Sets the  {@code id} of the {@link User} specific to {@link Diary}
+   * @param userId
+   */
   public void setUserId(long userId) {
     this.userId.setValue(userId);
   }
 
+  /**
+   * Saves the specified instance of {@link Diary}
+   * @param diary
+   */
   public void save(Diary diary) {
     Disposable disposable = repository
         .save(diary)
@@ -77,6 +107,10 @@ public class DiaryViewModel extends AndroidViewModel implements DefaultLifecycle
     pending.add(disposable);
   }
 
+  /**
+   * Deletes the specified instance of {@link Diary}
+   * @param diary
+   */
   public void delete(Diary diary) {
     repository
         .delete(diary)
@@ -87,6 +121,10 @@ public class DiaryViewModel extends AndroidViewModel implements DefaultLifecycle
 
   }
 
+  /**
+   * Sets the specified id of {@link MoodCheckIn}
+   * @param id
+   */
   public void setDiaryId(long id) {
     diaryId.setValue(id);
 

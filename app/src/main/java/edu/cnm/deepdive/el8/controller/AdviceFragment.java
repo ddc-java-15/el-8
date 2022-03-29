@@ -15,7 +15,10 @@ import edu.cnm.deepdive.el8.adapter.AdviceAdapter;
 import edu.cnm.deepdive.el8.databinding.FragmentAdviceBinding;
 import edu.cnm.deepdive.el8.viewmodel.AdviceViewModel;
 import edu.cnm.deepdive.el8.viewmodel.LoginViewModel;
-
+/**
+ * Defines and manages and inflates the {@code fragment_advice.xml} layout.
+ * Handles its layout lifecycle and input events.
+ */
 public class AdviceFragment extends Fragment {
 
   private FragmentAdviceBinding binding;

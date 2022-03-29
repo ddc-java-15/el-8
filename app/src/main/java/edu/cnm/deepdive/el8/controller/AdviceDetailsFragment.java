@@ -19,6 +19,10 @@ import edu.cnm.deepdive.el8.viewmodel.AdviceViewModel;
 import edu.cnm.deepdive.el8.viewmodel.LoginViewModel;
 import java.util.Random;
 
+/**
+ * Defines and manages and inflates the {@code fragment_advice_details.xml} layout.
+ * Handles its layout lifecycle and input events.
+ */
 public class AdviceDetailsFragment extends Fragment {
 
   private FragmentAdviceDetailsBinding binding;
