@@ -5,3 +5,8 @@ At any given moment the user can check in on the app and enter their current sta
 The app then give the users a first option which they can either accept and complete. Once the acton is completed the user is asked again to rate their current state of mind. If they do not feel better or if they choose to, the same logic is then applied.
 The user can also decide that the first recommended action doesn't appeal to them,and they can automatically get a second advice.
 Once the process is done and the user is satisfied., they get the opportunity if they feel like it to enter their thoughts in a reflection box.
+
+---
+
+Copyright 2022 Cathy Bastareaud. All rights reserved.
+
