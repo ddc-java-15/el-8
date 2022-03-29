@@ -15,6 +15,9 @@ import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.disposables.Disposable;
 import java.util.List;
 
+/**
+ *
+ */
 public class MoodViewModel extends AndroidViewModel implements DefaultLifecycleObserver {
 
   private final MoodCheckInRepository repository;

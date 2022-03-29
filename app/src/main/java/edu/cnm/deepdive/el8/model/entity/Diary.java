@@ -35,37 +35,63 @@ public class Diary {
   @ColumnInfo(name= "user_id",index = true)
   private long userId;
 
-
+  /**
+   * Returns the id of the specified {@link Diary}
+   * @return
+   */
   public long getId() {
     return id;
   }
-
+  /**
+   * Sets the id of the specified {@link Diary}
+   * @param id
+   */
   public void setId(long id) {
     this.id = id;
   }
-
+  /**
+   * Returns the date of creation of the specified {@link Diary}
+   * @return
+   */
   @NonNull
   public Date getCreated() {
     return created;
   }
-
+  /**
+   * Set the date of creation of the specified {@link Diary}
+   * @param created
+   */
   public void setCreated(@NonNull Date created) {
     this.created = created;
   }
 
+  /**
+   * Retrieves an {@code entry} specific to {@link Diary}
+   * @return
+   */
   @NonNull
   public String getEntry() {
     return entry;
   }
 
+  /**
+   * Set an {@code entry} specific to {@link Diary}
+   * @param entry
+   */
   public void setEntry(@NonNull String entry) {
     this.entry = entry;
   }
-
+  /**
+   * Retrieves the  name of the {@link User} specific to {@link Diary}
+   * @return
+   */
   public long getUserId() {
     return userId;
   }
-
+  /**
+   * Sets the  name of the {@link User} specific to {@link Diary}
+   * @param userId
+   */
   public void setUserId(long userId) {
     this.userId = userId;
   }

@@ -35,35 +35,66 @@ public class MoodCheckIn {
   @ColumnInfo(name = "user_id",index = true)
   private long userId;
 
+  /**
+   * Returns the id of the specified {@link User}
+   * @return
+   */
   public long getId() {
     return id;
   }
-
+  /**
+   * Sets the id of the specified {@link User}
+   * @param id
+   */
   public void setId(long id) {
     this.id = id;
   }
 
+  /**
+   * Returns the date of creation of the specified {@link MoodCheckIn}
+   * @return
+   */
   @NonNull
   public Date getCreated() {
     return created;
   }
 
+  /**
+   * Set the date of creation of the specified {@link MoodCheckIn}
+   * @param created
+   */
   public void setCreated(@NonNull Date created) {
     this.created = created;
   }
 
+  /**
+   * Retrieves the rating of the specified {@link MoodCheckIn}
+   * @return
+   */
   public int getRating() {
     return rating;
   }
 
+  /**
+   * Retrieves the rating of the specified {@link MoodCheckIn}
+   * @param rating
+   */
   public void setRating(int rating) {
     this.rating = rating;
   }
 
+  /**
+   * Retrieves the  name of the {@link User} specific to {@link MoodCheckIn}
+   * @return
+   */
   public long getUserId() {
     return userId;
   }
 
+  /**
+   * Sets the  name of the {@link User} specific to {@link MoodCheckIn}
+   * @param userId
+   */
   public void setUserId(long userId) {
     this.userId = userId;
   }
