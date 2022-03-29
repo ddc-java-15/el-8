@@ -56,3 +56,8 @@ Once the process is done and the user is satisfied,they get the opportunity if t
 - Links
 - Geolocation (Advice given taking into consideration the user's current surroundings.)
 - Greeting quote.
+
+## Copyright and License
+
+Copyright 2022 Cathy Bastareaud. All rights reserved.
+
