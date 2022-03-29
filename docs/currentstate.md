@@ -5,7 +5,7 @@ menu: Current State
 order: 50
 ---
 
-## Current state 
+## Current State 
 
 - The App navigation needs some improvements to make it more intuitive and  user-friendly.
 - The multiple entry point to access similar screens as "Mood rating, Advice and Diary" need to be improved.

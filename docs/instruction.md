@@ -36,11 +36,11 @@ order: 60
 - On GitHub.com, navigate to [El8](https://github.com/ddc-java-15/el-8)
 - Click on Code.
 - Click on SSH link and copy the link.
-- Open IntelliJ
-- Click on get from VCS
-- Paste the SSH link
-- Change the current working directory to the location where you want the cloned directory.
-- Run the application click on the green triangle.
+- Open IntelliJ.
+- Click on get from VCS and clone the repository.
+- Paste the SSH link.
+- Change the current working directory to the desired location.
+- Execute the build.
 
 ## Technical Requirements and Dependencies
 
