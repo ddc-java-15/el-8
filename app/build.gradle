@@ -83,20 +83,8 @@ dependencies {
     annotationProcessor "androidx.room:room-compiler:$roomVersion"
     implementation "androidx.room:room-rxjava3:$roomVersion"
 
-    // Gson (Google JSON parser) library
-    implementation 'com.google.code.gson:gson:2.9.0'
 
-    // Retrofit (REST client) with ReactiveX & Gson integration
-    def retrofitVersion = '2.9.0'
-    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-    implementation "com.squareup.retrofit2:adapter-rxjava3:$retrofitVersion"
 
-    // Picasso image retrieval library
-    implementation 'com.squareup.picasso:picasso:2.71828'
-
-    // OkHttp logging dependency
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
 
     // Google sign in library
     implementation 'com.google.android.gms:play-services-auth:20.1.0'
