@@ -53,10 +53,10 @@ public interface AdviceDao {
   @Query("SELECT * FROM advice ORDER BY `action` ASC")
   LiveData<List<Advice>> select();
 
-  @Query("SELECT * FROM advice WHERE user_id = :userId ORDER BY `action` ASC")
+  @Query("SELECT * FROM advice WHERE user_id = :userId ORDER BY created DESC")
   LiveData<List<Advice>> selectByUser(long userId);
 
-  @Query("SELECT * FROM advice WHERE user_id = :userId AND favorite ORDER BY `action` ASC")
+  @Query("SELECT * FROM advice WHERE user_id = :userId AND favorite ORDER BY created DESC")
   LiveData<List<Advice>> selectFavoritesByUser(long userId);
 
 }
