@@ -2,7 +2,6 @@ package edu.cnm.deepdive.el8.service;
 
 import android.content.Context;
 import androidx.lifecycle.LiveData;
-import edu.cnm.deepdive.el8.model.dao.AdviceDao;
 import edu.cnm.deepdive.el8.model.dao.MoodCheckInDao;
 import edu.cnm.deepdive.el8.model.entity.Advice;
 import edu.cnm.deepdive.el8.model.entity.MoodCheckIn;

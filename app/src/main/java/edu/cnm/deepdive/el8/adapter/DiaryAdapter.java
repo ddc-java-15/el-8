@@ -15,7 +15,6 @@ import java.util.List;
 /**
  * Provides access to a recycler view and creates a view for each item in the data set.
  */
-
 public class DiaryAdapter extends RecyclerView.Adapter<Holder> {
 
 

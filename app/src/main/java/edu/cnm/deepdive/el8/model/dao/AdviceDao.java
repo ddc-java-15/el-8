@@ -7,7 +7,6 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 import edu.cnm.deepdive.el8.model.entity.Advice;
-import edu.cnm.deepdive.el8.model.entity.Diary;
 import io.reactivex.rxjava3.core.Single;
 import java.util.Collection;
 import java.util.List;

@@ -10,7 +10,8 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Transformations;
-import edu.cnm.deepdive.el8.adapter.AdviceAdapter;
+import edu.cnm.deepdive.el8.controller.AdviceDetailsFragment;
+import edu.cnm.deepdive.el8.controller.AdviceFragment;
 import edu.cnm.deepdive.el8.model.entity.Advice;
 import edu.cnm.deepdive.el8.model.entity.MoodCheckIn;
 import edu.cnm.deepdive.el8.model.entity.User;
@@ -18,8 +19,6 @@ import edu.cnm.deepdive.el8.service.AdviceRepository;
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.disposables.Disposable;
 import java.util.List;
-import edu.cnm.deepdive.el8.controller.AdviceFragment;
-import edu.cnm.deepdive.el8.controller.AdviceDetailsFragment;
 
 /**
  *  Prepares and manages the data for the {@link AdviceFragment } and {@link AdviceDetailsFragment} fragment .

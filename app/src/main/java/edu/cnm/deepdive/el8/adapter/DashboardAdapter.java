@@ -12,7 +12,6 @@ import edu.cnm.deepdive.el8.adapter.DashboardAdapter.Holder;
 /**
  * Provides access to a recycler view and creates a view for each item in the data set.
  */
-
 public class DashboardAdapter extends RecyclerView.Adapter<Holder> {
 
 

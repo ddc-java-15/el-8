@@ -13,7 +13,6 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import edu.cnm.deepdive.el8.controller.LoginActivity;
-import edu.cnm.deepdive.el8.model.entity.MoodCheckIn;
 import edu.cnm.deepdive.el8.model.entity.User;
 import edu.cnm.deepdive.el8.service.GoogleSignInService;
 import edu.cnm.deepdive.el8.service.UserRepository;

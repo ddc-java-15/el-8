@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"edu.cnm.deepdive.el8"},{"l":"edu.cnm.deepdive.el8.adapter"},{"l":"edu.cnm.deepdive.el8.controller"},{"l":"edu.cnm.deepdive.el8.model.dao"},{"l":"edu.cnm.deepdive.el8.model.entity"},{"l":"edu.cnm.deepdive.el8.service"},{"l":"edu.cnm.deepdive.el8.viewmodel"}]

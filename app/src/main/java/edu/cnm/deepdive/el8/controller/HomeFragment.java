@@ -7,13 +7,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import edu.cnm.deepdive.el8.R;
-import edu.cnm.deepdive.el8.adapter.MoodCheckInAdapter;
 import edu.cnm.deepdive.el8.databinding.FragmentHomeBinding;
-import edu.cnm.deepdive.el8.viewmodel.MoodViewModel;
 
 /**
  * Defines, manages and inflates the {@code fragment_home.xml} layout.

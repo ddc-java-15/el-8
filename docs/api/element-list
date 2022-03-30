@@ -1,0 +1,7 @@
+edu.cnm.deepdive.el8
+edu.cnm.deepdive.el8.adapter
+edu.cnm.deepdive.el8.controller
+edu.cnm.deepdive.el8.model.dao
+edu.cnm.deepdive.el8.model.entity
+edu.cnm.deepdive.el8.service
+edu.cnm.deepdive.el8.viewmodel

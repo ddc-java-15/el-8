@@ -29,3 +29,5 @@ order: 30
 - [`Mood check-in`](https://github.com/ddc-java-15/el-8/blob/main/app/src/main/java/edu/cnm/deepdive/el8/service/MoodCheckInRepository.java)
 - [`Advice`](https://github.com/ddc-java-15/el-8/blob/main/app/src/main/java/edu/cnm/deepdive/el8/service/AdviceRepository.java)
 - [`Diary`](https://github.com/ddc-java-15/el-8/blob/main/app/src/main/java/edu/cnm/deepdive/el8/service/DiaryRepository.java)
+
+## [JavaDocs](api/)

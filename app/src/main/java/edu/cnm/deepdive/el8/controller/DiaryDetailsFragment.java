@@ -9,8 +9,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
-import edu.cnm.deepdive.el8.adapter.DiaryAdapter;
-import edu.cnm.deepdive.el8.databinding.FragmentAdviceDetailsBinding;
 import edu.cnm.deepdive.el8.databinding.FragmentDiaryDetailsBinding;
 import edu.cnm.deepdive.el8.model.entity.Diary;
 import edu.cnm.deepdive.el8.viewmodel.DiaryViewModel;
