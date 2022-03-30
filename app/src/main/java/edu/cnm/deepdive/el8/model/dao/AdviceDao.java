@@ -12,7 +12,7 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * Interface  used to access, modify, delete and update data of the {@link Advice} entity and to abstract
+ * Interface used to access, modify, delete and update data of the {@link Advice} entity and to abstract
  * the retrieval of data through queries from the database.
  */
 @Dao
