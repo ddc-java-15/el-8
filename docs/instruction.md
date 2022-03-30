@@ -19,18 +19,18 @@ order: 60
 
 #### 2- Diary button
   - Next to the Mood check in button, on the left, click on the Diary button, to navigate directly to your diary and write an entry.
-  - Use the left arrow at the top right anytime you want to get back to the previous screen. 
+  - Use the left arrow at the top right anytime when you want to get back to the previous screen. 
 
 #### 3- Advice button
   - Below the Diary button, click on the Advice button to navigate to a history of all the advices that have been displayed to the current user.
-  - Use the left arrow at the top right want to get back to the previous screen.
+  - Use the left arrow at the top right when you want to get back to the previous screen.
 
 ### Bottom Navigation 
   - Home screen button takes you back to the home screen.
   - Mood button navigates to a descending history of your mood check in but also gives you the opportunity to once again register a mood and to take you to the advice screen.
   - Diary button displays the previous entries made by the user to the diary.
   - Favorite displays all the advice favorited and gives you the option to be taken directly to their instances,
-  - Use the left arrow at the top right want to get back to the previous screen when the arrow is displaying, otherwise navigate with the bottom nav menu.
+  - Use the left arrow at the top right, to get back to the previous screen when the arrow is displaying, otherwise navigate with the bottom nav menu.
 
 ## Build Instructions
 - On GitHub.com, navigate to [El8](https://github.com/ddc-java-15/el-8)

@@ -48,14 +48,13 @@ Once the process is done and the user is satisfied,they get the opportunity if t
   [Google sign_in](https://developers.google.com/identity/sign-in/android/start-integrating)
   - Distinguish between users and offer privacy on shared devices.
   - The app is not accessible without internet connection.
-- [Google Maps Geolocation](https://developers.google.com/maps/documentation/geolocation/overview)
-  - The application will potentially use Geolocation to provide advice according to the user's current surroundings.
   
 ## Stretch goals/possible enhancements 
 
 - Links
-- Geolocation (Advice given taking into consideration the user's current surroundings.)
-- Greeting quote.
+- [Google Maps Geolocation](https://developers.google.com/maps/documentation/geolocation/overview)
+  - The application will potentially use Geolocation to provide advice according to the user's current surroundings.
+- Greeting quotes.
 
 ## Copyright and License
 

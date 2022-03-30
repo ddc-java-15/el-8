@@ -8,8 +8,8 @@ order: 50
 ## Current State 
 
 - The App navigation needs some improvements to make it more intuitive and  user-friendly.
-- The multiple entry point to access similar screens as "Mood rating, Advice and Diary" need to be improved.
-- Navigation between home screen and child screens through the bottom nav menu needs some refinement
+- The multiple entry points to access similar screens as "Mood rating, Advice and Diary" need to be improved.
+- Navigation between home screen and child screens through the bottom nav menu needs some refinement.
 - Mood graph button and what's around button me are not yet implemented.
 
 ## Cosmetic Enhancement
@@ -29,3 +29,4 @@ order: 50
 - Larger pool of images.
 - Implementation of a timer to keep track of time spent on a given advice.
 - Implementation of a calendar in the diary fragment and diary layout.
+- A more personalized touch(Using user's name for instance).
