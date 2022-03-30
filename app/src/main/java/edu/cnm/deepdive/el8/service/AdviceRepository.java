@@ -30,7 +30,7 @@ public class AdviceRepository {
   }
 
   /**
-   * Returns a LiveData instance of {@code id} specific to {@link AdviceDao}
+   * Returns a LiveData instance of {@code id} specific to {@link Advice}
    * @param id
    * @return
    */
@@ -41,7 +41,7 @@ public class AdviceRepository {
   }
 
   /**
-   * Retrieves a List of {@link Advice}
+   * Retrieves a List of all instances of  {@link Advice}
    * @return
    */
   public LiveData<List<Advice>> getAll() {
@@ -62,7 +62,11 @@ public class AdviceRepository {
         : adviceDao.selectByUser(userId);
   }
 
-
+  /**
+   * Saves an instance of  {@link Advice }
+   * @param advice
+   * @return
+   */
   public Single<Advice> save(Advice advice) {
 
     return (
@@ -81,6 +85,11 @@ public class AdviceRepository {
 
   }
 
+  /**
+   * Returns a completable upon completion of deletion of {@link Advice}
+   * @param advice
+   * @return
+   */
   public Completable delete(Advice advice) {
 
     return (
@@ -93,6 +102,12 @@ public class AdviceRepository {
         .subscribeOn(Schedulers.io());
   }
 
+  /**
+   * Generates an instance of Advice according to Mood rating/ Method not currently used bt the app.
+   * @param moodRating
+   * @param userId
+   * @return
+   */
   public Single<Advice> generate(int moodRating, long userId) {
     Advice advice = new Advice();
     advice.setUserId(userId);

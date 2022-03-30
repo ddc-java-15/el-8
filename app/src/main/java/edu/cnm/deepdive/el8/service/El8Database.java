@@ -20,6 +20,9 @@ import edu.cnm.deepdive.el8.service.El8Database.Converters;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 import java.util.Date;
 
+/**
+ * Database of the EL8 application that extends the room database.
+ */
 @Database(
     entities = {User.class, Diary.class, MoodCheckIn.class, Advice.class},
     version = 1
@@ -31,20 +34,44 @@ public abstract class El8Database extends RoomDatabase {
 
   private static Application context;
 
+  /**
+   * Sets the context of the database.
+   * @param context
+   */
   public static void setContext(Application context) {
     El8Database.context = context;
   }
 
+  /**
+   * Retrieves an instance of the {@link El8Database}
+   * @return
+   */
   public static El8Database getInstance() {
     return InstanceHolder.INSTANCE;
   }
 
+  /**
+   * Retrieves the {@link UserDao}
+   * @return
+   */
   public abstract UserDao getUserDao();
 
+  /**
+   * Retrieves the {@link AdviceDao}
+   * @return
+   */
   public abstract AdviceDao getAdviceDao();
 
+  /**
+   * Retrieves the {@link DiaryDao}
+   * @return
+   */
   public abstract DiaryDao getDiaryDao();
 
+  /**
+   * Retrieves the {@link MoodCheckInDao}
+   * @return
+   */
   public abstract MoodCheckInDao getMoodCheckInDao();
 
   private static class InstanceHolder {
@@ -71,6 +98,9 @@ public abstract class El8Database extends RoomDatabase {
 
   }
 
+  /**
+   * Date and time converters
+   */
   public static class Converters {
 
     @TypeConverter

@@ -17,6 +17,9 @@ import io.reactivex.rxjava3.core.Single;
 import io.reactivex.rxjava3.core.SingleEmitter;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
+/**
+ * Handles the Google sign in process.
+ */
 public class GoogleSignInService {
 
   private static final String BEARER_TOKEN_FORMAT = "Bearer %s";
@@ -37,14 +40,26 @@ public class GoogleSignInService {
 
   }
 
+  /**
+   * Sets the context of this Google sign in instance.
+   * @param context
+   */
   public static void setContext(Application context) {
     GoogleSignInService.context = context;
   }
 
+  /**
+   * Gets an instance of the {@link GoogleSignInService}
+   * @return
+   */
   public static GoogleSignInService getInstance() {
     return InstanceHolder.INSTANCE;
   }
 
+  /**
+   * Refreshes the specified instance if {@link  GoogleSignInService}
+   * @return
+   */
   public Single<GoogleSignInAccount> refresh() {
     return Single
         .create((SingleEmitter<GoogleSignInAccount> emitter) ->
@@ -58,6 +73,10 @@ public class GoogleSignInService {
         .observeOn(Schedulers.io());
   }
 
+  /**
+   * Refreshes the beare token.
+   * @return
+   */
   public Single<String> refreshBearerToken() {
     return refresh()
         .map(this::getBearerToken);
@@ -77,11 +96,20 @@ public class GoogleSignInService {
 
   }
 
+  /**
+   * Starts the specified {@link GoogleSignInService} with the launcher parameter.
+   * @param launcher
+   */
   public void startSignIn(ActivityResultLauncher<Intent> launcher) {
     launcher.launch(client.getSignInIntent());
 
   }
 
+  /**
+   * Completes the specified instance {@link  GoogleSignInService}
+   * @param result
+   * @return
+   */
   public Single<GoogleSignInAccount> completeSignIn(ActivityResult result) {
     return Single
         .create((SingleEmitter<GoogleSignInAccount> emitter) -> {
@@ -98,6 +126,10 @@ public class GoogleSignInService {
         .observeOn(Schedulers.io());
   }
 
+  /**
+   * Returns a {@code completable} of the specified instance of the sign-out process.
+   * @return
+   */
   public Completable signOut() {
     return Completable
         .create((emitter) ->

@@ -34,7 +34,6 @@ public class UserRepository {
    */
   public UserRepository(Context context) {
     this.context = context;
-
     El8Database database = El8Database.getInstance();
     userDao = database.getUserDao();
     signInService = GoogleSignInService.getInstance();
@@ -46,21 +45,39 @@ public class UserRepository {
         );
   }
 
+  /**
+   * Returns a Livedata instance of {@link User}
+   * @return
+   */
   public LiveData<User> getUser() {
     return user;
   }
 
+  /**
+   * Returns a LiveData instance of {@code id} specific to {@link User}
+   * @param id
+   * @return
+   */
   public LiveData<User> get(long id) {
 
     return userDao.select(id);
 
   }
 
+  /**
+   * Retrieves a List of all instances of  {@link Advice}
+   * @return
+   */
   public LiveData<List<User>> getAll() {
 
     return userDao.select();
   }
 
+  /**
+   * Saves an instance of  {@link User }
+   * @param user
+   * @return
+   */
   public Single<User> save(User user) {
 
     return (
@@ -79,6 +96,11 @@ public class UserRepository {
 
   }
 
+  /**
+   * Returns a completable upon completion of deletion of {@link User}
+   * @param user
+   * @return
+   */
   public Completable delete(User user) {
 
     return (
@@ -91,6 +113,10 @@ public class UserRepository {
         .subscribeOn(Schedulers.io());
   }
 
+  /**
+   * Returns a single instance of {@link User} sign-in.
+   * @return
+   */
   public Single<User> getOrCreate() {
     return signInService
         .refresh()

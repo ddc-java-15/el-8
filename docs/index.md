@@ -17,9 +17,9 @@ Once the process is done and the user is satisfied,they get the opportunity if t
 ## Intended users
 
 - Professional people that need on the go guidance
-  > As a new business owner I have a tendency to easily feel overwhelmed. Entrepreneurship is full of challenges and set backs.I need an app that can quickly lift me up so I can be my best self and succeed! 
+  > As a new business owner I have a tendency to easily feel overwhelmed. Entrepreneurship is full of challenges and set backs.I need an app that offers me concrete advice that can quickly lift me up,  so I can be my best self and succeed! 
 - Working parents that struggle with balance in their life
-  > As a working mother of three, I usually turn to food for comfort, it has been nice to have an app that can point me to some healthier options. 
+  > As a working mother of three, I usually turn to food for comfort, it has been nice to have an app that offers well proven advice that have been known to help people ouf ot a rut. 
  
 ## Functionality
 
